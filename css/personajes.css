@@ -1,0 +1,337 @@
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  
+  /* Evitamos problemas con las imagenes */
+  img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* opcional */
+    -o-object-fit: cover;
+       object-fit: cover;
+    /* opcional */
+    -o-object-position: center center;
+       object-position: center center;
+  }
+  
+  /* Reseteamos los enlaces para funcionar como cajas... */
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  /* ... excepto los que se encuentran en párrafos */
+  p a {
+    display: inline;
+  }
+  
+  /* Quitamos los puntos de los <li> */
+  li {
+    list-style-type: none;
+  }
+  
+  /* Configuramos anclas suaves */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+  h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1.2em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Evitamos problemas con los pseudoelementos de quotes */
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+  }
+  
+  /* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  /* Reseteamos las tablas */
+  table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Evitamos problemas con los SVG */
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+  }
+  
+  body {
+    background: #262626;
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: 'Barlow';
+    color: #fffff6 ;
+    line-height: 1.6em;
+
+  }
+
+/* AQUI EMPIEZA EL HEADER */
+
+
+.header{
+
+  max-width: 90rem;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .header__h1{
+  width: 120px;
+  }
+  
+  .header__nav{}
+  
+  .abrir__svg{
+  cursor: pointer;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50px;
+  padding: .2rem;
+  color: #E8C91E;
+  border: 1px solid #E8C91E;
+    
+  }
+  .modal__menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #282252;
+    z-index: 2;
+    display: none;
+  
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    
+  }
+  .isActive{
+    display: flex;
+  }
+  .cerrar__svg{
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 2.625rem;
+    height: 2.625rem;
+    color: #FFE19A;
+  }
+  .header__li{
+    font-family: 'Rubik Doodle Shadow';
+    font-size: 6rem;
+    line-height: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #FFE19A;
+    letter-spacing: 3px;
+  
+  }
+
+  .main__container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center ;
+    gap: 3rem;
+
+    max-width: 90rem;
+    min-height: 50rem;
+    
+    margin: 0 auto;
+
+    border-radius: 52px;
+    background: #1d1d1d;
+    box-shadow:  5px 5px 9px #181818,
+    -5px -5px 9px #222222;
+    position: relative;
+}
+
+.personajes{
+  padding: 5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.personajes__h2{
+  
+    font-family: 'Rubik Doodle Shadow';
+    font-size: 8rem;
+    line-height: 7.5rem;
+    color: #FFE19A;
+    
+}
+.personajes__nav{
+    position: absolute;
+    width: 100%;
+}
+.personajes__ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center ;
+  border-radius: 52px;
+  overflow: hidden;
+}
+.personajes__li{
+  width: 100%;
+  transition: all 1s ease;
+  mix-blend-mode: screen;
+}
+.personajes__link{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  gap: 7rem;
+  align-items: center;
+
+  min-height: 50rem;
+}
+.personajes__span{
+  position: absolute;
+  bottom: 500px;
+  transform: rotate(-90deg);
+  font-size: 3rem;
+  line-height: 1.1em;
+  font-weight: 800;
+
+  opacity: 0;
+  font-family: 'barlow';
+  color: #fffff6;  
+}
+
+.personajes__img{
+  display: block;
+  width: 300px;
+  transform: translateY(0);
+
+  transition: all .8s ease;
+}
+
+.personajes__li:hover .personajes__span{
+  opacity: 1;
+}
+.personajes__li:hover {
+  background-color: #282252;
+}
+.personajes__li:hover .personajes__img{
+  transform: translateY(-20%);
+}
+
+
+/* Hacer responsive para Tablets */
+
+@media ( max-width: 960px) {
+  .header{
+    padding: 0rem 2rem;
+  }
+  .header__li{
+    font-size: 4rem;
+  }
+  .main__container{
+    padding: 3rem 1rem;
+    border-radius: 16px;
+    gap: 3rem;
+    min-height: 55rem;
+  }
+  .personajes__h2{
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+  .personajes__span{
+    display: none;
+  }
+  }
+
+  .personajes {
+    padding: 3rem;
+}
+
+.personajes__nav{
+  overflow: hidden;
+  
+}
+
+
+
+
+
+
+
+
+
+  /* Hacer responsive para Moviles */
+
+  @media ( max-width: 480px) {
+    .header__li{
+      font-size: 2rem;
+    }
+    .cerrar__svg{
+      top: 30px;
+      right: 30px;
+    }
+
+    .main__container{
+      padding: 3rem 1rem;
+      border-radius: 16px;
+      gap: 3rem;
+    }
+    .personajes__h2{
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    .personajes__span{
+      display: none;
+    }
+
+    .personajes__cajas{
+      flex-direction: column;
+    }
+    }

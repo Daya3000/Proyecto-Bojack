@@ -1,0 +1,1091 @@
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  
+  /* Evitamos problemas con las imagenes */
+  img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* opcional */
+    -o-object-fit: cover;
+       object-fit: cover;
+    /* opcional */
+    -o-object-position: center center;
+       object-position: center center;
+  }
+  
+  /* Reseteamos los enlaces para funcionar como cajas... */
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  /* ... excepto los que se encuentran en párrafos */
+  p a {
+    display: inline;
+  }
+  
+  /* Quitamos los puntos de los <li> */
+  li {
+    list-style-type: none;
+  }
+  
+  /* Configuramos anclas suaves */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+  h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1.2em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Evitamos problemas con los pseudoelementos de quotes */
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+  }
+  
+  /* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  /* Reseteamos las tablas */
+  table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Evitamos problemas con los SVG */
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+  }
+  
+  body {
+    background: #262626;
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: 'Barlow';
+    color: #1d1d1d ;
+    line-height: 1.6em;
+    
+
+  }
+  
+/* AQUI EMPIEZA EL HEADER */
+
+
+.header{
+
+max-width: 90rem;
+margin: auto;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+}
+.header__h1{
+width: 120px;
+}
+
+.header__nav{}
+
+.abrir__svg{
+cursor: pointer;
+width: 2.625rem;
+height: 2.625rem;
+border-radius: 50px;
+padding: .2rem;
+color: #E8C91E;
+border: 1px solid #E8C91E;
+  
+}
+.modal__menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #282252;
+  z-index: 1;
+
+  display: none;
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.header__ul{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  
+}
+.isActive{
+  display: flex;
+}
+.cerrar__svg{
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 2.625rem;
+  height: 2.625rem;
+  color: #FFE19A;
+}
+.header__li{
+  font-family: 'Rubik Doodle Shadow';
+  font-size: 6rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FFE19A;
+  letter-spacing: 3px;
+
+}
+
+
+/* AQUI TERMINA EL HEADER */
+
+
+.contenedor{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+
+gap: 6rem;
+}
+
+.home{
+width: 100%;
+max-width: 90rem;
+margin: 0 auto;
+position: relative;
+border-radius: 52px;
+background: #efeeee;
+box-shadow:  5px 5px 9px #181818,
+-5px -5px 9px #222222;
+}
+.home__video{
+object-fit: cover;
+border-radius: 52px;
+}
+
+.home__rotate{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #262626;
+  
+  top: calc(50% - 0.5rem);
+  left: -120px;
+
+  position: absolute;
+  transform: rotate(-90deg);
+
+}
+
+.home__p{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fffff6;
+  letter-spacing: 1px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+ 
+}
+
+
+.main__container{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center ;
+gap: 6rem;
+
+max-width: 90rem;
+padding: 5rem;
+margin: 0 auto;
+
+border-radius: 52px;
+background: #efeeee;
+box-shadow:  5px 5px 9px #181818,
+-5px -5px 9px #222222;
+}
+
+.biografia{
+display: flex;
+flex-flow:column nowrap ;
+justify-content: center;
+align-items: flex-end;
+
+gap: 3rem;
+}
+
+.biografia__h2{
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 1.1em;
+  width: 100%;
+  text-align: center;
+}
+
+.biografia__p{
+  width: 70%;
+
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: right;
+}
+.color{
+  color: #CA7557;
+  font-weight: 700;
+}
+.ninez{
+  
+}
+.ninez__contenedor{
+  
+  display: flex;
+  flex-flow: row nowrap ;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.ninez__img{
+ width: 20%;
+}
+.ninez__span{
+  width: 80%;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: 500;
+}
+
+.padres{
+  margin-top: -50px;
+  display: flex;
+  flex-flow: row nowrap ;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 1.5rem;
+
+}
+.padres__contenedor{
+  width: 25%;
+  display: flex;
+  flex-flow: column nowrap ;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+.padres__span{
+  font-weight: 700;
+  
+}
+.padres__p{
+  font-size: 1rem;
+  line-height: 1rem;
+}
+  
+
+.resumen{
+  display: flex;
+  flex-flow: row nowrap ;
+  justify-content: center;
+  align-items: center;  
+  gap: 3rem;
+}
+.resumen__contenedor{
+  
+}
+.resumen__p{
+}
+.resumen__img{
+  width: 60%;
+  background-color: red;
+
+  border-radius: 22px;
+    background: #fffff6;
+    box-shadow:  5px 5px 9px #cecdcd,
+                 -5px -5px 9px #909090;
+}
+
+.biografia__p{
+  text-align: left;
+  font-weight: 700;
+}
+
+.spoiler{
+width: 100%;
+
+display: flex;
+flex-flow: row nowrap;
+justify-content: flex-start;
+align-items: center;
+
+overflow: hidden;
+background-color: #FFE19A;
+
+}
+
+.spoiler__marquee{
+  font-size: 5em;
+  text-transform: uppercase;
+  color: #262626 ;
+  line-height: 5rem;
+  letter-spacing: -5px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  padding: 0 3rem;
+
+  animation: move 5s linear infinite;
+  
+}
+
+@keyframes move{
+  from{
+    transform: translateX(0);
+  }
+
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+.personalidad{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center ;
+gap: 6rem;
+color: #fffff6;
+  
+max-width: 90rem;
+padding: 5rem;
+margin: 0 auto;
+  
+border-radius: 52px;
+background: #1d1d1d;
+box-shadow:  5px 5px 9px #181818,
+-5px -5px 9px #222222;
+}
+  
+
+.personalidad__h3{
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+.personalidad__caja{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.caja__span{
+  line-height: 1em;
+  border-radius: 32px;
+  border: 1px solid #fffff6;
+  padding: 1rem;
+  display: inline-block;
+
+  
+}
+
+.secundary__container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center ;
+  gap: 6rem;
+
+  max-width: 90rem;
+  padding: 5rem;
+  margin: 0 auto;
+
+  color: #1d1d1d;
+
+  border-radius: 52px;
+    background: #efeeee;
+    box-shadow:  5px 5px 9px #181818,
+    -5px -5px 9px #222222;
+}
+.ocupaciones{
+  display: flex;
+  flex-flow: row nowrap ;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+}
+.ocupaciones__img{
+  border-radius: 22px;
+    background: #fffff6;
+    box-shadow: 5px 5px 9px #cecdcd, -5px -5px 9px #909090;
+}
+.ocupaciones__contenedor{
+  
+}
+
+.ocupaciones__h3{
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  line-height: 1.1em;
+  font-weight: 700;
+  
+}
+.ocupaciones__ul{
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.ocupaciones__li{
+  list-style: circle;
+}
+
+.exitos{
+
+}
+.exitos__h3{
+  font-size: 4rem;
+  line-height: 1.1em;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.roles__contenedor{
+  display: flex;
+  flex-flow: row nowrap ;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 2rem;
+}
+.roles__img{
+  width: 400px;
+  border-radius: 32px;
+  box-shadow: 0px 0px 5px #262626aa;
+}
+.grid__roles{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.roles{
+  min-width: 700px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: .9rem;
+  border-bottom: 2px solid #262626;
+}
+.grid__p:nth-child(1){
+  min-width: 100px;
+}
+.grid__p:nth-child(2){
+  min-width: 400px;
+}
+
+.popular{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.popular__h3{
+  font-size: 4rem;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+.mujeres__contenedor{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+
+  
+ 
+}
+
+.mujeres__lista{
+
+}
+
+.mujeres__lista:hover .mujeres__img{
+transform: scale(1.1);
+}
+
+.mujeres__img{
+  transition: all .5s ease;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fffff6;
+  box-shadow:  5px 5px 9px #cecdcd,
+               -5px -5px 9px #909090;
+  
+  
+}
+.mujeres__h4{
+
+  
+  font-size: 1.8rem;
+  line-height: 1.1em;
+  font-weight: 300;
+  padding: .5rem .5rem .5rem 1rem;
+  border-radius: 22px;
+  background: #E8C91E;
+  text-align: center;
+  
+}
+
+.frases{
+  display: flex;
+  flex-flow: row nowrap ;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+.frases__svg{}
+
+
+.frases__p.uno{
+  font-size: 5rem;
+  line-height: 5rem;
+  text-align: left;
+}
+
+.temporadas{
+  width: 100%;
+}
+
+.temporadas__h3{
+  font-size: 4rem;
+  line-height: 1.1em;
+text-align: center;
+font-weight: 700;
+margin-bottom: 4rem;
+
+}
+
+.temporadas__bojack{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  
+}
+
+.temporadas__info{
+  min-height: 420px;
+  gap: 4rem;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 22px;
+  box-shadow: 5px 5px 9px #cecdcd,
+  -5px -5px 9px #909090;
+  overflow: hidden;
+
+  
+  position: relative;
+  
+}
+
+.temporadas__info:hover .temporadas__img{
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
+
+.temporadas__info .temporadas__h4{
+  transform: translateY(-100%);
+  transition: all .5s ease;
+}
+
+.temporadas__info:hover .temporadas__h4{
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.temporadas__info .temporadas__p{
+  transform: translateY(-100%);
+  transition: all .5s ease;
+}
+
+.temporadas__info:hover .temporadas__p{
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.temporadas__img{
+  
+}
+.temporadas__h4{
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1em;
+  
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  text-align: center;
+  padding: 60px 20px 0 ;
+
+  color: #FFE19A;
+  
+  transition: all .8s ease;
+  z-index: 1;
+}
+
+
+.temporadas__p{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0,.9);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  text-align: center;
+  padding: 80px 20px 0;
+
+  color: #FFE19A;
+  
+  transition: all .8s ease;
+}
+/* Hacer responsive para Tablets */
+
+@media ( max-width: 960px){
+  .header{
+    padding: 0rem 2rem;
+  }
+  .header__li{
+    font-size: 4rem;
+  }
+  .contenedor{
+  padding: 0rem 1rem 3rem;
+  border-radius: 16px;
+  }
+  
+  .main__container{
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  gap: 3rem;
+  }
+  .home__video{
+    border-radius: 16px;
+  }
+  .secundary__container{
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  }
+    
+  .personalidad{
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  }
+  
+  .biografia{
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;  
+  }
+  
+  .biografia__h2{
+  width: 100%;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  }
+  
+  .biografia__p{
+    text-align: center;
+    width: 100%;
+  line-height: 2rem;
+  }
+  
+  .ninez__span {
+  width: 70%;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 500;
+  }
+  .padres{
+    margin-top: 0;
+    justify-content: center;
+  }
+  .padres__contenedor{
+  font-size: .875rem;
+  width: 30%;
+  }
+  
+  .padres__p{
+  font-size: .875rem;
+  }
+  
+  .resumen{
+  flex-direction: column;
+  width: 80%;
+  }
+  
+  .resumen__p{
+  font-size: 1em;
+  line-height: 1.2rem;
+  }
+  
+  .resumen__img {
+  width: 100%;
+  }
+  
+  .personalidad{
+    gap: 3rem;
+  }
+
+  .personalidad__caja{
+    gap: 1rem;
+  }
+  
+  .personalidad__h3{
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  }
+
+  .caja__span {
+    font-size: 1rem;
+    line-height: 1.1em;
+    padding: .5rem 1rem
+  
+  }
+  .ocupaciones{}
+  
+  .ocupaciones__h3{
+    font-size: 2.5rem;
+    line-height: 1.1em;
+  }
+  
+  .ocupaciones__img{
+  width: 40%;
+  }
+  
+  .ocupaciones__ul {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  }
+  
+  .exitos{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  }
+  
+  .roles__contenedor {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  }
+  
+  .roles__img {
+  width: 250px;
+  }
+  
+  .grid__roles{
+  font-size: .875rem;
+  }
+  
+  .grid__p:nth-child(1) {
+  min-width: 80px;
+  }
+  
+  .grid__p:nth-child(2) {
+  min-width: 220px;
+  }
+    
+  .grid__p:nth-child(3) {
+  min-width: 120px;
+  }
+  
+  .roles{
+  min-width: 400px;
+  padding: 0;
+  }
+  
+  .exitos__h3{
+    font-size: 2.5rem;
+    line-height: 1.1em;
+  }
+  
+  .mujeres__contenedor{
+  
+  }
+   
+  .popular__h3{
+    font-size: 2.5rem;
+    line-height: 1.1em;
+    text-align: center;
+  }
+  
+  .frases__p.uno{
+  font-size: 3rem;
+  line-height: 3rem;
+  }
+  
+  .temporadas__h3{
+    font-size: 2.5rem;
+    line-height: 1.1em;
+  }
+
+  .temporadas__h4{
+    font-size: 1.6rem;
+    line-height: 1.1em;
+    padding: 30px 20px 0;
+  }
+
+  .temporadas__p{
+    font-size: .875rem;
+  }
+
+  }
+/* Hacer responsive para Moviles */
+
+@media ( max-width: 480px ) {
+  .header__li{
+    font-size: 2rem;
+  }
+  .cerrar__svg{
+    top: 30px;
+    right: 30px;
+  }
+.contenedor{
+border-radius: 16px;
+}
+
+.main__container{
+padding: 3rem 1rem;
+border-radius: 16px;
+gap: 3rem;
+}
+
+.secundary__container{
+padding: 3rem 1rem;
+border-radius: 16px;
+}
+  
+.personalidad{
+padding: 3rem 1rem;
+border-radius: 16px;
+}
+
+.biografia {
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;  
+}
+
+.biografia__h2{
+font-size: 2.5rem;
+line-height: 1.1em;
+}
+
+.biografia__p{
+font-size: 1em;
+line-height: 1.2rem;
+}
+.ninez__img{
+  width: 30%;
+}
+.ninez__contenedor{
+  gap: 1rem;
+}
+.ninez__span {
+font-size: 2rem;
+line-height: 2rem;
+}
+
+.padres__contenedor{
+font-size: .875rem;
+width: 50%;
+}
+
+.padres__p{
+font-size: .75rem;
+}
+
+.resumen{
+flex-direction: column;
+}
+
+.resumen__p{
+font-size: .875rem;
+line-height: 1rem;
+}
+
+.resumen__img {
+width: 100%;
+}
+
+.personalidad__h3{
+font-size: 2rem;
+line-height: 2rem;
+}
+.ocupaciones__img{
+  width: 100%;
+}
+.ocupaciones{
+flex-direction: column;
+}
+
+.ocupaciones__h3{
+font-size: 2rem;
+line-height: 2rem;
+text-align: center;
+}
+
+.ocupaciones__ul {
+font-size: 1rem;
+line-height: 1rem;
+}
+
+.exitos{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
+gap: 0rem;
+}
+
+.roles__contenedor {
+display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
+align-items: center;
+gap: .5rem;
+}
+
+.roles__img {
+  display: none;
+  width: 100%;
+}
+
+.roles{
+  min-width: 320px;
+  padding: 0;
+}
+.roles:nth-child(1){
+  font-weight: ;
+}
+.grid__roles{
+font-size: .8rem;
+}
+
+.grid__p:nth-child(1) {
+min-width: 0px;
+width: 50px;
+}
+
+.grid__p:nth-child(2) {
+min-width: 160px;
+width: 160px;
+}
+.grid__p:nth-child(3) {
+  min-width: 90px;
+  width: 90px;
+}
+
+.exitos__h3{
+font-size: 2rem;
+line-height: 2rem;
+}
+
+.mujeres__contenedor{
+flex-direction: column;
+}
+ 
+.mujeres__h4{
+font-size: 1.6rem;
+line-height: 1.1em;
+}
+
+.popular__h3{
+font-size: 2rem;
+line-height: 2rem;
+}
+
+.frases__p.uno{
+font-size: 2rem;
+line-height: 2rem;
+}
+
+.temporadas__h3{
+font-size: 2rem;
+line-height: 2rem;
+}
+}
+

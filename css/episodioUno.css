@@ -1,0 +1,170 @@
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  
+  /* Evitamos problemas con las imagenes */
+  img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* opcional */
+    -o-object-fit: cover;
+       object-fit: cover;
+    /* opcional */
+    -o-object-position: center center;
+       object-position: center center;
+  }
+  
+  /* Reseteamos los enlaces para funcionar como cajas... */
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  /* ... excepto los que se encuentran en párrafos */
+  p a {
+    display: inline;
+  }
+  
+  /* Quitamos los puntos de los <li> */
+  li {
+    list-style-type: none;
+  }
+  
+  /* Configuramos anclas suaves */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+  h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1.2em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Evitamos problemas con los pseudoelementos de quotes */
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+  }
+  
+  /* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  /* Reseteamos las tablas */
+  table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Evitamos problemas con los SVG */
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+  }
+  
+  body {
+    background: #262626;
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: 'Inconsolata', monospace;
+    color: #ffffff ;
+    line-height: 1.4em;
+
+  }
+
+  .main__container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center ;
+    gap: 3rem;
+
+    max-width: 90rem;
+    padding: 5rem;
+    margin: 0 auto;
+
+    border-radius: 50px;
+    background: #1d1d1d;
+    box-shadow:  20px 20px 60px #191919,
+             -20px -20px 60px #212121;
+}
+
+.episodios__h1{
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 3rem;
+}
+.episodios__video{
+    background-color: palegreen;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+}
+
+.episodios__p{}
+.episodios__img{
+    width: 100%;
+    background-color: rebeccapurple;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+}
+.fotos{
+    background-color: olivedrab;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+    background: #67e109;
+    box-shadow:  15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+}
+.texto{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.texto__span{
+    width: 20%;
+    font-size: 20rem;
+    font-size: 900;
+}
+.texto__p{
+    width: 80%;
+}
+.autor__span{
+    display: block;
+    text-align: right;
+}
