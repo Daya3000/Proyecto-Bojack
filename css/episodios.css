@@ -339,6 +339,10 @@ form, input, textarea, select, button, label {
       font-size: 4rem;
     }
     
+    .contenedor{
+      padding: 0rem 1rem 3rem;
+      border-radius: 16px;
+      }
     .main__container{
       padding: 3rem 1rem;
       border-radius: 16px;
@@ -389,6 +393,15 @@ form, input, textarea, select, button, label {
     right: 30px;
   }
 
+  .contenedor{
+    border-radius: 16px;
+    gap: 3rem;
+    }
+    .main__container{
+      padding: 3rem 1rem;
+      border-radius: 16px;
+      gap: 3rem;
+    }
   .fotos__bojack{
     width: 120px;
     height: 120px;

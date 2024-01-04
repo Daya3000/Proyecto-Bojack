@@ -42,7 +42,7 @@ botones.forEach( boton => boton.addEventListener("click" , () => modalMenu.class
 // })
 
 
-const botonesFilosofos = document.querySelectorAll('.filosofos__h2')
+const botonesFilosofos = document.querySelectorAll('.filosofos__h3')
 const frasesFilosofos = document.querySelectorAll('.filosofos__p')
 
 console.log(botonesFilosofos)

@@ -220,7 +220,7 @@ form, input, textarea, select, button, label {
     text-align: right;
     width: 50%;
 }
-.concepto__h1{
+.concepto__h2{
     font-size: 3rem;
     line-height: 3rem;
     font-weight: 700;
@@ -264,10 +264,11 @@ form, input, textarea, select, button, label {
     min-height: 250px;
     gap: 2rem;
 }
-.filosofos__h2{
+.filosofos__h3{
   font-size: 3rem;
   font-weight: 700;
 }
+
 .filosofos__fila{
   display: flex;
   flex-flow: row wrap;
@@ -278,8 +279,8 @@ form, input, textarea, select, button, label {
   cursor: pointer;
 }
 
-.filosofos__h2:hover{
-color: #E8C91E;
+.filosofos__h3:hover{
+color: #DFB664;
 }
 
 .filosofos__circulo{
@@ -413,24 +414,33 @@ color: #E8C91E;
 .diez{
   background-color: #C87356;
 }
+
+
+ /* Hacer responsive para Tablet */
+
 @media ( max-width: 960px) {
   .header{
     padding: 0rem 2rem;
   }
   .header__li{
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
+  .contenedor{
+    padding: 0rem 1rem 3rem;
+    border-radius: 16px;
+    }
   .main__container{
     padding: 3rem 1rem;
     border-radius: 16px;
+    
   }
   .descripcion__span{
     font-size: 1.4rem;
   }
   .descripcion__p{
-    font-size: 2rem;
-    line-height: 1.43em;
+    font-size: 3rem;
+    line-height: 1.1em;
   }
   .concepto{
     flex-flow: column nowrap;
@@ -445,18 +455,27 @@ color: #E8C91E;
   .filosofias{
     padding: 2rem;
   }
-  .filosofos{
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
   
-  .filosofos__h2{
-    font-size: 1.8rem;
-  }
+
   .filosofos__p{
     font-size: 1.2rem;
     text-align: center;
   }
+
+
+  .filosofos__h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .filosofos__fila{
+    gap: 1rem;
+    
+  }
+
+  
+
+
   .lecciones{
     gap: 2rem;
     padding: 1rem;
@@ -483,6 +502,10 @@ color: #E8C91E;
       right: 30px;
     }
 
+    .contenedor{
+      border-radius: 16px;
+      gap: 3rem;
+      }
     .main__container{
       padding: 3rem 1rem;
       border-radius: 16px;
@@ -491,11 +514,12 @@ color: #E8C91E;
     .resumen__span{
       text-align: center;
     }
-    .filosofos__fila{
-      width: 100%;
-      flex-flow: column nowrap;
-      gap: 1rem;
-      justify-content: center;
-      align-items: center;
-    }
+    .descripcion__p {
+      font-size: 2rem;
+    
+  }
+  .concepto__h2 {
+    font-size: 2.5rem;
+    line-height: 1.1em;
+  }
   }

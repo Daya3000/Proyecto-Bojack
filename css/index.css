@@ -191,8 +191,7 @@ margin: 0 auto;
 position: relative;
 border-radius: 52px;
 background: #efeeee;
-box-shadow:  5px 5px 9px #181818,
--5px -5px 9px #222222;
+
 }
 .home__video{
 object-fit: cover;
