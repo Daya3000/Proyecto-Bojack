@@ -115,8 +115,6 @@ align-items: center;
 width: 120px;
 }
 
-.header__nav{}
-
 .abrir__svg{
 cursor: pointer;
 width: 2.625rem;
@@ -275,9 +273,6 @@ gap: 3rem;
   color: #CA7557;
   font-weight: 700;
 }
-.ninez{
-  
-}
 .ninez__contenedor{
   
   display: flex;
@@ -330,11 +325,6 @@ gap: 3rem;
   justify-content: center;
   align-items: center;  
   gap: 3rem;
-}
-.resumen__contenedor{
-  
-}
-.resumen__p{
 }
 .resumen__img{
   width: 60%;
@@ -457,15 +447,13 @@ box-shadow:  5px 5px 9px #181818,
   justify-content: center;
   align-items: center;
 
-  gap: 3rem;
+  gap: 4rem;
 }
 .ocupaciones__img{
+  max-width: 500px;
   border-radius: 22px;
     background: #fffff6;
     box-shadow: 5px 5px 9px #cecdcd, -5px -5px 9px #909090;
-}
-.ocupaciones__contenedor{
-  
 }
 
 .ocupaciones__h3{
@@ -481,11 +469,9 @@ box-shadow:  5px 5px 9px #181818,
 }
 .ocupaciones__li{
   list-style: circle;
+  line-height: 1.4em;
 }
 
-.exitos{
-
-}
 .exitos__h3{
   font-size: 4rem;
   line-height: 1.1em;
@@ -544,17 +530,22 @@ box-shadow:  5px 5px 9px #181818,
 .mujeres__contenedor{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-
-  
- 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
-
 .mujeres__lista{
-
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-
+.mujeres__picture{
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow:  5px 5px 9px #cecdcd88,
+               -5px -5px 9px #90909088;
+}
 .mujeres__lista:hover .mujeres__img{
 transform: scale(1.1);
 }
@@ -562,22 +553,18 @@ transform: scale(1.1);
 .mujeres__img{
   transition: all .5s ease;
   overflow: hidden;
-  border-radius: 22px;
   background: #fffff6;
-  box-shadow:  5px 5px 9px #cecdcd,
-               -5px -5px 9px #909090;
-  
   
 }
 .mujeres__h4{
-
-  
+  width: 100%;
   font-size: 1.8rem;
   line-height: 1.1em;
-  font-weight: 300;
-  padding: .5rem .5rem .5rem 1rem;
-  border-radius: 22px;
-  background: #E8C91E;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 16px;
+  background: #282252;
+  color: #E8C91E;
   text-align: center;
   
 }
@@ -589,7 +576,6 @@ transform: scale(1.1);
   align-items: center;
   gap: 3rem;
 }
-.frases__svg{}
 
 
 .frases__p.uno{
@@ -662,10 +648,6 @@ margin-bottom: 4rem;
 .temporadas__info:hover .temporadas__p{
   transform: translateY(0%);
   opacity: 1;
-}
-
-.temporadas__img{
-  
 }
 .temporadas__h4{
   font-size: 2rem;
@@ -818,8 +800,6 @@ margin-bottom: 4rem;
     padding: .5rem 1rem
   
   }
-  .ocupaciones{}
-  
   .ocupaciones__h3{
     font-size: 2.5rem;
     line-height: 1.1em;
@@ -839,7 +819,7 @@ margin-bottom: 4rem;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 0rem;
   }
   
   .roles__contenedor {
@@ -848,7 +828,7 @@ margin-bottom: 4rem;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   }
   
   .roles__img {
@@ -881,9 +861,6 @@ margin-bottom: 4rem;
     line-height: 1.1em;
   }
   
-  .mujeres__contenedor{
-  
-  }
    
   .popular__h3{
     font-size: 2.5rem;
@@ -924,12 +901,17 @@ margin-bottom: 4rem;
   }
 .contenedor{
 border-radius: 16px;
+gap: 3rem;
 }
 
 .main__container{
 padding: 3rem 1rem;
 border-radius: 16px;
 gap: 3rem;
+}
+.home__p{
+  font-size: 1rem;
+  line-height: 1.2em;
 }
 
 .secundary__container{
@@ -1037,9 +1019,6 @@ gap: .5rem;
 .roles{
   min-width: 320px;
   padding: 0;
-}
-.roles:nth-child(1){
-  font-weight: ;
 }
 .grid__roles{
 font-size: .8rem;

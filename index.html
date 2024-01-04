@@ -44,13 +44,13 @@
     <div class="contenedor">
 
         <div class="home">
-            <video muted autoplay loop src="assets/videoplayback.webm" class="home__video"></video>
+            <video autobuffer autoplay playsinline loop muted src="assets/videoplayback.webm" class="home__video"></video>
         </div>
-        <p class="home__p">Leer más sobre Bojack</p>
+        <p class="home__p"><a href="#biografia">Leer más sobre Bojack ↓</a></p>
 
         <div class="main__container">
 
-            <section class="biografia">
+            <section class="biografia" id="biografia">
                 <h2 class="biografia__h2">Bojack Horseman</h2>
                 <p class="biografia__p">Caballo antropomorfo que triunfó en los años 90 en una exitosa comedia llamada "Horsin Around". y que actualmente
                 <span class="biografia__p color">es incapaz de reconducir su vida profesional y personal.</span></p> 
@@ -123,7 +123,7 @@
             </section>
         
             <section class="exitos">
-                <h3 class="exitos__h3">Carrera y Éxito en Hollywoo</h3>
+                <h3 class="exitos__h3">Carrera y Éxito en "Hollywoo"</h3>
                 <div class="roles__contenedor">
                     <img src="assets/bojack-home.png" alt="Bojack en los Globo de Oro" class="roles__img">
                     <div class="grid__roles">
@@ -194,10 +194,32 @@
                 <h3 class="popular__h3">El siempre fue popular entre las mujeres</h3>
                 <div class="mujeres__contenedor">
                     <div class="mujeres__lista ">
-                        <img src="assets/novia1.webp" alt="Princess Carolyn" class="mujeres__img">
+                        <picture class="mujeres__picture">
+                            <img loading="lazy" src="assets/novia1.webp" alt="Princess Carolyn" class="mujeres__img">
+                        </picture>
                         <h4 class="mujeres__h4">Princess Carolyn</h4>
                     </div>
-                    <div class="mujeres__lista">
+                    <div class="mujeres__lista ">
+                        <picture class="mujeres__picture">
+                            <img loading="lazy" src="assets/novia2.webp" alt="Wanda Pierce" class="mujeres__img">
+                        </picture>
+                        <h4 class="mujeres__h4">Wanda Pierce</h4>
+                    </div>
+                    <div class="mujeres__lista ">
+                        <picture class="mujeres__picture">
+                            <img loading="lazy" src="assets/novia3.webp" alt="Gina Cazador" class="mujeres__img">
+                        </picture>
+                        <h4 class="mujeres__h4">Gina Cazador</h4>
+                    </div>
+                    <div class="mujeres__lista ">
+                        <picture class="mujeres__picture">
+                            <img loading="lazy" src="assets/novia4.webp" alt="Ana Spanakopita" class="mujeres__img">
+                        </picture>
+                        <h4 class="mujeres__h4">Ana Spanakopita</h4>
+                    </div>
+
+
+                    <!-- <div class="mujeres__lista">
                         <img src="assets/novia2.webp" alt="Wanda Pierce" class="mujeres__img">
                         <h4 class="mujeres__h4">Wanda Pierce</h4>
                     </div>
@@ -208,7 +230,7 @@
                     <div class="mujeres__lista">
                         <img src="assets/novia4.webp" alt="Ana Spanakopita" class="mujeres__img">
                         <h4 class="mujeres__h4">Ana Spanakopita</h4>
-                    </div>
+                    </div> -->
                 </div>
             </section>
         

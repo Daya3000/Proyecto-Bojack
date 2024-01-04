@@ -394,6 +394,10 @@ form, input, textarea, select, button, label {
     height: 120px;
     opacity: 0.2;
   }
+  .titulos__p{
+    width: 80%;
+  }
+
 
   .uno {
     top: calc( 50% - 180px);

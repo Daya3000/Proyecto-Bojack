@@ -238,6 +238,9 @@ form, input, textarea, select, button, label {
     box-shadow:  5px 5px 9px #161616,
                  -5px -5px 9px #1e1e1e;
 }
+
+/* AQUI EMPIEZA FILOSOFOS */
+
 .filosofias{
     width: 100%;
     display: flex;
@@ -253,29 +256,30 @@ form, input, textarea, select, button, label {
 .resumen__span{}
 
 .filosofos{
+  width: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    min-height: 250px;
     gap: 2rem;
-
-    font-size: 3rem;
-    font-weight: 900;
+}
+.filosofos__h2{
+  font-size: 3rem;
+  font-weight: 700;
 }
 .filosofos__fila{
   display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem;
-    color: #565656aa;
-    cursor: pointer;
-
-    position: relative;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  color: #565656aa;
+  cursor: pointer;
 }
 
-.filosofos__fila:hover{
-color: #fffff6;
+.filosofos__h2:hover{
+color: #E8C91E;
 }
 
 .filosofos__circulo{
@@ -288,26 +292,25 @@ color: #fffff6;
 .isMelon{
   background-color: #C87356;
 }
-
-
-.filosofos__h2{
-  font-size:  2.5rem;
-  font-weight: 700;
-}
-
-.filosofos__p{
-  overflow: hidden;
-
-    transition: all .5s ease;
-    position: absolute;
-    opacity: 0;
-    margin: 0.5rem;
-}
-
-.filosofos__p.active{
+.filosofos__frase{
+  width: 100%;
   position: relative;
-    opacity: 1;
 }
+.filosofos__p{
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    opacity: 0;
+    position: absolute;
+}
+.filosofos__p:nth-child(4){
+  position: static;
+}
+.filosofos__p.isHover{
+  opacity: 1;
+}
+
+/* AQUI TERMINA FILOSOFOS */
 
 .card__container{
     width: 100%;
@@ -331,6 +334,7 @@ color: #fffff6;
 
 }
 .lecciones__contenedor{
+  width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -350,20 +354,35 @@ color: #fffff6;
 
     padding: 1.875rem;
     border-radius: 2rem;
+    transform: rotateX(0deg);
+    transition: all 2s ease;
+}
+.lecciones.active{
+  transform: rotateX(360deg);
+  background-color: #282252;
+  color: #fffff6;
 }
 .numero{
     font-size: 5rem;
     font-weight: 900;
 }
 .leccion{
+    display: block;
     font-size: 2rem;
     font-weight: 700;
     line-height: 2rem;
+    transition: all 1s ease;
 }
+.leccion.active{
+  display:none;
+} 
 .reflexion{
     display: none;
+    transition: all 1s ease;
 }
-
+.reflexion.active{
+    display: block;
+}
 .uno{
   background-color: #FFE19A;
 }
@@ -430,6 +449,14 @@ color: #fffff6;
     font-size: 2rem;
     line-height: 2.5rem;
   }
+  
+  .filosofos__h2{
+    font-size: 1.8rem;
+  }
+  .filosofos__p{
+    font-size: 1.2rem;
+    text-align: center;
+  }
   .lecciones{
     gap: 2rem;
     padding: 1rem;
@@ -460,5 +487,15 @@ color: #fffff6;
       padding: 3rem 1rem;
       border-radius: 16px;
       gap: 3rem;
+    }
+    .resumen__span{
+      text-align: center;
+    }
+    .filosofos__fila{
+      width: 100%;
+      flex-flow: column nowrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
     }
   }

@@ -189,24 +189,20 @@ form, input, textarea, select, button, label {
     -5px -5px 9px #222222;
     position: relative;
 }
-
 .personajes{
   padding: 5rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  
 }
-
-
 .personajes__h2{
-  
     font-family: 'Rubik Doodle Shadow';
-    font-size: 8rem;
+    font-size: 6rem;
     line-height: 7.5rem;
     color: #FFE19A;
-    
+    text-align: center;
+    pointer-events: none;
 }
 .personajes__nav{
     position: absolute;
@@ -223,7 +219,7 @@ form, input, textarea, select, button, label {
 .personajes__li{
   width: 100%;
   transition: all 1s ease;
-  mix-blend-mode: screen;
+  mix-blend-mode: screen ;
 }
 .personajes__link{
   display: flex;
@@ -244,7 +240,7 @@ form, input, textarea, select, button, label {
 
   opacity: 0;
   font-family: 'barlow';
-  color: #fffff6;  
+  color: #fffff6;
 }
 
 .personajes__img{
@@ -254,7 +250,6 @@ form, input, textarea, select, button, label {
 
   transition: all .8s ease;
 }
-
 .personajes__li:hover .personajes__span{
   opacity: 1;
 }
@@ -281,31 +276,38 @@ form, input, textarea, select, button, label {
     gap: 3rem;
     min-height: 55rem;
   }
+  .personajes__nav{
+    position: relative;
+  }
+  .personajes__ul{
+    flex-flow: column nowrap;
+    gap: 2rem;
+    border-radius: 0px;
+  }
+  .personajes__li{
+    background-color: #282252;
+    border-radius: 24px;
+  }
+  .personajes__link{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    gap: 1rem;
+    min-height: 0;
+  }
   .personajes__h2{
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 6rem;
   }
   .personajes__span{
-    display: none;
+    opacity: 1;
+    font-size: 4rem;
+    position: static;
+    transform: rotate(0deg);
   }
+  .personajes__img{
+    width: 200px;
   }
-
-  .personajes {
-    padding: 3rem;
 }
-
-.personajes__nav{
-  overflow: hidden;
-  
-}
-
-
-
-
-
-
-
-
 
   /* Hacer responsive para Moviles */
 
@@ -319,16 +321,28 @@ form, input, textarea, select, button, label {
     }
 
     .main__container{
-      padding: 3rem 1rem;
+      padding: 1rem;
       border-radius: 16px;
       gap: 3rem;
     }
+    .personajes{
+      padding: 1rem;
+    }
     .personajes__h2{
-      font-size: 2.5rem;
-      line-height: 3rem;
+      font-size: 3.5rem;
+      line-height: 1.1em;
+      text-align: center;
     }
     .personajes__span{
-      display: none;
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    .personajes__link{
+      display: flex;
+      flex-flow: column-reverse nowrap;
+      gap: 0rem;
+      min-height: 0;
+      padding: 2rem 0rem;
     }
 
     .personajes__cajas{
