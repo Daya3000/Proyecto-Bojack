@@ -250,7 +250,7 @@ form, input, textarea, select, button, label {
     gap: 3rem;
 
     padding: 3rem;
-    border: .2125rem solid rgb(255, 0, 200);
+    border: .2125rem solid  #E8C91E;
     border-radius: 32px;
 }
 .resumen__span{}
@@ -288,7 +288,7 @@ color: #DFB664;
     width: 32px;
     height: 32px;
     border-radius: 50px;
-    background-color: #E8C91E;
+    background-color: #8EBBC4;
 }
 .isMelon{
   background-color: #C87356;
@@ -444,7 +444,7 @@ color: #DFB664;
   }
   .concepto{
     flex-flow: column nowrap;
-    padding: 1rem;
+    
   }
   .concepto__text{
     width: 100%;
@@ -522,4 +522,9 @@ color: #DFB664;
     font-size: 2.5rem;
     line-height: 1.1em;
   }
+  .filosofos__h3 {
+    font-size: 1.8rem;
+    line-height: 1.1em;
+  }
+
   }

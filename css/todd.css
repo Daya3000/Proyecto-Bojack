@@ -93,53 +93,72 @@ form, input, textarea, select, button, label {
     min-height: 100vh;
     font-size: 100%;
     font-family: 'Barlow';
-    color: #FFFFF6 ;
+    color: #fffff6 ;
     line-height: 1.6em;
+    
 
   }
-
-  /* AQUI EMPIEZA EL HEADER */
+  
+/* AQUI EMPIEZA EL HEADER */
 
 
 .header{
 
-  max-width: 90rem;
-  margin: auto;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+max-width: 90rem;
+margin: auto;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
 }
 .header__h1{
-  width: 120px;
-}
-.header__nav{
+width: 120px;
 }
 
-.header__svg{
-  width: 2.625rem;
-  height: 2.625rem;
-  border-radius: 50px;
-  padding: .2rem;
-  color: #E8C91E;
-  border: 1px solid #E8C91E;
+.abrir__svg{
+cursor: pointer;
+width: 2.625rem;
+height: 2.625rem;
+border-radius: 50px;
+padding: .2rem;
+color: #E8C91E;
+border: 1px solid #E8C91E;
   
 }
-/* .header__ul{
-  display: none;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
+.modal__menu{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #E8C91E;
+  background-color: #282252;
+  z-index: 1;
+
+  display: none;
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.header__ul{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  
 }
 .isActive{
   display: flex;
+}
+.cerrar__svg{
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 2.625rem;
+  height: 2.625rem;
+  color: #FFE19A;
 }
 .header__li{
   font-family: 'Rubik Doodle Shadow';
@@ -147,29 +166,39 @@ form, input, textarea, select, button, label {
   line-height: 5rem;
   text-transform: uppercase;
   font-weight: 700;
-  color: #262626;
-  
-} */
+  color: #FFE19A;
+  letter-spacing: 3px;
+
+}
+
 
 /* AQUI TERMINA EL HEADER */
 
-  .container{}
-  .container__nav{}
 
-  .main__container{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center ;
-    gap: 6rem;
+.contenedor{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center;
 
-    max-width: 90rem;
-    padding: 5rem;
-    margin: 0 auto;
+gap: 6rem;
+}
 
-    border-radius: 52px;
-    background: #1d1d1d;
-    box-shadow:  5px 5px 9px #181818,
+
+.main__container{
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+align-items: center ;
+gap: 6rem;
+
+max-width: 90rem;
+padding: 5rem;
+margin: 0 auto;
+
+border-radius: 52px;
+background: #1d1d1d;
+box-shadow:  5px 5px 9px #181818,
     -5px -5px 9px #222222;
   }
   
@@ -183,19 +212,19 @@ form, input, textarea, select, button, label {
     gap: 3rem;
   }
 
-  .descripcion__h1{
+  .descripcion__h2{
     font-family: 'Rubik Doodle Shadow';
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 5rem;
     text-transform: uppercase;
     line-height: 4rem;
   }
   
 
-  .descripcion__h2{
+  .descripcion__h3{
     font-family: 'Barlow';
     line-height: 3rem;
-    font-size: 3.25rem;
+    font-size: 4rem;
     font-weight: 700;
   }
   .descripcion__span{
@@ -249,7 +278,45 @@ form, input, textarea, select, button, label {
   }
   .sectionD{
     background-color: #602273;
+
+
+
+    
+    display: flex;
+flex-flow: column nowrap;
+justify-content: flex-start;
+align-items: center;
+
+overflow: hidden;
+
+
+
   }
+
+  .muroGrid__text{
+    animation: move 5s linear infinite;
+    /* font-size: 7vw; */
+    
+    /* transform: rotate(-21deg); */
+  }
+
+  .sectionD__marquee{
+  
+  }
+
+
+
+  @keyframes move{
+    from{
+      transform: translateX(0);
+    }
+  
+    to{
+      transform: translateX(-100%);
+    }
+  }
+
+ 
   .sectionE{
     background-color: #282252;
     grid-column: span 2;
@@ -277,7 +344,7 @@ form, input, textarea, select, button, label {
     gap: 3rem;
   }
 
-  .resumen__h3{
+  .resumen__h4{
     font-size: 3rem;
     text-align: center;
     font-weight: 700;
@@ -348,9 +415,32 @@ form, input, textarea, select, button, label {
     }
 }
 
- /* Hacer responsive para Moviles */
+/* Hacer responsive para Tablets */
 
- @media ( max-width: 480px) {
+@media ( max-width: 960px){
+  .header{
+    padding: 0rem 2rem;
+  }
+  .header__li{
+    font-size: 4rem;
+  }
+  .contenedor{
+  padding: 0rem 1rem 3rem;
+  border-radius: 16px;
+  }
+  
+  .main__container{
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  gap: 3rem;
+  }
+}
+
+
+
+/* Hacer responsive para Moviles */
+
+@media ( max-width: 480px ) {
   .header__li{
     font-size: 2rem;
   }
@@ -358,10 +448,14 @@ form, input, textarea, select, button, label {
     top: 30px;
     right: 30px;
   }
+.contenedor{
+border-radius: 16px;
+gap: 3rem;
+}
 
-  .main__container{
-    padding: 3rem 1rem;
-    border-radius: 16px;
-    gap: 3rem;
-  }
+.main__container{
+padding: 3rem 1rem;
+border-radius: 16px;
+gap: 3rem;
+}
 }

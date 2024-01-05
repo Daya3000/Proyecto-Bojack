@@ -429,5 +429,9 @@ form, input, textarea, select, button, label {
     top: calc( 50% - 10px);
     right: 0px;
   }
+
+  .grid__temp {
+    font-size: 1.125rem;
+    font-weight: 600;
  
 }
