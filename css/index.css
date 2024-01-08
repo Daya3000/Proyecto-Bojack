@@ -151,8 +151,8 @@
 .cerrar__svg{ /* Icon cerrar aplica un función de .JS*/
   cursor: pointer;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 50px; /* Ajuste de posición*/
+  right: 50px; /* Ajuste de posición*/
   width: 2.625rem;
   height: 2.625rem;
   color: #FFE19A;
@@ -249,7 +249,7 @@
   text-align: right;
 }
 
-.color{
+.color{ /* Cambio de color de una parte del párrafo */
   color: #CA7557;
   font-weight: 700;
 }
@@ -273,7 +273,7 @@
   font-weight: 500;
 }
 
-.padres{
+.padres{ 
   display: flex;
   flex-flow: row nowrap ;
   justify-content: flex-end;
@@ -300,10 +300,10 @@
 }
   
 .resumen{
-  display: flex;
-  flex-flow: row nowrap ;
-  justify-content: center;
-  align-items: center;  
+  display: flex; /* Contenido centrado */
+  flex-flow: row nowrap ; /* Contenido centrado */
+  justify-content: center; /* Contenido centrado */
+  align-items: center;   /* Contenido centrado */
   gap: 3rem;
 }
 
@@ -313,11 +313,11 @@
 
   border-radius: 22px;
     background: #fffff6;
-    box-shadow:  5px 5px 9px #cecdcd,  /*Sombra para las imágenes*/
-                 -5px -5px 9px #909090;
+    box-shadow:  5px 5px 9px #cecdcd88,  /*Sombra para las imágenes*/
+                 -5px -5px 9px #90909088;
 }
 
-.biografia__p{
+.biografia__p{ /* Configuración para párrafo */
   text-align: left;
   font-weight: 700;
 }
@@ -377,7 +377,7 @@
   -5px -5px 9px #222222;
 }
   
-.personalidad__h3{
+.personalidad__h3{ /* Configuración para el H3 */
   margin: 0 0 2rem 0;
   font-size: 4rem;
   line-height: 1.1em;
@@ -430,10 +430,10 @@
 }
 
 .ocupaciones__img{
-  max-width: 500px;
+  max-width: 31.25rem; /* Ancho máximo de la imagen*/
   border-radius: 22px;
     background: #fffff6;
-    box-shadow: 5px 5px 9px #cecdcd, -5px -5px 9px #909090;
+    box-shadow: 5px 5px 9px #cecdcd88, -5px -5px 9px #90909088;
 }
 
 .ocupaciones__h3{
@@ -559,10 +559,10 @@
 }
 
 .frases{
-  display: flex;
-  flex-flow: row nowrap ;
-  justify-content: flex-start;
-  align-items: center;
+  display: flex; /* Contenido centrado */
+  flex-flow: row nowrap ; /* Contenido centrado */
+  justify-content: center; /* Contenido centrado */
+  align-items: center; /* Contenido centrado */
   gap: 3rem;
 }
 
@@ -601,9 +601,9 @@
   align-items: center;
   
   border-radius: 22px; /* Cambios en los bordes*/
-  box-shadow: 5px 5px 9px #cecdcd,
-  -5px -5px 9px #909090;
-  overflow: hidden;
+  box-shadow: 5px 5px 9px #cecdcd88,
+  -5px -5px 9px #90909088;
+  overflow: hidden; /* Para que el texto no se desborde de la imagen */
 
   position: relative; /*Relativo para que texto flote dentro del elemento*/
 }
@@ -665,10 +665,10 @@
   top: 0;
   left: 0;
 
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Contenido centrado */
+  flex-flow: row nowrap; /* Contenido centrado */
+  justify-content: center; /* Contenido centrado */
+  align-items: center; /* Contenido centrado */
   opacity: 0;
   text-align: center;
   padding: 80px 20px 0;
@@ -699,7 +699,7 @@
   gap: 3rem;
   }
 
-  .home__video{
+  .home__video{ /* Cambios en los bordes*/
   border-radius: 16px;
   }
 
@@ -733,7 +733,7 @@
   line-height: 2rem;
   }
   
-  .ninez__p {
+  .ninez__p { /* Ajustando tamaños para que sea responsive*/
   width: 70%;
   font-size: 3rem;
   line-height: 3rem;
@@ -743,12 +743,12 @@
   justify-content: center;
   }
 
-  .padres__contenedor{
+  .padres__contenedor{ /* Ajustando tamaños para que sea responsive*/
   font-size: .875rem;
   width: 30%;
   }
   
-  .padres__p{
+  .padres__p{ /* Ajustando tamaños para que sea responsive*/
   font-size: .875rem;
   }
   
@@ -757,28 +757,28 @@
   width: 80%;
   }
   
-  .resumen__p{
+  .resumen__p{ /* Ajustando tamaños para que sea responsive*/
   font-size: 1em;
   line-height: 1.2rem;
   }
   
-  .resumen__img {
-  width: 100%;
+  .resumen__img { /* Ajustando tamaños*/
+  width: 100%; 
   }
   
-  .personalidad{
+  .personalidad{ /* Ajustando tamaños*/
   gap: 3rem;
   }
 
-  .personalidad__caja{
+  .personalidad__caja{ /* Ajustando tamaños*/
   gap: 1rem;
   }
   
-  .personalidad__h3{
+  .personalidad__h3{ /* Ajustando tamaños*/
   font-size: 2.5rem;
   }
 
-  .caja__span {
+  .caja__span { /* Ajustando tamaños*/
   font-size: 1rem;
   line-height: 1.1em;
   padding: .5rem 1rem
@@ -881,25 +881,25 @@
   line-height: 1.2em;
   }
 
-  .biografia__h2{
+  .biografia__h2{ /* Ajuste de tamaños*/
   font-size: 2.5rem;
   line-height: 1.1em;
   }
 
-  .biografia__p{
+  .biografia__p{ /* Ajuste de tamaños*/
   font-size: 1em;
   line-height: 1.2rem;
   }
-
-  .ninez__img{
+ 
+  .ninez__img{ /* Ajuste de tamaños*/
   width: 30%;
   }
 
-  .ninez__contenedor{
+  .ninez__contenedor{ 
   gap: 1rem;
   }
 
-  .ninez__p {
+  .ninez__p { /* Ajuste de tamaños*/
   font-size: 2rem;
   line-height: 2rem;
   }
@@ -917,7 +917,7 @@
   line-height: 1rem;
   }
 
-  .resumen__img {
+  .resumen__img { /* Cambios en los bordes*/
   border-radius: 16px;
   }
 
@@ -931,7 +931,7 @@
   }
 
   .ocupaciones{
-  flex-direction: column;
+  flex-direction: column; /* Organizado en una sola columna, uno debajo del otro */
   }
 
   .ocupaciones__h3{
@@ -946,13 +946,13 @@
   }
 
   .roles__contenedor {
-  flex-direction: column;
+  flex-direction: column; /* Organizado en una sola columna, uno debajo del otro */
   justify-content: flex-start;
   gap: .5rem;
   }
 
   .roles__img {
-  display: none;
+  display: none; /* Se oculto imagen de la sección por diseño */
   width: 100%;
   }
 
@@ -984,26 +984,26 @@
   line-height: 2rem;
   }
 
-  .mujeres__contenedor{
+  .mujeres__contenedor{ /* Cambio de orientación de las imágenes y descripción */
   flex-direction: column;
   }
   
-  .mujeres__h4{
+  .mujeres__h4{ /* Ajustando tamaños*/
   font-size: 1.6rem;
   line-height: 1.1em;
   }
 
-  .popular__h3{
+  .popular__h3{ /* Ajustando tamaños*/
   font-size: 2rem;
   line-height: 2rem;
   }
 
-  .frases__p.uno{
+  .frases__p.uno{ /* Ajustando tamaños*/
   font-size: 2rem;
   line-height: 2rem;
   }
 
-  .temporadas__h3{
+  .temporadas__h3{ /* Ajustando tamaños*/
   font-size: 2rem;
   line-height: 2rem;
   }
