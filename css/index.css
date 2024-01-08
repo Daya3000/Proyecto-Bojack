@@ -60,7 +60,7 @@
   }
   
   /* Nivelamos problemas de tipografías y colocación de formularios */
-form, input, textarea, select, button, label {
+  form, input, textarea, select, button, label {
     font-family: inherit;
     font-size: inherit;
     -webkit-hyphens: auto;
@@ -75,12 +75,6 @@ form, input, textarea, select, button, label {
             appearance: none;
   }
   
-  /* Reseteamos las tablas */
-  table, tr, td {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
   /* Evitamos problemas con los SVG */
   svg {
     width: 100%;
@@ -90,68 +84,71 @@ form, input, textarea, select, button, label {
   
   body {
     background: #262626;
+    min-width: 320px; /*Después de esta medida mínima se rompe la web*/
     min-height: 100vh;
     font-size: 100%;
     font-family: 'Barlow';
     color: #1d1d1d ;
-    line-height: 1.6em;
-    
-
+    line-height: 1.6em; 
   }
   
-/* AQUI EMPIEZA EL HEADER */
-
-
+/* Aqui empieza el Header */
 .header{
-
-max-width: 90rem;
-margin: auto;
-display: flex;
-flex-flow: row nowrap;
-justify-content: space-between;
-align-items: center;
+  max-width: 90rem;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; /*División equitativa a los extremos del header*/
+  align-items: center;
 }
+
 .header__h1{
-width: 120px;
+  width: 120px;
 }
 
-.abrir__svg{
-cursor: pointer;
-width: 2.625rem;
-height: 2.625rem;
-border-radius: 50px;
-padding: .2rem;
-color: #E8C91E;
-border: 1px solid #E8C91E;
-  
-}
-.modal__menu{
-  position: absolute;
+.abrir__svg{ /* Icon abrir aplica un función de .JS*/
+  cursor: pointer;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50px;
+  padding: .2rem;
+  color: #E8C91E;
+  border: 1px solid #E8C91E;
+  }
+
+.modal__menu{ 
+  position: absolute; /* Para superponer el menú cuando se abra */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 100%; /*Ancho total de la pantalla*/
+  height: 100vh; /*Alto total de la pantalla*/
   background-color: #282252;
-  z-index: 1;
+  z-index: 1; /*Por encima del contenido*/
 
-  display: none;
+  display: none; /* Desactivado. Se activa con una funcion en JS */
 
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
+
+::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
+  display: none;
+}
+
 .header__ul{
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  
+  gap: 4rem;  
 }
-.isActive{
-  display: flex;
+
+.isActive{ 
+  display: flex; /* Activado. Se activa con una funcion en JS */
 }
-.cerrar__svg{
+
+.cerrar__svg{ /* Icon cerrar aplica un función de .JS*/
   cursor: pointer;
   position: absolute;
   top: 50px;
@@ -160,55 +157,40 @@ border: 1px solid #E8C91E;
   height: 2.625rem;
   color: #FFE19A;
 }
+
 .header__li{
-  font-family: 'Rubik Doodle Shadow';
-  font-size: 6rem;
+  font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
+  font-size: 6rem; 
   line-height: 5rem;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   font-weight: 700;
   color: #FFE19A;
-  letter-spacing: 3px;
-
+  letter-spacing: 3px; /*Espacio entre letras*/
 }
-
-
-/* AQUI TERMINA EL HEADER */
+/* Aqui termina el Header */
 
 
 .contenedor{
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 
-gap: 6rem;
+  gap: 6rem;
 }
 
 .home{
-width: 100%;
-max-width: 90rem;
-margin: 0 auto;
-position: relative;
-border-radius: 52px;
-background: #efeeee;
-
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  position: relative; /*Relativo para que cuando se abra el menú se pueda superponer el contenido*/
+  border-radius: 52px;
+  background: #efeeee;
 }
+
 .home__video{
-object-fit: cover;
-border-radius: 52px;
-}
-
-.home__rotate{
-  font-size: 2rem;
-  font-weight: 700;
-  color: #262626;
-  
-  top: calc(50% - 0.5rem);
-  left: -120px;
-
-  position: absolute;
-  transform: rotate(-90deg);
-
+  object-fit: cover; /*El video cubra todo la caja*/
+  border-radius: 52px;
 }
 
 .home__p{
@@ -223,40 +205,38 @@ border-radius: 52px;
   align-items: center;
 
   gap: 1rem;
- 
 }
 
-
 .main__container{
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center ;
-gap: 6rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center ;
+  gap: 6rem;
 
-max-width: 90rem;
-padding: 5rem;
-margin: 0 auto;
+  max-width: 90rem;
+  padding: 5rem; /* Ajustando padding del container*/
+  margin: 0 auto;
 
-border-radius: 52px;
-background: #efeeee;
-box-shadow:  5px 5px 9px #181818,
--5px -5px 9px #222222;
+  border-radius: 52px;
+  background: #efeeee;
+  box-shadow:  5px 5px 9px #181818, /*Efecto neumorfismo de la contenedora*/
+  -5px -5px 9px #222222;
 }
 
 .biografia{
-display: flex;
-flex-flow:column nowrap ;
-justify-content: center;
-align-items: flex-end;
+  display: flex;
+  flex-flow:column nowrap ;
+  justify-content: center;
+  align-items: flex-end;
 
-gap: 3rem;
+  gap: 3rem;
 }
 
 .biografia__h2{
   font-size: 8rem;
   font-weight: 800;
-  line-height: 1.1em;
+  line-height: 1.1em; /*Para que respete las variaciones del tamaño de la fuente en el responsive */
   width: 100%;
   text-align: center;
 }
@@ -268,23 +248,26 @@ gap: 3rem;
   line-height: 2rem;
   text-align: right;
 }
+
 .color{
   color: #CA7557;
   font-weight: 700;
 }
+
 .ninez__contenedor{
-  
   display: flex;
   flex-flow: row nowrap ;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
+
 .ninez__img{
- width: 20%;
+ width: 20%; /* Ajustando tamaños*/
 }
-.ninez__span{
-  width: 80%;
+
+.ninez__p{
+  width: 80%; /* Ajustando tamaños*/
   font-size: 5rem;
   line-height: 5rem;
   font-weight: 500;
@@ -297,26 +280,25 @@ gap: 3rem;
   align-items: center;
 
   gap: 1.5rem;
-
 }
+
 .padres__contenedor{
-  width: 25%;
+  width: 25%; /* Ajustando tamaños*/
   display: flex;
   flex-flow: column nowrap ;
-  justify-content: center;
+  justify-content: center; /* Contenido centrado en la pantalla */
   align-items: flex-start;
-  
 }
-.padres__span{
-  font-weight: 700;
-  
+
+.padres__h2{
+  font-weight: 700; 
 }
+
 .padres__p{
   font-size: 1rem;
   line-height: 1rem;
 }
   
-
 .resumen{
   display: flex;
   flex-flow: row nowrap ;
@@ -324,13 +306,14 @@ gap: 3rem;
   align-items: center;  
   gap: 3rem;
 }
+
 .resumen__img{
-  width: 60%;
+  width: 60%; /* Ajustando tamaños*/
   background-color: red;
 
   border-radius: 22px;
     background: #fffff6;
-    box-shadow:  5px 5px 9px #cecdcd,
+    box-shadow:  5px 5px 9px #cecdcd,  /*Sombra para las imágenes*/
                  -5px -5px 9px #909090;
 }
 
@@ -340,34 +323,33 @@ gap: 3rem;
 }
 
 .spoiler{
-width: 100%;
+  width: 100%;
 
-display: flex;
-flex-flow: row nowrap;
-justify-content: flex-start;
-align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
 
-overflow: hidden;
-background-color: #FFE19A;
-
+  overflow: hidden; /* Se utiliza para ocultar el texto de la animación */
+  background-color: #FFE19A;
 }
 
 .spoiler__marquee{
   font-size: 5em;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   color: #262626 ;
   line-height: 5rem;
   letter-spacing: -5px;
   font-weight: 600;
 
-  white-space: nowrap;
+  /* white-space: nowrap; */
   padding: 0 3rem;
 
-  animation: move 5s linear infinite;
+  animation: move 5s linear infinite; /*Efecto de animación infinita*/
   
 }
 
-@keyframes move{
+@keyframes move{ /*Animación de movimiento en eje X */
   from{
     transform: translateX(0);
   }
@@ -378,30 +360,30 @@ background-color: #FFE19A;
 }
 
 .personalidad{
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center ;
-gap: 6rem;
-color: #fffff6;
-  
-max-width: 90rem;
-padding: 5rem;
-margin: 0 auto;
-  
-border-radius: 52px;
-background: #1d1d1d;
-box-shadow:  5px 5px 9px #181818,
--5px -5px 9px #222222;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center ;
+  gap: 6rem;
+  color: #fffff6;
+    
+  max-width: 90rem;
+  padding: 5rem;
+  margin: 0 auto; /* Ajustando margen entre elementos*/
+    
+  border-radius: 52px;
+  background: #1d1d1d;
+  box-shadow:  5px 5px 9px #181818,
+  -5px -5px 9px #222222;
 }
   
-
 .personalidad__h3{
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
   font-size: 4rem;
   line-height: 1.1em;
   font-weight: 700;
 }
+
 .personalidad__caja{
   display: flex;
   flex-flow: row wrap;
@@ -416,9 +398,7 @@ box-shadow:  5px 5px 9px #181818,
   border-radius: 32px;
   border: 1px solid #fffff6;
   padding: 1rem;
-  display: inline-block;
-
-  
+  display: inline-block; /* Alineación uno al lado del otro*/
 }
 
 .secundary__container{
@@ -439,6 +419,7 @@ box-shadow:  5px 5px 9px #181818,
     box-shadow:  5px 5px 9px #181818,
     -5px -5px 9px #222222;
 }
+
 .ocupaciones{
   display: flex;
   flex-flow: row nowrap ;
@@ -447,6 +428,7 @@ box-shadow:  5px 5px 9px #181818,
 
   gap: 4rem;
 }
+
 .ocupaciones__img{
   max-width: 500px;
   border-radius: 22px;
@@ -459,14 +441,15 @@ box-shadow:  5px 5px 9px #181818,
   font-size: 4rem;
   line-height: 1.1em;
   font-weight: 700;
-  
 }
+
 .ocupaciones__ul{
   font-size: 2rem;
   line-height: 2rem;
 }
+
 .ocupaciones__li{
-  list-style: circle;
+  list-style: circle; /*Estilo de listado*/
   line-height: 1.4em;
 }
 
@@ -475,8 +458,9 @@ box-shadow:  5px 5px 9px #181818,
   line-height: 1.1em;
   font-weight: 700;
   margin-bottom: 3rem;
-  text-align: center;
+  text-align: center; /*Centrar texto*/
 }
+
 .roles__contenedor{
   display: flex;
   flex-flow: row nowrap ;
@@ -485,17 +469,20 @@ box-shadow:  5px 5px 9px #181818,
 
   gap: 2rem;
 }
+
 .roles__img{
   width: 400px;
   border-radius: 32px;
   box-shadow: 0px 0px 5px #262626aa;
 }
+
 .grid__roles{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .roles{
   min-width: 700px;
   display: flex;
@@ -505,10 +492,12 @@ box-shadow:  5px 5px 9px #181818,
   padding: .9rem;
   border-bottom: 2px solid #262626;
 }
-.grid__p:nth-child(1){
+
+.grid__p:nth-child(1){ /* Cambio en todos los elementos .grid__p que sean primer hijo */
   min-width: 100px;
 }
-.grid__p:nth-child(2){
+
+.grid__p:nth-child(2){ /* Cambio en todos los elementos .grid__p que sean segundo hijo */
   min-width: 400px;
 }
 
@@ -525,12 +514,14 @@ box-shadow:  5px 5px 9px #181818,
   line-height: 1.1em;
   font-weight: 700;
 }
+
 .mujeres__contenedor{
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: grid; /* Distribuido como GRID */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribuido como GRID con un minmax de 250px y filas 1 fracción*/
   gap: 1rem;
 }
+
 .mujeres__lista{
   display: flex;
   flex-flow: column nowrap;
@@ -538,24 +529,25 @@ box-shadow:  5px 5px 9px #181818,
   align-items: center;
   gap: 1rem;
 }
+
 .mujeres__picture{
-  overflow: hidden;
+  overflow: hidden; /* Para que cuando hago la transformación de escala no se desborde la imagen */
   border-radius: 16px;
   box-shadow:  5px 5px 9px #cecdcd88,
                -5px -5px 9px #90909088;
 }
+
 .mujeres__lista:hover .mujeres__img{
-transform: scale(1.1);
+  transform: scale(1.1); /* Animación al hacer Hover en cada foto */
 }
 
 .mujeres__img{
   transition: all .5s ease;
-  overflow: hidden;
-  background: #fffff6;
-  
+  background: #fffff6;  
 }
+
 .mujeres__h4{
-  width: 100%;
+  width: 100%; /*Ocupa todo el ancho de la pantalla*/
   font-size: 1.8rem;
   line-height: 1.1em;
   font-weight: 600;
@@ -563,8 +555,7 @@ transform: scale(1.1);
   border-radius: 16px;
   background: #282252;
   color: #E8C91E;
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .frases{
@@ -574,7 +565,6 @@ transform: scale(1.1);
   align-items: center;
   gap: 3rem;
 }
-
 
 .frases__p.uno{
   font-size: 5rem;
@@ -589,23 +579,20 @@ transform: scale(1.1);
 .temporadas__h3{
   font-size: 4rem;
   line-height: 1.1em;
-text-align: center;
-font-weight: 700;
-margin-bottom: 4rem;
-
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 4rem 0;
 }
 
-.temporadas__bojack{
+.temporadas__container{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Distribuido como GRID con un minmax de 300px y filas 1 fracción*/
   gap: 2rem;
-
-  
 }
 
 .temporadas__info{
-  min-height: 420px;
+  min-height: 420px; /* Alto mínimo para la card de temporada */
   gap: 4rem;
   
   display: flex;
@@ -613,18 +600,16 @@ margin-bottom: 4rem;
   justify-content: center;
   align-items: center;
   
-  border-radius: 22px;
+  border-radius: 22px; /* Cambios en los bordes*/
   box-shadow: 5px 5px 9px #cecdcd,
   -5px -5px 9px #909090;
   overflow: hidden;
 
-  
-  position: relative;
-  
+  position: relative; /*Relativo para que texto flote dentro del elemento*/
 }
 
 .temporadas__info:hover .temporadas__img{
-  transform: scale(1.1);
+  transform: scale(1.1); /* Animación para que la imagen de portada haga escala al hacer Hover en cada temporada */
   transition: all 1s ease;
 }
 
@@ -634,8 +619,8 @@ margin-bottom: 4rem;
 }
 
 .temporadas__info:hover .temporadas__h4{
-  transform: translateY(0%);
-  opacity: 1;
+  transform: translateY(0%);  /* Animación para que salga titulo al hacer Hover en cada temporada */
+  opacity: 1; /* Elementos visibles sin HOVER*/
 }
 
 .temporadas__info .temporadas__p{
@@ -644,7 +629,7 @@ margin-bottom: 4rem;
 }
 
 .temporadas__info:hover .temporadas__p{
-  transform: translateY(0%);
+  transform: translateY(0%); /* Animación para que salga texto al hacer Hover en cada temporada */
   opacity: 1;
 }
 .temporadas__h4{
@@ -653,8 +638,8 @@ margin-bottom: 4rem;
   line-height: 1.1em;
   
 
-  position: absolute;
-  top: 0;
+  position: absolute; /* Para que pueda flotar dentro del elemento */
+  top: 0; /* Dato que se coloca cuando hay absolute*/
   left: 0;
 
   display: flex;
@@ -667,17 +652,16 @@ margin-bottom: 4rem;
 
   color: #FFE19A;
   
-  transition: all .8s ease;
-  z-index: 1;
+  transition: all .8s ease; /* Animación  con hover */
+  z-index: 1; /* Posicionado por encima de la imagen y el texto informativo de cada temporada */
 }
-
 
 .temporadas__p{
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0,.9);
 
-  position: absolute;
+  position: absolute; /* Para que pueda flotar dentro del elemento */
   top: 0;
   left: 0;
 
@@ -693,28 +677,32 @@ margin-bottom: 4rem;
   
   transition: all .8s ease;
 }
-/* Hacer responsive para Tablets */
 
+/* Hacer responsive para Tablets */
 @media ( max-width: 960px){
-  .header{
-    padding: 0rem 2rem;
+  .header{ /* Ajuste de tamaños*/
+  padding: 0rem 2rem; 
   }
-  .header__li{
-    font-size: 4rem;
+
+  .header__li{ /* Ajuste de tamaños*/
+  font-size: 4rem; 
   }
-  .contenedor{
-  padding: 0rem 1rem 3rem;
+
+  .contenedor{ /* Ajuste de tamaños*/
+  padding: 0rem 1rem 3rem; 
   border-radius: 16px;
   }
-  
-  .main__container{
+
+  .main__container{ /* Ajuste de tamaños*/
   padding: 3rem 1rem;
   border-radius: 16px;
   gap: 3rem;
   }
+
   .home__video{
-    border-radius: 16px;
+  border-radius: 16px;
   }
+
   .secundary__container{
   padding: 3rem 1rem;
   border-radius: 16px;
@@ -726,9 +714,8 @@ margin-bottom: 4rem;
   }
   
   .biografia{
-  
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column nowrap; /* Configurando de columnas centradas*/
   justify-content: center;
   align-items: center;  
   }
@@ -741,21 +728,21 @@ margin-bottom: 4rem;
   }
   
   .biografia__p{
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
   line-height: 2rem;
   }
   
-  .ninez__span {
+  .ninez__p {
   width: 70%;
   font-size: 3rem;
   line-height: 3rem;
-  font-weight: 500;
   }
+
   .padres{
-    margin-top: 0;
-    justify-content: center;
+  justify-content: center;
   }
+
   .padres__contenedor{
   font-size: .875rem;
   width: 30%;
@@ -766,7 +753,7 @@ margin-bottom: 4rem;
   }
   
   .resumen{
-  flex-direction: column;
+  flex-direction: column; /* Organizado en una sola columna, uno debajo del otro */
   width: 80%;
   }
   
@@ -780,27 +767,26 @@ margin-bottom: 4rem;
   }
   
   .personalidad{
-    gap: 3rem;
+  gap: 3rem;
   }
 
   .personalidad__caja{
-    gap: 1rem;
+  gap: 1rem;
   }
   
   .personalidad__h3{
   font-size: 2.5rem;
-  line-height: 1.1em;
   }
 
   .caja__span {
-    font-size: 1rem;
-    line-height: 1.1em;
-    padding: .5rem 1rem
-  
+  font-size: 1rem;
+  line-height: 1.1em;
+  padding: .5rem 1rem
   }
+
   .ocupaciones__h3{
-    font-size: 2.5rem;
-    line-height: 1.1em;
+  font-size: 2.5rem;
+  line-height: 1.1em;
   }
   
   .ocupaciones__img{
@@ -809,7 +795,6 @@ margin-bottom: 4rem;
   
   .ocupaciones__ul {
   font-size: 1.8rem;
-  line-height: 2rem;
   }
   
   .exitos{
@@ -822,11 +807,6 @@ margin-bottom: 4rem;
   
   .roles__contenedor {
   width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
   }
   
   .roles__img {
@@ -837,15 +817,15 @@ margin-bottom: 4rem;
   font-size: .875rem;
   }
   
-  .grid__p:nth-child(1) {
+  .grid__p:nth-child(1) { /* Cambio en todos los elementos .grid__p que sean primer hijo */
   min-width: 80px;
   }
   
-  .grid__p:nth-child(2) {
+  .grid__p:nth-child(2) { /* Cambio en todos los elementos .grid__p que sean segundo hijo */
   min-width: 220px;
   }
     
-  .grid__p:nth-child(3) {
+  .grid__p:nth-child(3) { /* Cambio en todos los elementos .grid__p que sean tercer hijo */
   min-width: 120px;
   }
   
@@ -855,15 +835,14 @@ margin-bottom: 4rem;
   }
   
   .exitos__h3{
-    font-size: 2.5rem;
-    line-height: 1.1em;
+  font-size: 2.5rem;
+  line-height: 1.1em;
   }
   
-   
   .popular__h3{
-    font-size: 2.5rem;
-    line-height: 1.1em;
-    text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  text-align: center;
   }
   
   .frases__p.uno{
@@ -872,198 +851,165 @@ margin-bottom: 4rem;
   }
   
   .temporadas__h3{
-    font-size: 2.5rem;
-    line-height: 1.1em;
+  font-size: 2.5rem;
+  line-height: 1.1em;
   }
 
   .temporadas__h4{
-    font-size: 1.6rem;
-    line-height: 1.1em;
-    padding: 30px 20px 0;
+  font-size: 1.6rem;
+  padding: 30px 20px 0;
+  }
+}
+
+
+/* Hacer responsive para Moviles */
+@media ( max-width: 480px ){
+  .header__li{ /* Ajuste de tamaños*/
+  font-size: 2rem;
+  }
+  .cerrar__svg{ /* Ajuste de tamaños*/
+  top: 30px;
+  right: 30px;
+  }
+  .contenedor{ /* Ajuste de tamaños*/
+  border-radius: 16px;
+  gap: 3rem;
+  }
+
+  .home__p{ /* Ajuste de tamaños*/
+  font-size: 1rem;
+  line-height: 1.2em;
+  }
+
+  .biografia__h2{
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  }
+
+  .biografia__p{
+  font-size: 1em;
+  line-height: 1.2rem;
+  }
+
+  .ninez__img{
+  width: 30%;
+  }
+
+  .ninez__contenedor{
+  gap: 1rem;
+  }
+
+  .ninez__p {
+  font-size: 2rem;
+  line-height: 2rem;
+  }
+
+  .padres__contenedor{
+  width: 50%;
+  }
+
+  .padres__p{
+  font-size: .75rem;
+  }
+
+  .resumen__p{
+  font-size: .875rem;
+  line-height: 1rem;
+  }
+
+  .resumen__img {
+  border-radius: 16px;
+  }
+
+  .personalidad__h3{
+  font-size: 2rem;
+  line-height: 2rem;
+  }
+
+  .ocupaciones__img{
+  width: 100%;
+  }
+
+  .ocupaciones{
+  flex-direction: column;
+  }
+
+  .ocupaciones__h3{
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  }
+
+  .ocupaciones__ul {
+  font-size: 1rem;
+  line-height: 1rem;
+  }
+
+  .roles__contenedor {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: .5rem;
+  }
+
+  .roles__img {
+  display: none;
+  width: 100%;
+  }
+
+  .roles{
+  min-width: 320px;
+  padding: 0;
+  }
+
+  .grid__roles{
+  font-size: .8rem;
+  }
+
+  .grid__p:nth-child(1) { /* Cambio en todos los elementos .grid__p que sean primer hijo */
+  min-width: 0px;
+  width: 50px;
+  }
+
+  .grid__p:nth-child(2) { /* Cambio en todos los elementos .grid__p que sean segundo hijo */
+  min-width: 160px;
+  width: 160px;
+  }
+  .grid__p:nth-child(3) { /* Cambio en todos los elementos .grid__p que sean tercer hijo */
+  min-width: 90px;
+  width: 90px;
+  }
+
+  .exitos__h3{
+  font-size: 2rem;
+  line-height: 2rem;
+  }
+
+  .mujeres__contenedor{
+  flex-direction: column;
+  }
+  
+  .mujeres__h4{
+  font-size: 1.6rem;
+  line-height: 1.1em;
+  }
+
+  .popular__h3{
+  font-size: 2rem;
+  line-height: 2rem;
+  }
+
+  .frases__p.uno{
+  font-size: 2rem;
+  line-height: 2rem;
+  }
+
+  .temporadas__h3{
+  font-size: 2rem;
+  line-height: 2rem;
   }
 
   .temporadas__p{
-    font-size: .875rem;
+  font-size: .875rem;
   }
-
-  }
-/* Hacer responsive para Moviles */
-
-@media ( max-width: 480px ) {
-  .header__li{
-    font-size: 2rem;
-  }
-  .cerrar__svg{
-    top: 30px;
-    right: 30px;
-  }
-.contenedor{
-border-radius: 16px;
-gap: 3rem;
-}
-
-.main__container{
-padding: 3rem 1rem;
-border-radius: 16px;
-gap: 3rem;
-}
-.home__p{
-  font-size: 1rem;
-  line-height: 1.2em;
-}
-
-.secundary__container{
-padding: 3rem 1rem;
-border-radius: 16px;
-}
-  
-.personalidad{
-padding: 3rem 1rem;
-border-radius: 16px;
-}
-
-.biografia {
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center;  
-}
-
-.biografia__h2{
-font-size: 2.5rem;
-line-height: 1.1em;
-}
-
-.biografia__p{
-font-size: 1em;
-line-height: 1.2rem;
-}
-.ninez__img{
-  width: 30%;
-}
-.ninez__contenedor{
-  gap: 1rem;
-}
-.ninez__span {
-font-size: 2rem;
-line-height: 2rem;
-}
-
-.padres__contenedor{
-font-size: .875rem;
-width: 50%;
-}
-
-.padres__p{
-font-size: .75rem;
-}
-
-.resumen{
-flex-direction: column;
-}
-
-.resumen__p{
-font-size: .875rem;
-line-height: 1rem;
-}
-
-.resumen__img {
-  border-radius: 16px;
-width: 100%;
-}
-
-.personalidad__h3{
-font-size: 2rem;
-line-height: 2rem;
-}
-.ocupaciones__img{
-  width: 100%;
-}
-.ocupaciones{
-flex-direction: column;
-}
-
-.ocupaciones__h3{
-font-size: 2rem;
-line-height: 2rem;
-text-align: center;
-}
-
-.ocupaciones__ul {
-font-size: 1rem;
-line-height: 1rem;
-}
-
-.exitos{
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center;
-gap: 0rem;
-}
-
-.roles__contenedor {
-display: flex;
-flex-flow: column nowrap;
-justify-content: flex-start;
-align-items: center;
-gap: .5rem;
-}
-
-.roles__img {
-  display: none;
-  width: 100%;
-}
-
-.roles{
-  min-width: 320px;
-  padding: 0;
-}
-.grid__roles{
-font-size: .8rem;
-}
-
-.grid__p:nth-child(1) {
-min-width: 0px;
-width: 50px;
-}
-
-.grid__p:nth-child(2) {
-min-width: 160px;
-width: 160px;
-}
-.grid__p:nth-child(3) {
-  min-width: 90px;
-  width: 90px;
-}
-
-.exitos__h3{
-font-size: 2rem;
-line-height: 2rem;
-}
-
-.mujeres__contenedor{
-flex-direction: column;
-}
- 
-.mujeres__h4{
-font-size: 1.6rem;
-line-height: 1.1em;
-}
-
-.popular__h3{
-font-size: 2rem;
-line-height: 2rem;
-}
-
-.frases__p.uno{
-font-size: 2rem;
-line-height: 2rem;
-}
-
-.temporadas__h3{
-font-size: 2rem;
-line-height: 2rem;
-}
 }
 
