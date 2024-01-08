@@ -291,7 +291,6 @@ gap: 3rem;
 }
 
 .padres{
-  margin-top: -50px;
   display: flex;
   flex-flow: row nowrap ;
   justify-content: flex-end;
@@ -969,6 +968,7 @@ line-height: 1rem;
 }
 
 .resumen__img {
+  border-radius: 16px;
 width: 100%;
 }
 

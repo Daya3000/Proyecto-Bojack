@@ -279,36 +279,27 @@ box-shadow:  5px 5px 9px #181818,
   .sectionD{
     background-color: #602273;
 
-
-
-    
     display: flex;
 flex-flow: column nowrap;
 justify-content: flex-start;
 align-items: center;
 
 overflow: hidden;
-
-
-
   }
 
   .muroGrid__text{
     animation: move 5s linear infinite;
     /* font-size: 7vw; */
-    
-    /* transform: rotate(-21deg); */
+ 
   }
 
   .sectionD__marquee{
   
   }
 
-
-
   @keyframes move{
     from{
-      transform: translateX(0);
+      transform: translateX(0) rotate(21deg);
     }
   
     to{

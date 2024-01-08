@@ -98,25 +98,22 @@ form, input, textarea, select, button, label {
 
   }
 
-  /* AQUI EMPIEZA EL HEADER */
-
+  /* Aqui empieza el header */
 
 .header{
-
   max-width: 90rem;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  }
-  .header__h1{
+}
+
+.header__h1{
   width: 120px;
-  }
-  
-  .header__nav{}
-  
-  .abrir__svg{
+}
+
+.abrir__svg{
   cursor: pointer;
   width: 2.625rem;
   height: 2.625rem;
@@ -124,80 +121,84 @@ form, input, textarea, select, button, label {
   padding: .2rem;
   color: #E8C91E;
   border: 1px solid #E8C91E;
+}
+
+.modal__menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #282252;
+      
+  display: none;
     
-  }
-  .modal__menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #282252;
-    
-  
-    display: none;
-  
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .header__ul{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    
-  }
-  .isActive{
-    display: flex;
-  }
-  .cerrar__svg{
-    cursor: pointer;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 2.625rem;
-    height: 2.625rem;
-    color: #FFE19A;
-  }
-  .header__li{
-    font-family: 'Rubik Doodle Shadow';
-    font-size: 6rem;
-    line-height: 5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #FFE19A;
-    letter-spacing: 3px;
-  
-  }
-  /* AQUI TERMINA EL HEADER */
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__ul{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.isActive{
+  display: flex;
+}
+
+.cerrar__svg{
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 2.625rem;
+  height: 2.625rem;
+  color: #FFE19A;
+}
+
+.header__li{
+  font-family: 'Rubik Doodle Shadow';
+  font-size: 6rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FFE19A;
+  letter-spacing: 3px;
+}
+
+/* Aqui termina el Header */
 
 .main__container{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center ;
-    gap: 6rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center ;
+  gap: 6rem;
 
-    max-width: 90rem;
-    padding: 5rem;
-    margin: 0 auto;
+  max-width: 90rem;
+  padding: 5rem;
+  margin: 0 auto;
 
-    border-radius: 52px;
-    background: #1d1d1d;
-    box-shadow:  5px 5px 9px #181818,
-    -5px -5px 9px #222222;
+  border-radius: 52px;
+  background: #1d1d1d;
+  box-shadow:  5px 5px 9px #181818,
+  -5px -5px 9px #222222;
 }
 
 .episodios__h2{
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 3rem;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 3rem;
 }
+
 span{
   color: #E8C91E;
 }
+
 .episodios__h3{
   color: darkgray;
   font-size: 2rem;
@@ -206,70 +207,63 @@ span{
 }
 
 .episodios__video{
-    background-color: palegreen;
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow:  15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff;
+  border-radius: 52px;
 }
 
-.episodios__p{}
 .episodios__img{
-    width: 100%;
-    background-color: rebeccapurple;
-    border-radius: 52px;
-
+  width: 100%;
+  background-color: rebeccapurple;
+  border-radius: 52px;
 }
+
 .fotos{
-   
-
-    width: 100%;
-    
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-  gap: 1rem;
-   
-    
+  width: 100%;
+      
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;    
 }
+
 .fotos__img{
- 
   border-radius: 52px;
 }
 
 .texto{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
-.texto__svg{
-    width: 20%;
 
+.texto__svg{
+  width: 20%;
 }
+
 .texto__p{
-    width: 80%;
+  width: 80%;
 }
+
 .autor__span{
   width: 100%;
-    display: block;
-    text-align: right;
-    color: #C67152;
-    font-weight: 700;
+  display: block;
+  text-align: right;
+  color: #C67152;
+  font-weight: 700;
 }
 
 /* Hacer responsive para Tablets */
-
 
 @media ( max-width: 960px){
   .header{
     padding: 0rem 2rem;
   }
+
   .header__li{
     font-size: 4rem;
   }
+
   .contenedor{
   padding: 0rem 1rem 3rem;
   border-radius: 16px;
@@ -281,53 +275,66 @@ span{
   gap: 3rem;
   }
 
+  .episodios__video{
+    border-radius: 16px;
+  }
+
+  .episodios__img{
+    border-radius: 16px;
+  }
+
+  .fotos__img{
+    border-radius: 16px;
+  }
+
   .fotos{
     justify-content: space-between;
   }
+
   .fotos__img {
     width: 340px;
-  
   }
 }
 
 
 /* Hacer responsive para Moviles */
 
-@media ( max-width: 480px ) {
+@media ( max-width: 480px ){
   .header__li{
     font-size: 2rem;
   }
+
   .cerrar__svg{
     top: 30px;
     right: 30px;
   }
-.contenedor{
-border-radius: 16px;
-gap: 3rem;
-}
 
-.main__container{
-padding: 3rem 1rem;
-border-radius: 16px;
-gap: 3rem;
-}
-.episodios__h2 {
-  font-size: 2.5rem;
+  .contenedor{
+    border-radius: 16px;
+    gap: 3rem;
+  }
 
+  .main__container{
+    padding: 3rem 1rem;
+    border-radius: 16px;
+    gap: 3rem;
+  }
 
-}
-.episodios__h3 {
+  .episodios__h2 {
+    font-size: 2.5rem;
+  }
 
-  font-size: 1.5rem;
+  .episodios__h3 {
+    font-size: 1.5rem;
+  }
 
-}
-.fotos__img {
-  width: 150px;
-  border-radius: 32px;
-}
+  .fotos__img {
+    width: 150px;
+   
+  }
 
 .texto__p{
   font-size: .875rem;
   line-height: 1.1em;
-}
+  }
 }
