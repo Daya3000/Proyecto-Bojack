@@ -170,7 +170,7 @@
 /* Aqui termina el Header */
 
 
-.contenedor{
+.contenedor{ /* Contenedor principal centrado y que mantengan cierta separación*/
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -179,13 +179,12 @@
   gap: 6rem;
 }
 
-.home{
+.home{ /* Contenedor del video */
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
   position: relative; /*Relativo para que cuando se abra el menú se pueda superponer el contenido*/
   border-radius: 52px;
-  background: #efeeee;
 }
 
 .home__video{
@@ -193,7 +192,7 @@
   border-radius: 52px;
 }
 
-.home__p{
+.home__p{ /* Texto centrado */
   font-size: 2rem;
   font-weight: 500;
   color: #fffff6;
@@ -207,7 +206,7 @@
   gap: 1rem;
 }
 
-.main__container{
+.main__container{ /* Segundo contenedor de la biografía de Bojack */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -224,7 +223,7 @@
   -5px -5px 9px #222222;
 }
 
-.biografia{
+.biografia{ /* Texto alineado a la derecha */
   display: flex;
   flex-flow:column nowrap ;
   justify-content: center;
@@ -233,7 +232,7 @@
   gap: 3rem;
 }
 
-.biografia__h2{
+.biografia__h2{ /* Texto centrado */
   font-size: 8rem;
   font-weight: 800;
   line-height: 1.1em; /*Para que respete las variaciones del tamaño de la fuente en el responsive */
@@ -241,7 +240,7 @@
   text-align: center;
 }
 
-.biografia__p{
+.biografia__p{ /* Parrafo alineado a la derecha */
   width: 70%;
 
   font-size: 2rem;
@@ -322,7 +321,7 @@
   font-weight: 700;
 }
 
-.spoiler{
+.spoiler{  /* Contenedor con efecto de animación infinita */
   width: 100%;
 
   display: flex;
@@ -334,7 +333,7 @@
   background-color: #FFE19A;
 }
 
-.spoiler__marquee{
+.spoiler__marquee{ /* Texto del contenedor para hacer el efecto de animación infinita */
   font-size: 5em;
   text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   color: #262626 ;
@@ -359,7 +358,7 @@
   }
 }
 
-.personalidad{
+.personalidad{ /* XXX */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -401,7 +400,7 @@
   display: inline-block; /* Alineación uno al lado del otro*/
 }
 
-.secundary__container{
+.secundary__container{ /* Contenedor con más informacion de la trayectoria de Bojack */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -614,7 +613,7 @@
 }
 
 .temporadas__info .temporadas__h4{
-  transform: translateY(-100%);
+  transform: translateY(-100%); /* Animación para esconder el titulo de cada temporada */
   transition: all .5s ease;
 }
 
@@ -624,7 +623,7 @@
 }
 
 .temporadas__info .temporadas__p{
-  transform: translateY(-100%);
+  transform: translateY(-100%); /* Animación para esconder el párrafo de cada temporada */
   transition: all .5s ease;
 }
 
@@ -679,6 +678,8 @@
 }
 
 /* Hacer responsive para Tablets */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
+
 @media ( max-width: 960px){
   .header{ /* Ajuste de tamaños*/
   padding: 0rem 2rem; 
@@ -863,6 +864,8 @@
 
 
 /* Hacer responsive para Moviles */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
+
 @media ( max-width: 480px ){
   .header__li{ /* Ajuste de tamaños*/
   font-size: 2rem;

@@ -8,6 +8,7 @@
     vertical-align: baseline;
   }
   
+
   /* Evitamos problemas con las imagenes */
   img, picture, video, iframe, figure {
     max-width: 100%;
@@ -90,6 +91,7 @@ form, input, textarea, select, button, label {
   
   body {
     background: #262626;
+    min-width: 320px; /*Después de esta medida mínima se rompe la web*/
     min-height: 100vh;
     font-size: 100%;
     font-family: 'Barlow';
@@ -98,25 +100,21 @@ form, input, textarea, select, button, label {
 
   }
 
-/* AQUI EMPIEZA EL HEADER */
-
-
+/* Aqui empieza el Header */
 .header{
-
   max-width: 90rem;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-between; /*División equitativa a los extremos del header*/
   align-items: center;
-  }
-  .header__h1{
+}
+
+.header__h1{
   width: 120px;
-  }
-  
-  .header__nav{}
-  
-  .abrir__svg{
+}
+
+.abrir__svg{ /* Icon abrir aplica un función de .JS*/
   cursor: pointer;
   width: 2.625rem;
   height: 2.625rem;
@@ -124,91 +122,112 @@ form, input, textarea, select, button, label {
   padding: .2rem;
   color: #E8C91E;
   border: 1px solid #E8C91E;
-    
-  }
-  .modal__menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #282252;
-    z-index: 2;
-    display: none;
-  
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .header__ul{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    
-  }
-  .isActive{
-    display: flex;
-  }
-  .cerrar__svg{
-    cursor: pointer;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 2.625rem;
-    height: 2.625rem;
-    color: #FFE19A;
-  }
-  .header__li{
-    font-family: 'Rubik Doodle Shadow';
-    font-size: 6rem;
-    line-height: 5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #FFE19A;
-    letter-spacing: 3px;
-  
-  }
-
-  .main__container{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: center ;
-    gap: 3rem;
-
-    max-width: 90rem;
-    min-height: 50rem;
-    
-    margin: 0 auto;
-
-    border-radius: 52px;
-    background: #1d1d1d;
-    box-shadow:  5px 5px 9px #181818,
-    -5px -5px 9px #222222;
-    position: relative;
 }
-.personajes{
+
+.modal__menu{ 
+  position: absolute; /* Para superponer el menú cuando se abra */
+  top: 0;
+  left: 0;
+  width: 100%; /*Ancho total de la pantalla*/
+  height: 100vh; /*Alto total de la pantalla*/
+  background-color: #282252;
+  z-index: 1; /*Por encima del contenido*/
+
+  display: none; /* Desactivado. Se activa con una funcion en JS */
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
+  display: none;
+}
+
+.header__ul{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;  
+}
+
+.isActive{ 
+  display: flex; /* Activado. Se activa con una funcion en JS */
+}
+
+.cerrar__svg{ /* Icon cerrar aplica un función de .JS*/
+  cursor: pointer;
+  position: absolute;
+  top: 50px; /* Ajuste de posición*/
+  right: 50px; /* Ajuste de posición*/
+  width: 2.625rem;
+  height: 2.625rem;
+  color: #FFE19A;
+}
+
+.header__li{
+  font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
+  font-size: 6rem; 
+  line-height: 5rem;
+  text-transform: uppercase; /*Texto transformado todo a mayúscula*/
+  font-weight: 700;
+  color: #FFE19A;
+  letter-spacing: 3px; /*Espacio entre letras*/
+}
+/* Aqui termina el Header */
+
+.contenedor{ /* Contenedor general */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__container{ /* Segundo contenedor para ordenar contenido */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center ;
+  gap: 3rem;
+
+  max-width: 90rem;
+  min-height: 50rem;
+      
+  margin: 0 auto;
+
+  border-radius: 52px;
+  background: #1d1d1d;
+  box-shadow:  5px 5px 9px #181818, /*Efecto neumorfismo de la contenedora*/
+      -5px -5px 9px #222222;
+
+  position: relative; /*Relativo para que los personajes__nav floten dentro del elemento*/
+}
+
+.personajes{  /* Contenido organizado en una sola columna, uno debajo del otro */
   padding: 5rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
-.personajes__h2{
-    font-family: 'Rubik Doodle Shadow';
-    font-size: 6rem;
-    line-height: 7.5rem;
-    color: #FFE19A;
-    text-align: center;
-    pointer-events: none;
+
+.personajes__h2{ /* Texto principal con tipografía de título y centrado */
+  font-family: 'Rubik Doodle Shadow';
+  font-size: 6rem;
+  line-height: 7.5rem;
+  color: #FFE19A;
+  text-align: center;
+  pointer-events: none;
 }
-.personajes__nav{
-    position: absolute;
-    width: 100%;
+
+.personajes__nav{  /* Posicionada sobre la caja con ancho completo de personajes*/
+  position: absolute;
+  width: 100%;
 }
-.personajes__ul{
+
+
+.personajes__ul{ /*Selector de la lista de personajes que lo ordena en fila y oculta lo que desborda al hacer hover */
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -216,12 +235,12 @@ form, input, textarea, select, button, label {
   border-radius: 52px;
   overflow: hidden;
 }
-.personajes__li{
+.personajes__li{ 
   width: 100%;
-  transition: all 1s ease;
-  mix-blend-mode: screen ;
+  mix-blend-mode: screen ; /*Efecto que combina con el elemento princupal y fondo del elemento*/
 }
-.personajes__link{
+
+.personajes__link{ /*Selector de cada personaje para que se posicione abajo del contenedor */
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -230,7 +249,7 @@ form, input, textarea, select, button, label {
 
   min-height: 50rem;
 }
-.personajes__span{
+.personajes__span{ /*Nombre del personaje con una transformación que rota y se vera al hacer hover */
   position: absolute;
   bottom: 500px;
   transform: rotate(-90deg);
@@ -246,115 +265,140 @@ form, input, textarea, select, button, label {
 .personajes__img{
   display: block;
   width: 300px;
-  transform: translateY(0);
 
   transition: all .8s ease;
 }
-.personajes__li:hover .personajes__span{
+
+.personajes__li:hover .personajes__span{ /* Elementos visibles sin hover */
   opacity: 1;
 }
+
 .personajes__li:hover {
   background-color: #282252;
 }
-.personajes__li:hover .personajes__img{
+
+.personajes__li:hover .personajes__img{ /* Animación en la imagen de un pequeño movimiento en ejeY */
   transform: translateY(-20%);
 }
 
 
 /* Hacer responsive para Tablets */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
 
-@media ( max-width: 960px) {
+
+@media ( max-width: 960px){
   .header{
-    padding: 0rem 2rem;
+    padding: 0rem 2rem; /* Ajuste de tamaño */
   }
+
   .header__li{
-    font-size: 4rem;
+    font-size: 4rem; /* Ajuste de tamaño */
   }
  
   .contenedor{
     padding: 0rem 1rem 3rem;
     border-radius: 16px;
     }
+
   .main__container{
     padding: 3rem 1rem;
     border-radius: 16px;
-    gap: 3rem;
     min-height: 55rem;
   }
+
   .personajes__nav{
     position: relative;
   }
-  .personajes__ul{
+
+  .personajes__ul{ /* Organizado en una sola columna, un personaje debajo del otro */
     flex-flow: column nowrap;
     gap: 2rem;
     border-radius: 0px;
   }
+
   .personajes__li{
     background-color: #282252;
     border-radius: 24px;
   }
-  .personajes__link{
+
+  .personajes__link{ /* Dirección del contenedor en fila y orden inversa    */
     display: flex;
     flex-flow: row-reverse nowrap;
     gap: 1rem;
     min-height: 0;
   }
+
   .personajes__h2{
     font-size: 5rem;
     line-height: 6rem;
   }
-  .personajes__span{
+
+  .personajes__span{ /* Nombre de los personajes se posicionen en la misma caja    */
+    display: flex;
     opacity: 1;
-    font-size: 4rem;
+    font-size: 3.5rem;
     position: static;
     transform: rotate(0deg);
   }
+
   .personajes__img{
     width: 200px;
   }
+
+  .personajes__li:hover .personajes__img{ /* Animación en la imagen de un pequeño movimiento en ejeX */
+    transform: translateX(12%);
+  }
 }
 
-  /* Hacer responsive para Moviles */
+/* Hacer responsive para Moviles */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
 
-  @media ( max-width: 480px) {
-    .header__li{
-      font-size: 2rem;
-    }
-    .cerrar__svg{
-      top: 30px;
-      right: 30px;
-    }
 
-    .contenedor{
-      border-radius: 16px;
-      gap: 3rem;
-      }
-    .main__container{
-      padding: 1rem;
-      border-radius: 16px;
-      gap: 3rem;
-    }
-    .personajes{
-      padding: 1rem;
-    }
-    .personajes__h2{
-      font-size: 3.5rem;
-      line-height: 1.1em;
-      text-align: center;
-    }
-    .personajes__span{
-      font-size: 2rem;
-      line-height: 2rem;
-    }
-    .personajes__link{
-      display: flex;
-      flex-flow: column-reverse nowrap;
-      gap: 0rem;
-      min-height: 0;
-      padding: 2rem 0rem;
-    }
+@media ( max-width: 480px){
+  .header__li{ /* Ajuste de tamaño */
+    font-size: 2rem;
+  }
+ 
+  .cerrar__svg{ /* Ajuste de tamaño */
+    top: 30px;
+    right: 30px;
+  }
 
-    .personajes__cajas{
-      flex-direction: column;
-    }
-    }
+  .contenedor{
+    border-radius: 16px;
+    gap: 3rem;
+  }
+
+  .main__container{
+    padding: 1rem;
+    border-radius: 16px;
+    gap: 3rem;
+  }
+  
+  .personajes{
+    padding: 1rem;
+  }
+  
+  .personajes__h2{
+    font-size: 3.5rem;
+    line-height: 1.1em;
+    text-align: center;
+  }
+
+  .personajes__span{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .personajes__link{ /* Dirección del contenedor en columna y orden inversa    */
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    gap: 0rem;
+    min-height: 0;
+    padding: 2rem 0rem;
+  }
+
+  .personajes__li:hover .personajes__img{ /* Animación en la imagen de un pequeño movimiento en ejeY */
+    transform: translateY(-15%);
+  }
+}
