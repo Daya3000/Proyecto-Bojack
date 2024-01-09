@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <header class="header"> <!-- Contenedor del Header con menú desplegable -->
+    <header class="header"> <!-- Contenedor del Header con menú a pantalla completa -->
         <h1 class="header__h1">
             <a href="./index.html" title="Ir al inicio en Bojack">
                 <img loading="lazy" src="assets/Bo-Jack-Horseman-Logo.png" alt="Foto del logo Bojack">
@@ -42,7 +42,7 @@
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
                 </svg> <!-- Icon para cerrar el menú, función con .JS  -->
                 <ul class="header__ul active">
-                    <!--Lista de links que se agrego estilo active cuando JS. detecta el evento Click -->
+                    <!--Lista de links que se agrego estilo active cuando .JS detecta el evento Click -->
                     <li class="header__li"><a title="Bojack" href="./index.html">Bojack</a></li>
                     <li class="header__li"><a title="Personajes" href="./personajes.html">Personajes</a></li>
                     <li class="header__li"><a title="Episodios" href="./episodios.html">Episodios</a></li>
@@ -57,7 +57,7 @@
     <div class="contenedor"> <!-- Contenedor de toda la sección, diseño modular  -->
 
         <div class="main__container"> <!-- Contenedor de la sección lecciones  -->
-            <div class="descripcion">
+            <div class="descripcion"> <!-- Contenedor con texto principal  -->
                 <span class="descripcion__span">Bojack nos enseña...</span>
                 <p class="descripcion__p">
                     “El universo es un vacío cruel e indiferente. La clave para ser feliz no es la búsqueda de sentido,
@@ -66,7 +66,7 @@
 
             </div>
 
-            <section class="concepto">
+            <section class="concepto"> <!-- Sección con información del nihilismo  -->
                 <div class="concepto__text">
                     <h2 class="concepto__h2">El nihilismo: la filosofía que mueve toda la serie</h2>
                     <span class="concepto__span">El show es uno de los pocos que muestra con precision la enfermedad
@@ -82,21 +82,21 @@
 
             </section>
 
-            <section class="filosofias">
+            <section class="filosofias"> <!-- Sección de filósofos y frases célebres  -->
                 <span class="resumen__span">La serie toma las ideas de distintos filosófos existenciales </span>
-                <div class="filosofos">
-                    <div class="filosofos__fila">
-                        <h3 class="filosofos__h3">Friedrich Nietzsche</h3>
+                <div class="filosofos"> <!-- Sección con nombres de filósofos, con una función de .JS aparece su respectiva filosofía  -->
+                    <div class="filosofos__fila"> <!-- Sección de primera fila de filósofos -->
+                        <h3 class="filosofos__h3 amarillo">Friedrich Nietzsche</h3>
                         <span class="filosofos__circulo"></span>
                         <h3 class="filosofos__h3">Albert Camus</h3>
                     </div>
-                    <div class="filosofos__fila">
+                    <div class="filosofos__fila"> <!-- Sección de segunda fila de filósofos -->
                         <h3 class="filosofos__h3">Blaise Pascal</h3>
-                        <span class="filosofos__circulo isMelon"></span>
+                        <span class="filosofos__circulo melon"></span>
                         <h3 class="filosofos__h3">Jean Paul Sartre</h3>
                     </div>
-                    <div class="filosofos__frase">
-                        <p class="filosofos__p isHover">«¿Queréis que el hombre bueno, sea modesto, diligente, bien
+                    <div class="filosofos__frase"> <!-- Sección de frases -->
+                        <p class="filosofos__p hover">«¿Queréis que el hombre bueno, sea modesto, diligente, bien
                             intencionado y moderado? A mí se me antoja el esclavo ideal» - La voluntad de poder.
                         </p>
                         <p class="filosofos__p">
@@ -118,7 +118,7 @@
 
             </section>
 
-            <div class="card__container">
+            <div class="card__container"> <!-- Sección con imagen de portada y texto -->
                 <img loading="lazy" class="card__img" src="assets/bojack-lecciones2.jpeg"
                     alt="Todos los personajes tomandose una foto">
                 <span class="card__span">La filosofía detrás de la serie merece ser analizada , ya que nos hace pensar
@@ -126,8 +126,8 @@
 
             </div>
 
-            <div class="lecciones__contenedor">
-                <article class="lecciones uno">
+            <div class="lecciones__contenedor"> <!-- Contenedor con diez lecciones y diez reflexiones -->
+                <article class="lecciones uno">  <!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">01</span>
                     <h4 class="leccion">Nadie está obligado a perdonarte</h4>
                     <p class="reflexion">Cuando le hacemos daño a alguien, creemos que con pedir disculpas será
@@ -136,7 +136,7 @@
                         demasiado para que puedan perdonarnos.</p>
                 </article>
 
-                <article class="lecciones dos">
+                <article class="lecciones dos"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">02</span>
                     <h4 class="leccion">Los errores del pasado siempre vuelven a morderte el trasero.</h4>
                     <p class="reflexion">No importa cuánto querramos dejarlos atrás, si realmente no nos hicimos cargo
@@ -145,7 +145,7 @@
                         temprano, salen a la luz.</p>
                 </article>
 
-                <article class="lecciones tres">
+                <article class="lecciones tres"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">03</span>
                     <h4 class="leccion">Hay que cuidarse a uno mismo para poder cuidar a los demás, pero no hay que
                         cuidar a los demás sólo para quererse a uno mismo.</h4>
@@ -158,7 +158,7 @@
                         a nadie le gustas".</p>
                 </article>
 
-                <article class="lecciones cuatro">
+                <article class="lecciones cuatro"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">04</span>
                     <h4 class="leccion">La familia no siempre es de tu sangre.</h4>
                     <p class="reflexion">En un capítulo se ahonda de las problemáticas y tóxicas relaciones familiares
@@ -171,7 +171,7 @@
                     </p>
                 </article>
 
-                <article class="lecciones cinco">
+                <article class="lecciones cinco"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">05</span>
                     <h4 class="leccion">Hay personas que pasan por nuestras vidas, la mejoran y se van.</h4>
                     <p class="reflexion">No todas nuestras amistades son para siempre y, sin embargo, debemos estar
@@ -180,7 +180,7 @@
                         pueden quedarse a nuestro lado. Y eso está bien.</p>
                 </article>
 
-                <article class="lecciones seis">
+                <article class="lecciones seis"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">06</span>
                     <h4 class="leccion">La felicidad como meta es inalcanzable.</h4>
                     <p class="reflexion">Suena muy duro, como algo que el propio BoJack Horseman diría desde lo más
@@ -190,14 +190,14 @@
                         felicidad como estado perpetuo y desaprovechando los momentos que pueden dársela.</p>
                 </article>
 
-                <article class="lecciones siete">
+                <article class="lecciones siete"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">07</span>
                     <h4 class="leccion">Los finales felices fueron hechos para la televisión.</h4>
                     <p class="reflexion">No esperes un final made in Hollywoo(d), eso no existe. La vida es mucho más
                         compleja y caótica, no tiene esos grandes gestos que vemos a diario en la pantalla chica.</p>
                 </article>
 
-                <article class="lecciones ocho">
+                <article class="lecciones ocho"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">08</span>
                     <h4 class="leccion">La depresión y las adicciones son un asunto serio.</h4>
                     <p class="reflexion">Puede parecer una obviedad, pero no es nada fuera de lo común que las
@@ -208,7 +208,7 @@
                         más positiva y aceptando el coaching como un nuevo camino, fallando en el intento.</p>
                 </article>
 
-                <article class="lecciones nueve">
+                <article class="lecciones nueve"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">09</span>
                     <h4 class="leccion">Ser mejor persona no es tan fácil como proponérselo, pero hay que proponérselo y
                         no cejar en el intento.</h4>
@@ -222,7 +222,7 @@
                         lo duro. Pero se hace más fácil".</p>
                 </article>
 
-                <article class="lecciones diez">
+                <article class="lecciones diez"><!-- Cada lección tiene  función .JS y te mostrará la reflexión y nuevamente la lección-->
                     <span class="numero">10</span>
                     <h4 class="leccion">Hay que seguir viviendo.</h4>
                     <p class="reflexion">La vida, a veces, puede ser complicada. Es cierto. Sin embargo, hay que seguir

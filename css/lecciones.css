@@ -90,23 +90,21 @@ form, input, textarea, select, button, label {
   
   body {
     background: #262626;
+    min-width: 320px; /*Después de esta medida mínima se rompe la web*/
     min-height: 100vh;
     font-size: 100%;
     font-family: 'Barlow';
     color: #fffff6 ;
     line-height: 1.6em;
-
   }
 
-/* AQUI EMPIEZA EL HEADER */
-
+/* Aqui empieza el header */
 .header {
-
   max-width: 90rem;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-between; /*División equitativa a los extremos del header*/
   align-items: center;
 }
 
@@ -114,7 +112,7 @@ form, input, textarea, select, button, label {
   width: 120px;
 }
 
-.abrir__svg {
+.abrir__svg { /* Icon abrir aplica un función de .JS*/
   cursor: pointer;
   width: 2.625rem;
   height: 2.625rem;
@@ -122,26 +120,28 @@ form, input, textarea, select, button, label {
   padding: .2rem;
   color: #E8C91E;
   border: 1px solid #E8C91E;
-
 }
 
 .modal__menu {
-  position: absolute;
+  position: absolute; /* Para superponer el menú cuando se abra */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 100%; /*Ancho total de la pantalla*/
+  height: 100vh; /*Alto total de la pantalla*/
   background-color: #282252;
 
-
-  display: none;
+  display: none;  /* Desactivado. Se activa con una funcion en JS */
 
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.header__ul {
+::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
+  display: none;
+}
+
+.header__ul { /* Menú organizado en una sola columna, uno debajo del otro */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -151,33 +151,31 @@ form, input, textarea, select, button, label {
 }
 
 .active {
-  display: flex;
+  display: flex; /* Activado. Se activa con una funcion en JS */
 }
 
-.cerrar__svg {
+.cerrar__svg { /* Icon cerrar aplica un función de .JS*/
   cursor: pointer;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 50px; /* Ajuste de posición*/
+  right: 50px; /* Ajuste de posición*/
   width: 2.625rem;
   height: 2.625rem;
   color: #FFE19A;
 }
 
 .header__li {
-  font-family: 'Rubik Doodle Shadow';
+  font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
   font-size: 6rem;
   line-height: 5rem;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   font-weight: 700;
   color: #FFE19A;
-  letter-spacing: 3px;
-
+  letter-spacing: 3px; /*Espacio entre letras*/
 }
+/* Aqui termina el Header */
 
-/* AQUI TERMINA EL HEADER */
-
-.main__container {
+.main__container { /*Contenedor de la sección centrado y organizado en una sola columna*/
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -194,7 +192,7 @@ form, input, textarea, select, button, label {
     -5px -5px 9px #222222;
 }
 
-.descripcion {
+.descripcion { /* Texto alineado a la izquierda */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -204,18 +202,17 @@ form, input, textarea, select, button, label {
 
 .descripcion__span {
   font-size: 1.8rem;
-
 }
 
-.descripcion__p {
-  font-family: 'Rubik Doodle Shadow';
+.descripcion__p { 
+  font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
   font-size: 4rem;
   color: #FFE19A;
   line-height: 4rem;
   font-weight: 800;
 }
 
-.concepto {
+.concepto { /* Sección organizada en fila  */
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -223,7 +220,7 @@ form, input, textarea, select, button, label {
   gap: 3rem;
 }
 
-.concepto__text {
+.concepto__text { /* Texto alineado a la derecha */
   text-align: right;
   width: 50%;
 }
@@ -244,9 +241,9 @@ form, input, textarea, select, button, label {
     -5px -5px 9px #1e1e1e;
 }
 
-/* AQUI EMPIEZA FILOSOFOS */
+/* Aqui empieza filosofos */
 
-.filosofias {
+.filosofias { /* Contenido en columna y alineado a la izquierda */
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -259,7 +256,7 @@ form, input, textarea, select, button, label {
   border-radius: 32px;
 }
 
-.filosofos {
+.filosofos { /* Contenido organizado en columna y tres filas */
   width: 100%;
   display: flex;
   flex-flow: column wrap;
@@ -269,12 +266,12 @@ form, input, textarea, select, button, label {
   gap: 2rem;
 }
 
-.filosofos__h3 {
+.filosofos__h3 { /* Texto destacado */
   font-size: 3rem;
   font-weight: 700;
 }
 
-.filosofos__fila {
+.filosofos__fila {/*Cursos de una mano y pinche sobre el elemento*/
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -284,11 +281,15 @@ form, input, textarea, select, button, label {
   cursor: pointer;
 }
 
-.filosofos__h3:hover {
+.amarillo{
   color: #DFB664;
 }
 
-.filosofos__circulo {
+.filosofos__h3:hover { /*Efecto HOVER al texto*/
+  color: #DFB664;
+}
+
+.filosofos__circulo { /*Circulo como detalle*/
   display: block;
   width: 32px;
   height: 32px;
@@ -296,16 +297,16 @@ form, input, textarea, select, button, label {
   background-color: #8EBBC4;
 }
 
-.isMelon {
+.melon { /*Color al circulo con esta clase*/
   background-color: #C87356;
 }
 
-.filosofos__frase {
+.filosofos__frase { /*Relativo para que filosofos__p floten dentro del elemento */
   width: 100%;
   position: relative;
 }
 
-.filosofos__p {
+.filosofos__p { /* Superponer frase tras otra*/
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.2em;
@@ -313,15 +314,14 @@ form, input, textarea, select, button, label {
   position: absolute;
 }
 
-.filosofos__p:nth-child(4) {
+.filosofos__p:nth-child(4) { /* Para que la caja mantenga el alto mas grande de las frases*/
   position: static;
 }
 
-.filosofos__p.isHover {
+.filosofos__p.hover { /* Elementos visibles sin HOVER*/
   opacity: 1;
 }
-
-/* AQUI TERMINA FILOSOFOS */
+/* Aqui termina filósofos */
 
 .card__container {
   width: 100%;
@@ -465,7 +465,6 @@ form, input, textarea, select, button, label {
   .main__container {
     padding: 3rem 1rem;
     border-radius: 16px;
-
   }
 
   .descripcion__span {
@@ -494,7 +493,6 @@ form, input, textarea, select, button, label {
     padding: 2rem;
   }
 
-
   .filosofos__p {
     font-size: 1.2rem;
     text-align: center;
@@ -507,12 +505,8 @@ form, input, textarea, select, button, label {
   }
 
   .filosofos__fila {
-    gap: 1rem;
-
+    gap: 3rem;
   }
-
-
-
 
   .lecciones {
     gap: 2rem;

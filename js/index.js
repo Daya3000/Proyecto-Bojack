@@ -46,9 +46,9 @@ console.log(frasesFilosofos);
 botonesFilosofos.forEach(function (eachFilosofo, index) {
   botonesFilosofos[index].addEventListener("click", function () {
     frasesFilosofos.forEach(function (eachFrase, index) {
-      frasesFilosofos[index].classList.remove("isHover");
+      frasesFilosofos[index].classList.remove("hover");
     });
-    frasesFilosofos[index].classList.add("isHover");
+    frasesFilosofos[index].classList.add("hover");
   });
 });
 

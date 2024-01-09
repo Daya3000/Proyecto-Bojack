@@ -91,7 +91,8 @@
     color: #1d1d1d ;
     line-height: 1.6em; 
   }
-  
+
+
 /* Aqui empieza el Header */
 .header{
   max-width: 90rem;
@@ -136,7 +137,7 @@
   display: none;
 }
 
-.header__ul{
+.header__ul{  /* Menú organizado en una sola columna, uno debajo del otro */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
