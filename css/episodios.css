@@ -1,122 +1,148 @@
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    vertical-align: baseline;
-  }
-  
-  /* Evitamos problemas con las imagenes */
-  img, picture, video, iframe, figure {
-    max-width: 100%;
-    width: 100%;
-    display: block;
-    /* opcional */
-    -o-object-fit: cover;
-       object-fit: cover;
-    /* opcional */
-    -o-object-position: center center;
-       object-position: center center;
-  }
-  
-  /* Reseteamos los enlaces para funcionar como cajas... */
-  a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    font-size: inherit;
-  }
-  
-  /* ... excepto los que se encuentran en párrafos */
-  p a {
-    display: inline;
-  }
-  
-  /* Quitamos los puntos de los <li> */
-  li {
-    list-style-type: none;
-  }
-  
-  /* Configuramos anclas suaves */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
-  h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-    font-size: 1.2em;
-    font-weight: inherit;
-    font-style: inherit;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* Evitamos problemas con los pseudoelementos de quotes */
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: "";
-    content: none;
-  }
-  
-  /* Nivelamos problemas de tipografías y colocación de formularios */
-form, input, textarea, select, button, label {
-    font-family: inherit;
-    font-size: inherit;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-    background-color: transparent;
-    color: inherit;
-    display: block;
-    /* opcional */
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-  }
-  
-  /* Reseteamos las tablas */
-  table, tr, td {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  /* Evitamos problemas con los SVG */
-  svg {
-    width: 100%;
-    display: block;
-    fill: currentColor;
-  }
-  
-  body {
-    background: #262626;
-    min-height: 100vh;
-    font-size: 100%;
-    font-family: 'Barlow';
-    color: #FFFFF6 ;
-    line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
 
-  }
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1.2em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  background: #262626;
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: 'Barlow';
+  color: #FFFFF6;
+  line-height: 1.6em;
+
+}
 
 /* AQUI EMPIEZA EL HEADER */
 
 
-.header{
-
+.header {
   max-width: 90rem;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-between; /*División equitativa a los extremos del header*/
   align-items: center;
-  }
-  .header__h1{
+}
+
+.header__h1 {
   width: 120px;
-  }
-  
-  .header__nav{}
-  
-  .abrir__svg{
+}
+
+.abrir__svg { /* Icon abrir aplica un función de .JS*/
   cursor: pointer;
   width: 2.625rem;
   height: 2.625rem;
@@ -124,314 +150,319 @@ form, input, textarea, select, button, label {
   padding: .2rem;
   color: #E8C91E;
   border: 1px solid #E8C91E;
-    
-  }
-  .modal__menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #282252;
-    z-index: 2;
-  
-    display: none;
-  
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .header__ul{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    
-  }
-  .isActive{
-    display: flex;
-  }
-  .cerrar__svg{
-    cursor: pointer;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 2.625rem;
-    height: 2.625rem;
-    color: #FFE19A;
-  }
-  .header__li{
-    font-family: 'Rubik Doodle Shadow';
-    font-size: 6rem;
-    line-height: 5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #FFE19A;
-    letter-spacing: 3px;
-  
-  }
-  /* AQUI TERMINA EL HEADER */
+}
 
-.main__container{
+.modal__menu {
+  position: absolute; /* Para superponer el menú cuando se abra */
+  top: 0;
+  left: 0;
+  width: 100%; /*Ancho total de la pantalla*/
+  height: 100vh; /*Alto total de la pantalla*/
+  background-color: #282252;
+  z-index: 2;
+
+  display: none; /* Desactivado. Se activa con una funcion en JS */
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
+  display: none;
+}
+
+.header__ul { /* Selector de la lista de menú en dirección de columna */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
+  gap: 4rem;
+}
+
+.active { /* Activado. Se activa con una funcion en JS */
+  display: flex;
+}
+
+.cerrar__svg { /* Icon cerrar aplica un función de .JS*/
+  cursor: pointer;
+  position: absolute;
+  top: 50px; /* Ajuste de posición*/
+  right: 50px; /* Ajuste de posición*/
+  width: 2.625rem;
+  height: 2.625rem;
+  color: #FFE19A;
+}
+
+.header__li {
+  font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
+  font-size: 6rem;
+  line-height: 5rem;
+  text-transform: uppercase; /*Texto transformado todo a mayúscula*/
+  font-weight: 700;
+  color: #FFE19A;
+  letter-spacing: 3px; /*Espacio entre letras*/
+
+}
+/* Aqui termina el Header */
+
+.main__container { /* Contenedor de toda la sección de top de episodios */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 6rem;
 
   max-width: 90rem;
-  padding: 5rem;
+  padding: 5rem; /* Ajustando padding del container*/
   margin: 0 auto;
 
   border-radius: 52px;
   background: #1d1d1d;
-  box-shadow:  5px 5px 9px #181818,
-  -5px -5px 9px #222222;
+  box-shadow: 5px 5px 9px #181818, /*Efecto neumorfismo de la contenedora*/
+    -5px -5px 9px #222222;
 }
 
-  .titulos{
-    width: 100%;
+.titulos { /*Relativo para que texto flote dentro del contenedor y se organice en columna*/
+  width: 100%;
 
-    margin: auto;
-    position: relative;
+  margin: auto;
+  position: relative; 
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.titulos__p {  /* Texto centrado  */
+  width: 60%;
+  font-size: 2rem;
+  line-height: 1.6rem;
+
+}
+
+.titulos__p.poema {
+  z-index: 1; /* Posicionado por encima de las imagenes */
+
+  font-family: 'rubik doodle shadow'; /* Tipografía para titulares*/
+  width: 100%;
+  font-size: 4rem;
+  line-height: 1.1em;
+  margin: 70px 0 70px 0;
+  color: #FFE19A;
+}
+
+.titulos__span {
+  display: block;
+  color: #FFE19A;
+  font-size: 1.2rem;
+}
+
+.titulos__p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.fotos__bojack {  /* Imagenes con posición absoluta para superponerse al texto */
+  width: 200px;
+  height: 200px;
+
+  opacity: 0.4;  /* Opacidad a las imágenes para que pueda leerse el texto */
+  position: absolute;
+
+  border-radius: 22px;
+}
+
+.uno { /* Ajuste de posición izquierda arriba a la primera imagen*/
+  top: calc(50% - 280px);
+  left: 0;
+}
+
+.dos { /* Ajuste de posición derecha abajo a la segunda imagen*/
+  top: calc(50% - 10px);
+  right: 50px;
+}
+
+.tres { /* Ajuste de posición izquierda abajo a la primera imagen*/
+  top: calc(50% - 10px);
+  left: 50px;
+}
+
+.cuatro { /* Ajuste de posición derecha arriba a la primera imagen*/
+  top: calc(50% - 280px);
+  right: 0;
+}
+
+.grid__h2 { /* Texto centrado */
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  width: 100%;
+}
+
+.grid__top {
+  width: 100%;
+
+  display: grid; /* Distribuido como GRID */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Distribuido en columnas que tienen un tamaño mínimo de 300px y que pueden ocupar el espacio disponible del contenedor*/
+  gap: 2rem;
+}
+
+.grid__episodio { /* Efecto de gradiante a las cajas contenedoras de los episodios, con contenido centrado */
+  min-height: 420px;
+  gap: 4rem;
+  padding: 2rem;
+  border-radius: 22px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left top, #8CB9C2, #282252);
+  box-shadow: 5px 5px 9px #161616,
+    -5px -5px 9px #1e1e1e;
+}
+
+.grid__p { /* Texto centrado */
+  font-size: 2.25rem;
+  line-height: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.grid__puesto {
+  font-size: 9.375rem;
+  font-weight: 800;
+}
+
+.grid__puntuacion { /* Texto centrado */
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.grid__temp { /* Texto centrado */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Hacer responsive para Tablets */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
+
+@media (max-width: 960px) {
+  .header { /* Ajuste de tamaños*/
+    padding: 0rem 2rem;
   }
-  .titulos__p{
-    width: 60%;
-    font-size: 2rem;
-    line-height: 1.6rem;
-    text-align: center;
 
-  }
-
-  .titulos__p.poema{
-    z-index: 1;
-
-    font-family: 'rubik doodle shadow';
-    width: 100%;
+  .header__li { /* Ajuste de tamaños*/
     font-size: 4rem;
-    line-height: 1.1em;
-    margin: 70px 0 70px 0;
-    color: #FFE19A;
   }
 
-  .titulos__span{
-   
-    display: block;
-    font-size: 1.2rem;
-    
-    color: #FFE19A;
-
-  }
-  
-  .titulos__p{
-    font-size: 1.2rem;
-    text-align: center;
+  .contenedor { /* Ajuste de tamaños*/
+    padding: 0rem 1rem 3rem;
+    border-radius: 16px;
   }
 
-  .fotos{
-    
+  .main__container { /* Ajuste de tamaños*/
+    padding: 3rem 1rem;
+    border-radius: 16px;
   }
 
-  .fotos__bojack{
-    width: 200px;
-    height: 200px;
-
-    opacity: 0.4;
-    position: absolute;
-
-    border-radius: 22px;
-    background: #1a1a1a;
-    box-shadow:  5px 5px 9px #161616,
-                 -5px -5px 9px #1e1e1e;
+  .titulos__p {
+    font-size: .875rem;
+    line-height: 1rem;
   }
 
-  .uno{
-    top: calc( 50% - 280px);
+  .titulos__p.poema { /* Ajuste de tamaños*/
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 20px 0 20px 0;
+  }
+
+  .fotos__bojack { /* Ajuste de tamaños*/
+    width: 180px;
+    height: 180px;
+  }
+
+  .uno { /* Ajuste de posición*/
+    top: calc(50% - 220px);
     left: 0;
   }
-  .dos{
-    top: calc( 50% - 10px);
-    right: 50px;
-  }
-  .tres{
-    top: calc( 50% - 10px);
-    left: 50px;
-  }
-  .cuatro{
-    top: calc( 50% - 280px);
+
+  .cuatro { /* Ajuste de posición*/
+    top: calc(50% - 220px);
     right: 0;
   }
 
-
-  .grid__h2{
-    font-size: 4rem;
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 4rem;
+  .grid__h2 {
+    font-size: 2.5rem;
+    line-height: 1.1em;
   }
 
-  .grid{
-    width: 100%;
-    
-  }
-  
-  .grid__top{
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-
-   
-  }
-
-  .grid__episodio{
-    min-height: 420px;
-    gap: 4rem;
-    padding: 2rem;
-    border-radius: 22px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient( to left top , #8CB9C2, #282252 );
-    box-shadow:  5px 5px 9px #161616,
-                 -5px -5px 9px #1e1e1e;
-
-
-  }
-  .grid__p{
-    font-size: 2.25rem;
-    line-height: 1em;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  .grid__puesto{
-    font-size: 9.375rem;
-    font-weight: 800;
-  }
-
-  .grid__puntuacion{
-    font-size: 1.125rem;
-    font-weight: 400;
-  }
-
-  .grid__temp{
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-    /* Hacer responsive para Tablets */
-
-  @media ( max-width: 960px) {
-    .header{
-      padding: 0rem 2rem;
-    }
-    .header__li{
-      font-size: 4rem;
-    }
-    
-    .contenedor{
-      padding: 0rem 1rem 3rem;
-      border-radius: 16px;
-      }
-    .main__container{
-      padding: 3rem 1rem;
-      border-radius: 16px;
-    }
-
-    .titulos__p{
-      font-size: .875rem;
-      line-height: 1rem;
-    }
-    .titulos__p.poema{
-      font-size: 2rem;
-      line-height: 2rem;
-      margin: 20px 0 20px 0;
-    }
-
-    .fotos__bojack{
-      width: 180px;
-      height: 180px;
-    }
-
-    .uno {
-      top: calc( 50% - 220px);
-      left: 0;
-    }
-
-    .cuatro {
-      top: calc( 50% - 220px);
-      right: 0;
-    }
-
-    .grid__h2{
-      font-size: 2.5rem;
-      line-height: 1.1em;
-    }
-    .grid__p{
-      font-size: 2rem;
-    }
-  }
-
-  /* Hacer responsive para Moviles */
-
-@media ( max-width: 480px ) {
-  .header__li{
+  .grid__p {
     font-size: 2rem;
   }
-  .cerrar__svg{
+}
+
+
+/* Hacer responsive para Moviles */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
+
+@media (max-width: 480px) {
+  .header__li { /* Ajuste de tamaños*/
+    font-size: 2rem;
+  }
+
+  .cerrar__svg { /* Ajuste de tamaños*/
     top: 30px;
     right: 30px;
   }
 
-  .contenedor{
+  .contenedor {
     border-radius: 16px;
     gap: 3rem;
-    }
-    .main__container{
-      padding: 3rem 1rem;
-      border-radius: 16px;
-      gap: 3rem;
-    }
-  .fotos__bojack{
+  }
+
+  .main__container {
+    gap: 3rem;
+  }
+
+  .fotos__bojack {
     width: 120px;
     height: 120px;
     opacity: 0.2;
   }
-  .titulos__p{
+
+  .titulos__p {
     width: 80%;
   }
 
-
-  .uno {
-    top: calc( 50% - 180px);
+  .uno { /* Ajuste de posición*/
+    top: calc(50% - 180px);
     left: 0;
   }
 
-  .cuatro {
-    top: calc( 50% - 180px);
+  .cuatro { /* Ajuste de posición*/
+    top: calc(50% - 180px);
     right: 0;
   }
-  .tres{
-    top: calc( 50% - 10px);
+
+  .tres { /* Ajuste de posición*/
+    top: calc(50% - 10px);
     left: 0px;
   }
-  .dos{
-    top: calc( 50% - 10px);
+
+  .dos { /* Ajuste de posición*/
+    top: calc(50% - 10px);
     right: 0px;
   }
 
-  .grid__temp {
+  .grid__temp { /* Ajuste de tamaños*/
     font-size: 1.125rem;
     font-weight: 600;
- 
+  }
 }

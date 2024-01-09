@@ -98,10 +98,9 @@ form, input, textarea, select, button, label {
 
   }
 
-  /* AQUI EMPIEZA EL HEADER */
+/* AQUI EMPIEZA EL HEADER */
 
-
-.header{
+.header {
 
   max-width: 90rem;
   margin: auto;
@@ -109,14 +108,13 @@ form, input, textarea, select, button, label {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  }
-  .header__h1{
+}
+
+.header__h1 {
   width: 120px;
-  }
-  
-  .header__nav{}
-  
-  .abrir__svg{
+}
+
+.abrir__svg {
   cursor: pointer;
   width: 2.625rem;
   height: 2.625rem;
@@ -124,152 +122,159 @@ form, input, textarea, select, button, label {
   padding: .2rem;
   color: #E8C91E;
   border: 1px solid #E8C91E;
-    
-  }
-  .modal__menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #282252;
-    
-  
-    display: none;
-  
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .header__ul{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    
-  }
-  .isActive{
-    display: flex;
-  }
-  .cerrar__svg{
-    cursor: pointer;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 2.625rem;
-    height: 2.625rem;
-    color: #FFE19A;
-  }
-  .header__li{
-    font-family: 'Rubik Doodle Shadow';
-    font-size: 6rem;
-    line-height: 5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #FFE19A;
-    letter-spacing: 3px;
-  
-  }
-  /* AQUI TERMINA EL HEADER */
 
-.main__container{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center ;
-    gap: 6rem;
+}
 
-    max-width: 90rem;
-    padding: 5rem;
-    margin: 0 auto;
+.modal__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #282252;
 
-    border-radius: 52px;
-    background: #1d1d1d;
-    box-shadow:  5px 5px 9px #181818,
+
+  display: none;
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+}
+
+.active {
+  display: flex;
+}
+
+.cerrar__svg {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 2.625rem;
+  height: 2.625rem;
+  color: #FFE19A;
+}
+
+.header__li {
+  font-family: 'Rubik Doodle Shadow';
+  font-size: 6rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FFE19A;
+  letter-spacing: 3px;
+
+}
+
+/* AQUI TERMINA EL HEADER */
+
+.main__container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  max-width: 90rem;
+  padding: 5rem;
+  margin: 0 auto;
+
+  border-radius: 52px;
+  background: #1d1d1d;
+  box-shadow: 5px 5px 9px #181818,
     -5px -5px 9px #222222;
 }
 
-.descripcion{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start ;
-    gap:2rem;
+.descripcion {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
-.descripcion__span{
-    font-size: 1.8rem;
+.descripcion__span {
+  font-size: 1.8rem;
 
 }
-.descripcion__p{
-    font-family: 'Rubik Doodle Shadow';
-    font-size: 4rem;
-    color: #FFE19A;
-    line-height: 4rem;
-    font-weight: 800;
+
+.descripcion__p {
+  font-family: 'Rubik Doodle Shadow';
+  font-size: 4rem;
+  color: #FFE19A;
+  line-height: 4rem;
+  font-weight: 800;
 }
-.concepto{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-end ;
-    gap: 3rem;
+
+.concepto {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
 }
-.concepto__text{
-    text-align: right;
-    width: 50%;
+
+.concepto__text {
+  text-align: right;
+  width: 50%;
 }
-.concepto__h2{
-    font-size: 3rem;
-    line-height: 3rem;
-    font-weight: 700;
-    text-align: right;
-    margin-bottom: 2rem;
+
+.concepto__h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 700;
+  text-align: right;
+  margin-bottom: 2rem;
 }
-.concepto__span{
-    
-    
-}
-.concepto__img{
-    width: 50%;
-    border-radius: 22px;
-    background: #1a1a1a;
-    box-shadow:  5px 5px 9px #161616,
-                 -5px -5px 9px #1e1e1e;
+
+.concepto__img {
+  width: 50%;
+  border-radius: 22px;
+  background: #1a1a1a;
+  box-shadow: 5px 5px 9px #161616,
+    -5px -5px 9px #1e1e1e;
 }
 
 /* AQUI EMPIEZA FILOSOFOS */
 
-.filosofias{
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 3rem;
-
-    padding: 3rem;
-    border: .2125rem solid  #E8C91E;
-    border-radius: 32px;
-}
-.resumen__span{}
-
-.filosofos{
+.filosofias {
   width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-height: 250px;
-    gap: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+
+  padding: 3rem;
+  border: .2125rem solid #E8C91E;
+  border-radius: 32px;
 }
-.filosofos__h3{
+
+.filosofos {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 250px;
+  gap: 2rem;
+}
+
+.filosofos__h3 {
   font-size: 3rem;
   font-weight: 700;
 }
 
-.filosofos__fila{
+.filosofos__fila {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -279,53 +284,60 @@ form, input, textarea, select, button, label {
   cursor: pointer;
 }
 
-.filosofos__h3:hover{
-color: #DFB664;
+.filosofos__h3:hover {
+  color: #DFB664;
 }
 
-.filosofos__circulo{
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50px;
-    background-color: #8EBBC4;
+.filosofos__circulo {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  background-color: #8EBBC4;
 }
-.isMelon{
+
+.isMelon {
   background-color: #C87356;
 }
-.filosofos__frase{
+
+.filosofos__frase {
   width: 100%;
   position: relative;
 }
-.filosofos__p{
-    font-weight: 300;
-    font-size: 1.5rem;
-    line-height: 1.2em;
-    opacity: 0;
-    position: absolute;
+
+.filosofos__p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+  opacity: 0;
+  position: absolute;
 }
-.filosofos__p:nth-child(4){
+
+.filosofos__p:nth-child(4) {
   position: static;
 }
-.filosofos__p.isHover{
+
+.filosofos__p.isHover {
   opacity: 1;
 }
 
 /* AQUI TERMINA FILOSOFOS */
 
-.card__container{
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 2rem;
+.card__container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
 }
-.card__img{
+
+.card__img {
   border-radius: 22px;
-    background: #1a1a1a;
-    box-shadow:  5px 5px 9px #161616,
-                 -5px -5px 9px #1e1e1e
+  background: #1a1a1a;
+  box-shadow: 5px 5px 9px #161616,
+    -5px -5px 9px #1e1e1e
 }
-.card__span{
+
+.card__span {
   width: 70%;
 
   display: block;
@@ -334,197 +346,231 @@ color: #DFB664;
   text-align: center;
 
 }
-.lecciones__contenedor{
+
+.lecciones__contenedor {
   width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.5rem;
-    color: #1d1d1d;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  color: #1d1d1d;
 }
-.lecciones{
-    width: 100%;
-    min-height: 9.375rem;
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 3rem;
+.lecciones {
+  width: 100%;
+  min-height: 9.375rem;
 
-    padding: 1.875rem;
-    border-radius: 2rem;
-    transform: rotateX(0deg);
-    transition: all 2s ease;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+
+  padding: 1.875rem;
+  border-radius: 2rem;
+  transform: rotateX(0deg);
+  transition: all 2s ease;
 }
-.lecciones.active{
+
+.lecciones.active {
   transform: rotateX(360deg);
   background-color: #282252;
   color: #fffff6;
 }
-.numero{
-    font-size: 5rem;
-    font-weight: 900;
+
+.numero {
+  font-size: 5rem;
+  font-weight: 900;
 }
-.leccion{
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 2rem;
-    transition: all 1s ease;
+
+.leccion {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  transition: all 1s ease;
 }
-.leccion.active{
-  display:none;
-} 
-.reflexion{
-    display: none;
-    transition: all 1s ease;
+
+.leccion.active {
+  display: none;
 }
-.reflexion.active{
-    display: block;
+
+.reflexion {
+  display: none;
+  transition: all 1s ease;
 }
-.uno{
+
+.reflexion.active {
+  display: block;
+}
+
+.uno {
   background-color: #FFE19A;
 }
-.dos{
+
+.dos {
   background-color: #602273;
 }
-.tres{
+
+.tres {
   background-color: #8EBBC4;
 }
-.cuatro{
+
+.cuatro {
   background-color: #C87356;
 }
-.cinco{
+
+.cinco {
   background-color: #DFB664;
 }
-.seis{
+
+.seis {
   background-color: #9B5434;
 }
-.siete{
+
+.siete {
   background-color: #E7E4E3;
 }
-.ocho{
+
+.ocho {
   background-color: #E8C91E;
 }
-.nueve{
+
+.nueve {
   background-color: #8EBBC4;
 }
-.diez{
+
+.diez {
   background-color: #C87356;
 }
 
 
- /* Hacer responsive para Tablet */
+/* Hacer responsive para Tablet */
 
-@media ( max-width: 960px) {
-  .header{
+@media (max-width: 960px) {
+  .header {
     padding: 0rem 2rem;
   }
-  .header__li{
+
+  .header__li {
     font-size: 2rem;
   }
 
-  .contenedor{
+  .contenedor {
     padding: 0rem 1rem 3rem;
     border-radius: 16px;
-    }
-  .main__container{
+  }
+
+  .main__container {
     padding: 3rem 1rem;
     border-radius: 16px;
-    
+
   }
-  .descripcion__span{
+
+  .descripcion__span {
     font-size: 1.4rem;
   }
-  .descripcion__p{
+
+  .descripcion__p {
     font-size: 3rem;
     line-height: 1.1em;
   }
-  .concepto{
+
+  .concepto {
     flex-flow: column nowrap;
-    
+
   }
-  .concepto__text{
+
+  .concepto__text {
     width: 100%;
   }
-  .concepto__img{
+
+  .concepto__img {
     width: 100%;
   }
-  .filosofias{
+
+  .filosofias {
     padding: 2rem;
   }
-  
 
-  .filosofos__p{
+
+  .filosofos__p {
     font-size: 1.2rem;
     text-align: center;
   }
 
 
-  .filosofos__h3{
+  .filosofos__h3 {
     font-size: 2.5rem;
     font-weight: 700;
   }
-  
-  .filosofos__fila{
+
+  .filosofos__fila {
     gap: 1rem;
-    
+
   }
 
-  
 
 
-  .lecciones{
+
+  .lecciones {
     gap: 2rem;
     padding: 1rem;
     border-radius: 16px;
     min-height: 120px;
   }
-  .leccion{
+
+  .leccion {
     font-size: 1.4rem;
     line-height: 1.2em;
   }
-  .numero{
+
+  .numero {
     font-size: 2rem;
   }
 }
 
-  /* Hacer responsive para Moviles */
+/* Hacer responsive para Moviles */
 
-  @media ( max-width: 480px) {
-    .header__li{
-      font-size: 2rem;
-    }
-    .cerrar__svg{
-      top: 30px;
-      right: 30px;
-    }
-
-    .contenedor{
-      border-radius: 16px;
-      gap: 3rem;
-      }
-    .main__container{
-      padding: 3rem 1rem;
-      border-radius: 16px;
-      gap: 3rem;
-    }
-    .resumen__span{
-      text-align: center;
-    }
-    .descripcion__p {
-      font-size: 2rem;
-    
+@media (max-width: 480px) {
+  .header__li {
+    font-size: 2rem;
   }
+
+  .cerrar__svg {
+    top: 30px;
+    right: 30px;
+  }
+
+  .contenedor {
+    border-radius: 16px;
+    gap: 3rem;
+  }
+
+  .main__container {
+    padding: 3rem 1rem;
+    border-radius: 16px;
+    gap: 3rem;
+  }
+
+  .resumen__span {
+    text-align: center;
+  }
+
+  .descripcion__p {
+    font-size: 2rem;
+
+  }
+
   .concepto__h2 {
     font-size: 2.5rem;
     line-height: 1.1em;
   }
+
   .filosofos__h3 {
     font-size: 1.8rem;
     line-height: 1.1em;
   }
 
-  }
+}

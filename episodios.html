@@ -1,121 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Episodios | Bojack Horseman</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Episodios | Bojack Horseman</title> <!-- Titulo de mi Proyecto -->
+    <link rel="icon" type="image/png" href="assets/favicon.png"> <!-- Link de favicon para personalizar página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Tipografia de Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/episodios.css">
+    <!-- Tipografias agregadas de Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/episodios.css"> <!-- Link de CSS para dar estilo a la página -->
     <script src="js/index.js" defer></script>
+    <!-- Se agrego defer para que se descargue al mismo tiempo que el HTML pero que no se ejecute hasta que este termine su descarga -->
 </head>
+
 <body>
-    <header class="header">
+    <header class="header"> <!-- Contenedor del Header con menú desplegable -->
         <h1 class="header__h1">
             <a href="./index.html" title="Ir al inicio en Bojack">
-                <img loading="lazy" src="assets/Bo-Jack-Horseman-Logo.png" alt="Logo Bojack">
-            </a>      
+                <img loading="lazy" src="assets/Bo-Jack-Horseman-Logo.png" alt="Foto del logo Bojack">
+                <!-- Logo de Bojack -->
+            </a>
         </h1>
 
-        <nav class="header__nav">
-            <svg class="abrir__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        <nav class="header__nav"> <!-- Navegador de menú hamburguesa -->
+            <svg class="abrir__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                viewBox="0 0 16 16"> <!-- Icon para abrir el menú, función con .JS  -->
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
             </svg>
             <div class="modal__menu">
-                <svg class="cerrar__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                </svg>
-                <ul class="header__ul isActive">
+                <!-- Modal que se activa con una función de .JS permite abrir y cerrar el menu con la acción CLICK  -->
+                <svg class="cerrar__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg> <!-- Icon para cerrar el menú, función con .JS  -->
+                <ul class="header__ul active">
+                    <!--Lista de links que se agrego estilo active cuando JS. detecta el evento Click -->
                     <li class="header__li"><a href="./index.html">Bojack</a></li>
                     <li class="header__li"><a href="./personajes.html">Personajes</a></li>
                     <li class="header__li"><a href="./episodios.html">Episodios</a></li>
                     <li class="header__li"><a href="./lecciones.html">Lecciones</a></li>
                 </ul>
             </div>
-            
+
         </nav>
 
     </header>
 
-    <div class="contenedor">
+    <div class="contenedor"> <!-- Contenedor de toda la sección, diseño modular  -->
 
-        <div class="main__container">
+        <div class="main__container"> <!-- Contenedor de frases y episodios top  -->
 
-            <section class="titulos">
-                <p class="titulos__p">BoJack Horseman, un olvidado actor que supo vivir sus días de gloria gracias a una comedia televisiva, y que se enfrenta a las más duras crisis existenciales y adicciones mientras intenta volver a las grandes ligas
-                </p>
+            <div class="titulos"> <!-- Contenedor de frases y fotos superpuestas -->
+                <p class="titulos__p">Bojack Horseman, un olvidado actor que supo vivir sus días de gloria gracias a una comedia televisiva, y que se enfrenta a las más duras crisis existenciales y adicciones mientras intenta volver a las grandes ligas.</p>
                 <p class="titulos__p poema">"Realmente debí haber pensado,
-                acerca de la vista a la mitad del camino,
-                desearía haber sabido
-                acerca de la vista a la mitad del camino".
+                    acerca de la vista a la mitad del camino,
+                    desearía haber sabido
+                    acerca de la vista a la mitad del camino".
                     <span class="titulos__span">Alison Tafel</span>
                 </p>
                 <p class="titulos__p">Mediante una forma particular de hacer comedia , la serie es un espectáculo hilarante y dramático, satírico y trágico, te mostramos los mejores capítulos con historias sumergidas en la depresión, las drogas y la ansiedad existencial.</p>
-                <div class="fotos">
-                    <img loading="lazy" class="fotos__bojack uno" src="assets/bojack-epi1.jpeg" alt="Foto uno de Bojack">
-                    <img loading="lazy" class="fotos__bojack dos " src="assets/bojack-epi2.jpeg" alt="Foto dos de Bojack">
-                    <img loading="lazy" class="fotos__bojack tres" src="assets/bojack-epi3.jpeg" alt="Foto tres de Bojack">
-                    <img loading="lazy" class="fotos__bojack cuatro" src="assets/bojack-epi4.jpeg" alt="Foto cuatro de Bojack">
+                <div class="fotos"> <!-- Contenedor de fotos -->
+                    <img loading="lazy" class="fotos__bojack uno" src="assets/bojack-epi1.jpeg"
+                        alt="Foto uno de Bojack">
+                    <img loading="lazy" class="fotos__bojack dos " src="assets/bojack-epi2.jpeg"
+                        alt="Foto dos de Bojack">
+                    <img loading="lazy" class="fotos__bojack tres" src="assets/bojack-epi3.jpeg"
+                        alt="Foto tres de Bojack">
+                    <img loading="lazy" class="fotos__bojack cuatro" src="assets/bojack-epi4.jpeg"
+                        alt="Foto cuatro de Bojack">
                 </div>
-            </section>
-    
-            <section class="grid">
+            </div>
+
+            <section class="grid"> <!-- Sección de los episodios top trabajadas con GRID-->
                 <h2 class="grid__h2">Top de Episodios</h2>
-                <div class="grid__top">
+                <div class="grid__top"> <!-- Contenedor de los episodios top trabajadas con GRID-->
                     <a href="./episodioUno.html">
-                        <div class="grid__episodio">
+                        <div class="grid__episodio"><!-- Contenedor del top 1 -->
                             <p class="grid__p">Las vistas desde la mitad de la caída.</p>
                             <p class="grid__puesto">1</p>
                             <p class="grid__puntuacion">Puntuación en IMDB 9,9</p>
                             <p class="grid__temp">Temporada 6, episodio 15.</p>
                         </div>
                     </a>
-    
+
                     <a href="./episodioDos.html">
-                        <div class="grid__episodio">
+                        <div class="grid__episodio"><!-- Contenedor del top 2  -->
                             <p class="grid__p">Un churro gratis.</p>
                             <p class="grid__puesto">2</p>
                             <p class="grid__puntuacion">Puntuación en IMDB 9,8</p>
                             <p class="grid__temp">Temporada 5, episodio 6. </p>
                         </div>
                     </a>
-                    
+
                     <a href="./episodioTres.html">
-                        <div class="grid__episodio">
+                        <div class="grid__episodio"><!-- Contenedor del top 3  -->
                             <p class="grid__p">La flecha del tiempo.</p>
                             <p class="grid__puesto">3</p>
                             <p class="grid__puntuacion">Puntuación en IMDB 9,8</p>
-                            <p class="grid__temp">Temporada 4, episodio 11.  </p>
+                            <p class="grid__temp">Temporada 4, episodio 11. </p>
                         </div>
                     </a>
-                    
+
                     <a href="./episodioCuatro.html">
-                        <div class="grid__episodio">
+                        <div class="grid__episodio"> <!-- Contenedor del top 4 -->
                             <p class="grid__p">Pez fuera el agua</p>
                             <p class="grid__puesto">4</p>
                             <p class="grid__puntuacion">Puntuación en IMDB 9,6</p>
                             <p class="grid__temp">Temporada 3, episodio 4. </p>
                         </div>
                     </a>
-                    
+
                     <a href="./episodioCinco.html">
-                        <div class="grid__episodio">
+                        <div class="grid__episodio">  <!-- Contenedor del top 5 -->
                             <p class="grid__p">¡Fue una pasada, tío!</p>
                             <p class="grid__puesto">5</p>
                             <p class="grid__puntuacion">Puntuación en IMDB 9,6</p>
                             <p class="grid__temp">Temporada 3, episodio 11.</p>
                         </div>
                     </a>
-                    
-    
+
+
                 </div>
             </section>
         </div>
     </div>
-    
-    
-    
+
+
+
 </body>
+
 </html>

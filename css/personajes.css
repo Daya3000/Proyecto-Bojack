@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
+    /* border: solid 2px red; */
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     vertical-align: baseline;
@@ -152,7 +152,7 @@ form, input, textarea, select, button, label {
   gap: 4rem;  
 }
 
-.isActive{ 
+.active{ 
   display: flex; /* Activado. Se activa con una funcion en JS */
 }
 
@@ -176,13 +176,6 @@ form, input, textarea, select, button, label {
   letter-spacing: 3px; /*Espacio entre letras*/
 }
 /* Aqui termina el Header */
-
-.contenedor{ /* Contenedor general */
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
 
 .main__container{ /* Segundo contenedor para ordenar contenido */
   display: flex;
@@ -288,65 +281,66 @@ form, input, textarea, select, button, label {
 
 @media ( max-width: 960px){
   .header{
-    padding: 0rem 2rem; /* Ajuste de tamaño */
+  padding: 0rem 2rem; /* Ajuste de tamaño */
   }
 
   .header__li{
-    font-size: 4rem; /* Ajuste de tamaño */
+  font-size: 4rem; /* Ajuste de tamaño */
   }
  
   .contenedor{
-    padding: 0rem 1rem 3rem;
-    border-radius: 16px;
-    }
+  padding: 0rem 1rem 3rem;
+  border-radius: 16px;
+  }
 
   .main__container{
-    padding: 3rem 1rem;
-    border-radius: 16px;
-    min-height: 55rem;
+  padding: 3rem 1rem;
+  border-radius: 16px;
+  min-height: 55rem;
   }
 
   .personajes__nav{
-    position: relative;
+  position: relative;
   }
 
   .personajes__ul{ /* Organizado en una sola columna, un personaje debajo del otro */
-    flex-flow: column nowrap;
-    gap: 2rem;
-    border-radius: 0px;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  border-radius: 0px;
   }
 
   .personajes__li{
-    background-color: #282252;
-    border-radius: 24px;
+  background-color: #282252;
+  border-radius: 24px;
+  
   }
 
   .personajes__link{ /* Dirección del contenedor en fila y orden inversa    */
-    display: flex;
-    flex-flow: row-reverse nowrap;
-    gap: 1rem;
-    min-height: 0;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  gap: 1rem;
+  min-height: 0;
   }
 
   .personajes__h2{
-    font-size: 5rem;
-    line-height: 6rem;
+  font-size: 5rem;
+  line-height: 6rem;
   }
 
   .personajes__span{ /* Nombre de los personajes se posicionen en la misma caja    */
-    display: flex;
-    opacity: 1;
-    font-size: 3.5rem;
-    position: static;
-    transform: rotate(0deg);
+  display: flex;
+  opacity: 1;
+  font-size: 3.5rem;
+  position: static;
+  transform: rotate(0deg);
   }
 
   .personajes__img{
-    width: 200px;
+  width: 200px;
   }
 
   .personajes__li:hover .personajes__img{ /* Animación en la imagen de un pequeño movimiento en ejeX */
-    transform: translateX(12%);
+  transform: translateX(12%);
   }
 }
 
@@ -362,11 +356,6 @@ form, input, textarea, select, button, label {
   .cerrar__svg{ /* Ajuste de tamaño */
     top: 30px;
     right: 30px;
-  }
-
-  .contenedor{
-    border-radius: 16px;
-    gap: 3rem;
   }
 
   .main__container{

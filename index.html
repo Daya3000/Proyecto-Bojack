@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bojack Horseman - Tribute</title>  <!-- Titulo de mi Proyecto -->
-    <link rel="icon" type="image/png" href="assets/favicon.png"/>  <!-- Link de favicon para personalizar página -->
+    <title>Bojack Horseman - Tribute</title> <!-- Titulo de mi Proyecto -->
+    <link rel="icon" type="image/png" href="assets/favicon.png"> <!-- Link de favicon para personalizar página -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Tipografia de Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet"> <!-- Tipografias agregadas de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <!-- Tipografias agregadas de Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/index.css"> <!-- Link de CSS para dar estilo a la página -->
-    <script src="js/index.js" defer></script> <!-- Se agrego defer para que se descargue al mismo tiempo que el HTML pero que no se ejecute hasta que este termine su descarga -->
+    <script src="js/index.js" defer></script>
+    <!-- Se agrego defer para que se descargue al mismo tiempo que el HTML pero que no se ejecute hasta que este termine su descarga -->
 </head>
+
 <body>
     <header class="header"> <!-- Contenedor del Header con menú desplegable -->
         <h1 class="header__h1">
             <a href="./index.html" title="Ir al inicio en Bojack">
-                <img loading="lazy" src="assets/Bo-Jack-Horseman-Logo.png" alt="Foto del logo Bojack"> <!-- Logo de Bojack -->
-            </a>      
+                <img loading="lazy" src="assets/Bo-Jack-Horseman-Logo.png" alt="Foto del logo Bojack">
+                <!-- Logo de Bojack -->
+            </a>
         </h1>
 
         <nav class="header__nav"> <!-- Navegador de menú hamburguesa -->
-            <svg class="abrir__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" viewBox="0 0 16 16"> <!-- Icon para abrir el menú, función con .JS  -->
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            <svg class="abrir__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                viewBox="0 0 16 16"> <!-- Icon para abrir el menú, función con .JS  -->
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
             </svg>
-            <div class="modal__menu">  <!-- Modal que se activa con una función de .JS permite abrir y cerrar el menu con la acción CLICK  -->
-                <svg class="cerrar__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            <div class="modal__menu">
+                <!-- Modal que se activa con una función de .JS permite abrir y cerrar el menu con la acción CLICK  -->
+                <svg class="cerrar__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
                 </svg> <!-- Icon para cerrar el menú, función con .JS  -->
-                <ul class="header__ul isActive"> <!--Lista de links que se agrego estilo IsActive cuando JS. detecta el evento Click -->
+                <ul class="header__ul active">
+                    <!--Lista de links que se agrego estilo active cuando JS. detecta el evento Click -->
                     <li class="header__li"><a title="Bojack" href="./index.html">Bojack</a></li>
                     <li class="header__li"><a title="Personajes" href="./personajes.html">Personajes</a></li>
                     <li class="header__li"><a title="Episodios" href="./episodios.html">Episodios</a></li>
                     <li class="header__li"><a title="Lecciones" href="./lecciones.html">Lecciones</a></li>
                 </ul>
             </div>
-            
+
         </nav>
 
     </header>
@@ -44,7 +59,8 @@
     <div class="contenedor"> <!-- Contenedor de toda la sección, diseño modular  -->
 
         <div class="home"> <!-- Video intro de Bojack  -->
-            <video poster="assets/bojack-epi1.jpeg" autoplay controls playsinline preload="none" loop muted src="assets/videoplayback.mp4" class="home__video"></video>
+            <video poster="assets/bojack-epi1.jpeg" autoplay controls playsinline preload="none" loop muted
+                src="assets/videoplayback.mp4" class="home__video"></video>
         </div>
         <p class="home__p"><a href="#biografia">Leer más sobre Bojack ↓</a></p> <!-- Link a la primera sección -->
 
@@ -53,37 +69,55 @@
 
             <section class="biografia" id="biografia"> <!-- Sección de resumen de Bojack -->
                 <h2 class="biografia__h2">Bojack Horseman</h2>
-                <p class="biografia__p">Caballo antropomorfo que triunfó en los años 90 en una exitosa comedia llamada "Horsin Around". y que actualmente
-                <span class="biografia__p color">es incapaz de reconducir su vida profesional y personal.</span></p> 
+                <p class="biografia__p">Caballo antropomorfo que triunfó en los años 90 en una exitosa comedia llamada
+                    "Horsin Around". y que actualmente
+                    <span class="biografia__p color">es incapaz de reconducir su vida profesional y personal.</span>
+                </p>
             </section>
 
-            <section class="ninez"> <!-- Sección de niñez de Bojack -->
+            <div class="ninez"> <!-- Sección de niñez de Bojack -->
                 <div class="ninez__contenedor">
-                    <img loading="lazy" class="ninez__img" src="assets/Bojack_Horseman_-Kid-.webp" alt="Bojack pequeno" >
-                    <p class="ninez__p">Nacido el 2 de enero de 1964, nació y creció en California, y creció en una familia abusiva y disfuncional .</span>
+                    <img loading="lazy" class="ninez__img" src="assets/Bojack_Horseman_-Kid-.webp" alt="Bojack pequeno">
+                    <p class="ninez__p">Nacido el 2 de enero de 1964, nació y creció en California, y creció en una
+                        familia abusiva y disfuncional .</p>
                 </div>
-            </section>
+            </div>
 
             <section class="padres"> <!-- Sección de quienes fueron los padres de Bojack -->
                 <div class="padres__contenedor">
                     <h2 class="padres__h2">Padre</h2>
-                    <p class="padres__p">Butterscotch Horseman;<br> Era un novelista fracasado de origen de clase trabajadora.</p>
+                    <p class="padres__p">Butterscotch Horseman;<br> Era un novelista fracasado de origen de clase
+                        trabajadora.</p>
                 </div>
                 <div class="padres__contenedor">
                     <h2 class="padres__h2">Madre</h2>
-                    <p class="padres__p">Beatrice Horseman; <br>Ama de casa, ex miembro de la alta sociedad y heredera de la fortuna de Sugarman Company.</p>
-                </div> 
+                    <p class="padres__p">Beatrice Horseman; <br>Ama de casa, ex miembro de la alta sociedad y heredera
+                        de la fortuna de Sugarman Company.</p>
+                </div>
             </section>
-            
-            <section class="resumen"> <!-- Sección de como fueron los padres de Bojack -->
+
+            <div class="resumen"> <!-- Sección de como fueron los padres de Bojack -->
                 <div class="resumen__contenedor">
-                    <p class="resumen__p">Butterscotch, el padre de BoJack Horseman, era un alcohólico que regularmente abusaba verbal y a veces físicamente de BoJack durante su juventud. Además, expresaba opiniones ultraconservadoras y a menudo culpaba a demócratas, judíos o comunistas por sus propios fracasos. Practicaba el adulterio, evitaba a su familia recluyéndose para beber y trabajar en su novela o teniendo aventuras extramatrimoniales. Por otro lado, la madre de BoJack, Beatrice, también era alcohólica y fumadora, resentida y odiada por BoJack por todo lo que le había " hecho ", incluido el nacimiento, diciendo que era hermosa antes de quedar embarazada. Para ella, BoJack era un recordatorio de todas sus malas decisiones, y su propia infancia traumática no ayudó a ese hecho.Su relación con Butterscotch era conflictiva, y constantemente discutían frente a su hijo. Estos patrones de comportamiento, sumados a los problemas familiares, adicciones y disputas, hicieron que los años de formación de BoJack fueran difíciles y moldearon su personalidad en la adultez.</p>
+                    <p class="resumen__p">Butterscotch, el padre de BoJack Horseman, era un alcohólico que regularmente
+                        abusaba verbal y a veces físicamente de BoJack durante su juventud. Además, expresaba opiniones
+                        ultraconservadoras y a menudo culpaba a demócratas, judíos o comunistas por sus propios
+                        fracasos. Practicaba el adulterio, evitaba a su familia recluyéndose para beber y trabajar en su
+                        novela o teniendo aventuras extramatrimoniales. Por otro lado, la madre de BoJack, Beatrice,
+                        también era alcohólica y fumadora, resentida y odiada por BoJack por todo lo que le había "
+                        hecho ", incluido el nacimiento, diciendo que era hermosa antes de quedar embarazada. Para ella,
+                        BoJack era un recordatorio de todas sus malas decisiones, y su propia infancia traumática no
+                        ayudó a ese hecho.Su relación con Butterscotch era conflictiva, y constantemente discutían
+                        frente a su hijo. Estos patrones de comportamiento, sumados a los problemas familiares,
+                        adicciones y disputas, hicieron que los años de formación de BoJack fueran difíciles y moldearon
+                        su personalidad en la adultez.</p>
                 </div>
                 <img loading="lazy" class="resumen__img" src="assets/bojack-family.jpeg" alt="Padres de Bojack">
 
-            </section>
+            </div>
             <p class="biografia__p"> <!-- Sección de una de las tantas frases de Bojack -->
-                'Tengo la sensación de que nací con una fuga, y cualquier cosa buena acabará saliendo lentamente de mí y creo que ya no me queda nada. Jamás la recuperaré. Ya es tarde. La vida es un montón de puertas que se cierran'.
+                'Tengo la sensación de que nací con una fuga, y cualquier cosa buena acabará saliendo lentamente de mí y
+                creo que ya no me queda nada. Jamás la recuperaré. Ya es tarde. La vida es un montón de puertas que se
+                cierran'.
             </p>
         </div>
 
@@ -93,7 +127,7 @@
             <span class="spoiler__marquee">Advertencia:Spoilers</span>
             <span class="spoiler__marquee">Advertencia:Spoilers</span>
             <span class="spoiler__marquee">Advertencia:Spoilers</span>
-            </div>  
+        </div>
 
         <section class="personalidad">
             <h3 class="personalidad__h3">Personalidad</h3>
@@ -111,9 +145,10 @@
             </div>
         </section>
 
-        <div class="secundary__container">  <!-- Contenedor con la segunda parte de la biografía de Bojack -->
+        <div class="secundary__container"> <!-- Contenedor con la segunda parte de la biografía de Bojack -->
             <section class="ocupaciones"> <!-- Sección de las ocupaciones de Bojack -->
-                <img loading="lazy" class="ocupaciones__img" src="assets/bojack2.webp" alt="Bojack con lentes y fondo naranja" >
+                <img loading="lazy" class="ocupaciones__img" src="assets/bojack2.webp"
+                    alt="Bojack con lentes y fondo naranja">
                 <div class="ocupaciones__contenedor">
                     <h3 class="ocupaciones__h3">Ocupaciones</h3>
                     <ul class="ocupaciones__ul">
@@ -123,26 +158,27 @@
                         <li class="ocupaciones__li">Comediante amateur </li>
                         <li class="ocupaciones__li">Camarero en Elefanté </li>
                     </ul>
-                </div> 
+                </div>
             </section>
-        
+
             <section class="exitos"> <!-- Sección de los éxitos de Bojack -->
                 <h3 class="exitos__h3">Carrera y Éxito en "Hollywoo"</h3>
                 <div class="roles__contenedor">
-                    <img loading="lazy" src="assets/bojack-home.png" alt="Bojack en los Globo de Oro" class="roles__img">
+                    <img loading="lazy" src="assets/bojack-home.png" alt="Bojack en los Globo de Oro"
+                        class="roles__img">
                     <div class="grid__roles">
                         <div class="roles">
                             <p class="grid__p">Año</p>
                             <p class="grid__p">Titulo</p>
                             <p class="grid__p">Rol</p>
                         </div>
-            
+
                         <div class="roles">
                             <p class="grid__p">1987</p>
                             <p class="grid__p">Horsin' Around</p>
                             <p class="grid__p">El caballo</p>
                         </div>
-            
+
                         <div class="roles">
                             <p class="grid__p">2007</p>
                             <p class="grid__p">The BoJack Horseman Show</p>
@@ -193,10 +229,10 @@
                     </div>
                 </div>
             </section>
-        
+
             <section class="popular"> <!-- Sección de las amantes de Bojack -->
                 <h3 class="popular__h3">El siempre fue popular entre las mujeres</h3>
-                <div class="mujeres__contenedor">  <!-- Contenedor de galeria trabajada con Grid  -->
+                <div class="mujeres__contenedor"> <!-- Contenedor de galeria trabajada con Grid  -->
                     <div class="mujeres__lista ">
                         <picture class="mujeres__picture">
                             <img loading="lazy" src="assets/novia1.webp" alt="Princess Carolyn" class="mujeres__img">
@@ -224,62 +260,100 @@
 
                 </div>
             </section>
-        
+
             <div class="frases"> <!-- Sección con otra famosa frase de Bojack -->
-                <svg class="frases__svg" xmlns="http://www.w3.org/2000/svg" width="500" height="500" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                <svg class="frases__svg" xmlns="http://www.w3.org/2000/svg" width="500" height="500" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1z" />
                 </svg>
                 <p class="frases__p uno">La vida es un montón de puertas que se cierran.</p>
             </div>
-        
+
             <section class="temporadas"> <!-- Sección de las temporadas de Bojack -->
                 <h3 class="temporadas__h3">Temporadas</h3>
                 <div class="temporadas__container"> <!-- Contenedor de galeria trabajada con Grid  -->
                     <div class="temporadas__info uno">
-                        <img loading="lazy" src="assets/Bojack-Season_1_.webp" alt="Portada temporada Uno" class="temporadas__img">
+                        <img loading="lazy" src="assets/Bojack-Season_1_.webp" alt="Portada temporada Uno"
+                            class="temporadas__img">
                         <h4 class="temporadas__h4">Primera temporada (2014)</h4>
-                        <p class="temporadas__p">En esta primera temporada se presenta a BoJack Horseman, un caballo antropomorfo que en los años 1990 protagonizó la telecomedia Retozando (Horsin' Around); un joven caballo soltero que cría a tres niños huérfanos. Tras 18 años de su éxito artístico, BoJack se siente vacío y miserable por no haberle sacarle provecho a su vida. Su crisis existencial se intensifica al tener que escribir una autobiografía que no lo deje en ridículo y no lo muestre como fracasado, por lo cual busca a un escritor fantasma Diane Nguyen, que le ayude a disminuir esta ansiedad.</p>
+                        <p class="temporadas__p">En esta primera temporada se presenta a BoJack Horseman, un caballo
+                            antropomorfo que en los años 1990 protagonizó la telecomedia Retozando (Horsin' Around); un
+                            joven caballo soltero que cría a tres niños huérfanos. Tras 18 años de su éxito artístico,
+                            BoJack se siente vacío y miserable por no haberle sacarle provecho a su vida. Su crisis
+                            existencial se intensifica al tener que escribir una autobiografía que no lo deje en
+                            ridículo y no lo muestre como fracasado, por lo cual busca a un escritor fantasma Diane
+                            Nguyen, que le ayude a disminuir esta ansiedad.</p>
                     </div>
-                    
-                
+
+
                     <div class="temporadas__info dos">
-                        <img loading="lazy" src="assets/Bojack-Season_2_.webp" alt="Portada temporada Dos" class="temporadas__img">
+                        <img loading="lazy" src="assets/Bojack-Season_2_.webp" alt="Portada temporada Dos"
+                            class="temporadas__img">
                         <h4 class="temporadas__h4">Segunda temporada (2015)</h4>
-                        <p class="temporadas__p">BoJack consigue el papel estelar en la película Secretariat, que retrata la historia de un caballo ganador de la Triple Corona de los Estados Unidos en 1973, además, el protagonista vive un momento de esplendor debido a que las memorias en las que había trabajado durante la temporada anterior se convirtieron en un éxito de ventas en el mercado editorial. Sin embargo, el triunfo y la fama provocan que el caballo comience a enfrentar recuerdos de tiempos pasados, los cuales le llevan a pasar por pasajes oscuros de su vida.</p>
+                        <p class="temporadas__p">BoJack consigue el papel estelar en la película Secretariat, que
+                            retrata la historia de un caballo ganador de la Triple Corona de los Estados Unidos en 1973,
+                            además, el protagonista vive un momento de esplendor debido a que las memorias en las que
+                            había trabajado durante la temporada anterior se convirtieron en un éxito de ventas en el
+                            mercado editorial. Sin embargo, el triunfo y la fama provocan que el caballo comience a
+                            enfrentar recuerdos de tiempos pasados, los cuales le llevan a pasar por pasajes oscuros de
+                            su vida.</p>
                     </div>
-                    
-        
+
+
                     <div class="temporadas__info tres">
-                        <img loading="lazy" src="assets/Bojack-Season_3.webp" alt="Portada temporada Tres" class="temporadas__img">
+                        <img loading="lazy" src="assets/Bojack-Season_3.webp" alt="Portada temporada Tres"
+                            class="temporadas__img">
                         <h4 class="temporadas__h4">Tercera temporada (2016)</h4>
-                        <p class="temporadas__p">Secretariat es un éxito en taquilla y crítica, por este motivo BoJack comienza a tener en mente la nominación al premio Óscar como mejor actor, por lo tanto sus preocupaciones y acciones se derivan a la obtención de la estatuilla. Por este motivo comienza a tener problemas con sus amistades, lo que hace que su vida siga siendo un conjunto de problemas pese a estar disfrutando de un momento de fama. Entre más sube en el mundo de la fama, más desciende en lo personal.</p>
+                        <p class="temporadas__p">Secretariat es un éxito en taquilla y crítica, por este motivo BoJack
+                            comienza a tener en mente la nominación al premio Óscar como mejor actor, por lo tanto sus
+                            preocupaciones y acciones se derivan a la obtención de la estatuilla. Por este motivo
+                            comienza a tener problemas con sus amistades, lo que hace que su vida siga siendo un
+                            conjunto de problemas pese a estar disfrutando de un momento de fama. Entre más sube en el
+                            mundo de la fama, más desciende en lo personal.</p>
                     </div>
-                    
-        
+
+
                     <div class="temporadas__info cuatro">
-                        <img loading="lazy" src="assets/Bojack-Season_4_.webp" alt="Portada temporada Cuatro" class="temporadas__img">
+                        <img loading="lazy" src="assets/Bojack-Season_4_.webp" alt="Portada temporada Cuatro"
+                            class="temporadas__img">
                         <h4 class="temporadas__h4">Cuarta temporada (2017)</h4>
-                        <p class="temporadas__p">Tras la decepción de la temporada pasada, BoJack se aleja de Hollywood para replantearse sus orígenes, por ello viaja hasta Míchigan para reencontrarse con su pasado y las personas que marcaron su vida. Mientras tanto, el Sr. Peanutbutter inicia una carrera política al postularse como candidato en las elecciones para gobernador de California, por lo que junto con Todd centran sus esfuerzos en la campaña electoral, por otro lado, Diane comienza una nueva etapa laboral en un blog.</p>
+                        <p class="temporadas__p">Tras la decepción de la temporada pasada, BoJack se aleja de Hollywood
+                            para replantearse sus orígenes, por ello viaja hasta Míchigan para reencontrarse con su
+                            pasado y las personas que marcaron su vida. Mientras tanto, el Sr. Peanutbutter inicia una
+                            carrera política al postularse como candidato en las elecciones para gobernador de
+                            California, por lo que junto con Todd centran sus esfuerzos en la campaña electoral, por
+                            otro lado, Diane comienza una nueva etapa laboral en un blog.</p>
                     </div>
-                    
-        
+
+
                     <div class="temporadas__info cinco">
-                        <img loading="lazy" src="assets/Bojack-Season_5_.webp" alt="Portada temporada Cinco" class="temporadas__img">
+                        <img loading="lazy" src="assets/Bojack-Season_5_.webp" alt="Portada temporada Cinco"
+                            class="temporadas__img">
                         <h4 class="temporadas__h4">Quinta temporada (2018)</h4>
-                        <p class="temporadas__p">Luego de que Princesa Carolyn logre poner a su bebé (Philbert) en marcha en el sitio WhatTimeIsItRightNow.com e intente balancear su vida laboral de tal manera que ésta no se interponga con su lucha por tener una familia, BoJack está listo para volver a actuar luego de su descanso en Míchigan, mientras que Diane y el Sr. Peanutbutter lidian con los estragos de su divorcio, cada uno a su manera, y Todd sigue explorando su asexualidad a la par de vivir sus alocadas aventuras.</p>
+                        <p class="temporadas__p">Luego de que Princesa Carolyn logre poner a su bebé (Philbert) en
+                            marcha en el sitio WhatTimeIsItRightNow.com e intente balancear su vida laboral de tal
+                            manera que ésta no se interponga con su lucha por tener una familia, BoJack está listo para
+                            volver a actuar luego de su descanso en Míchigan, mientras que Diane y el Sr. Peanutbutter
+                            lidian con los estragos de su divorcio, cada uno a su manera, y Todd sigue explorando su
+                            asexualidad a la par de vivir sus alocadas aventuras.</p>
                     </div>
-                    
-        
+
+
                     <div class="temporadas__info seis">
-                        <img loading="lazy" src="assets/Bojack-Season_6_.webp" alt="Portada temporada Sexta" class="temporadas__img">
+                        <img loading="lazy" src="assets/Bojack-Season_6_.webp" alt="Portada temporada Sexta"
+                            class="temporadas__img">
                         <h4 class="temporadas__h4">Sexta temporada (2019-2020)</h4>
-                        <p class="temporadas__p">Bojack inicia una nueva vida, entrando a rehabilitación pero sus fantasmas y decisiones del pasado le siguen pesando.
+                        <p class="temporadas__p">Bojack inicia una nueva vida, entrando a rehabilitación pero sus
+                            fantasmas y decisiones del pasado le siguen pesando.
                         </p>
-                    </div>  
+                    </div>
                 </div>
             </section>
         </div>
 
     </div>
-    
+
 </body>
+
 </html>
