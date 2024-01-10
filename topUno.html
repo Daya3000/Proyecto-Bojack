@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 1 - Episodios</title><!-- Titulo de mi Proyecto -->
+    <link rel="icon" type="image/png" href="assets/favicon.png"> <!-- Link de favicon para personalizar página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Tipografia de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <!-- Tipografias agregadas de Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/topUno.css"> <!-- Link de CSS para dar estilo a la página -->
+    <script src="js/index.js" defer></script>
+    <!-- Se agrego defer para que se descargue al mismo tiempo que el HTML pero que no se ejecute hasta que este termine su descarga -->
+</head>
+<body>
+    <header class="header"> <!-- Contenedor del Header con menú a pantalla completa -->
+        <h1 class="header__h1">
+            <a href="./index.html" title="Ir al inicio en Bojack">
+                <img loading="lazy" src="assets/Bo-Jack-Horseman-Logo.png" alt="Foto del logo Bojack">
+                <!-- Logo de Bojack -->
+            </a>
+        </h1>
+
+        <nav class="header__nav"> <!-- Navegador de menú hamburguesa -->
+            <svg class="abrir__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                viewBox="0 0 16 16"> <!-- Icon para abrir el menú, función con .JS  -->
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <div class="modal__menu">
+                <!-- Modal que se activa con una función de .JS permite abrir y cerrar el menu con la acción CLICK  -->
+                <svg class="cerrar__svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg> <!-- Icon para cerrar el menú, función con .JS  -->
+                <ul class="header__ul active">
+                    <!--Lista de links que se agrego estilo active cuando .JS detecta el evento Click -->
+                    <li class="header__li"><a title="Bojack" href="./index.html">Bojack</a></li>
+                    <li class="header__li"><a title="Personajes" href="./personajes.html">Personajes</a></li>
+                    <li class="header__li"><a title="Episodios" href="./topEpisodios.html">Episodios</a></li>
+                    <li class="header__li"><a title="Lecciones" href="./lecciones.html">Lecciones</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <div class="contenedor"> <!-- Contenedor de toda la sección, diseño modular  -->
+
+        <div class="main__container"> <!-- Contenedor del episodio Top -->
+        
+            <h2 class="episodios__h2">1. Las vistas desde la mitad de la caída  <!-- Titulo principal -->
+                <span>.</span>
+            </h2>
+            <h3 class="episodios__h3">Temporada 6, episodio 15. Puntuación en IMDB 9,9</h3> <!-- Sección de la temporada -->
+            <video  autoplay playsinline loop muted class="episodios__video" src="assets/top2.mp4"></video>
+            
+            <p class="episodios__p">Se trata del penúltimo episodio de la serie y seguramente uno de los más ambiciosos. También es uno de los más oscuros y serios, y supone el clímax del arco argumental del personaje protagonista.
+            El episodio es como un sueño en el que Bojack asiste a una cena organizada por su madre, en la que están algunos de sus amigos y familiares muertos. A lo largo del episodio, Bojack se dará cuenta de que se encuentra en el Limbo y que, en la realidad, su cuerpo está en una piscina, boca abajo, debatiéndose entre la vida y la muerte.</p>
+            <img loading="lazy" class="episodios__img"  src="assets/top1-bojack.webp" alt="Foto Episodio Uno">
+            <div class="fotos"> <!-- Sección de fotos de la temporada -->
+                <img loading="lazy" class=fotos__img src="assets/top1.2-bojack.webp" alt="Bojac y sus amigos ">
+                <img loading="lazy" class=fotos__img src="assets/top1.3-bojack.webp" alt="Bojack y Herb">
+            </div>
+            <div class="texto"> <!-- Sección de la temporada -->
+                <svg class="texto__svg" xmlns="http://www.w3.org/2000/svg" width="500" height="300" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                </svg>
+                <p class="texto__p">La brisa débil no susurra nada. El agua grita sublime. Sus pies, se balancean. Respira profundo, se detiene, ya es hora. Sus dedos ya no tocan el puente, pronto estará bajo el agua. Con los ojos cerrados, pero espiando la vista en medio de la caída. Una ventisca, sol de verano. Un río rico y majestuoso. Una inundación de endorfinas trae una calma sin igual. Ahora estás volando. Ves todo mucho más claro que desde tierra firme. Todo está bien. Lo estaría, si no estuvieses en medio de la caída. Golpeas para frenar la gravedad. Que podría detener la caída? Daría todo porque mis dedos tocaran de nuevo la cima. Pero ya está, es un hecho. El silencio ahoga el sonido. Antes de saltar, ¿por qué no vi la vista en medio de la caída? No! Debí haber pensado en la vista en medio de la caída. Si solo hubiese sabido cómo era la vista en medio de la caída!</p>
+            </div>
+            <span class="autor__span">Secretariat</span>
+
+            <button class="episodios__button"> <!-- Boton con estado hover-->
+                <p>Ver más episodios Top</p>
+            </button>
+            
+        </div>
+    </div>
+    
+
+    
+</body>
+</html>

@@ -323,31 +323,30 @@ form, input, textarea, select, button, label {
 }
 /* Aqui termina filósofos */
 
-.card__container {
+.card__container { /*Organizado en columna*/
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   gap: 2rem;
 }
 
-.card__img {
-  border-radius: 22px;
+.card__img { /*Sombra para contraste*/
+  border-radius: 22px; /* Ajuste de borde*/
   background: #1a1a1a;
   box-shadow: 5px 5px 9px #161616,
     -5px -5px 9px #1e1e1e
 }
 
-.card__span {
+.card__span { /*Texto centrado*/
   width: 70%;
 
   display: block;
   font-size: 1rem;
   margin: auto;
   text-align: center;
-
 }
 
-.lecciones__contenedor {
+.lecciones__contenedor { /* Organizado en una sola columna, uno debajo del otro */
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
@@ -357,7 +356,7 @@ form, input, textarea, select, button, label {
   color: #1d1d1d;
 }
 
-.lecciones {
+.lecciones { /* Animación para cuando lecciones este activo haga una rotación de 360deg y regrese a su eje*/
   width: 100%;
   min-height: 9.375rem;
 
@@ -373,18 +372,18 @@ form, input, textarea, select, button, label {
   transition: all 2s ease;
 }
 
-.lecciones.active {
+.lecciones.active { /* Animación para cuando lecciones este activo haga una rotación de 360deg */
   transform: rotateX(360deg);
   background-color: #282252;
   color: #fffff6;
 }
 
-.numero {
+.numero { /* Ajustando tamaños*/
   font-size: 5rem;
   font-weight: 900;
 }
 
-.leccion {
+.leccion { /* Título de las cajas de las lecciones*/
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -392,72 +391,74 @@ form, input, textarea, select, button, label {
   transition: all 1s ease;
 }
 
-.leccion.active {
+.leccion.active { /* Título de las cajas de lección se oculta, para mostrar la reflexión con funcion .JS*/
   display: none;
 }
 
-.reflexion {
+.reflexion { /* Texto de las reflexiones se ocultan*/
   display: none;
   transition: all 1s ease;
 }
 
-.reflexion.active {
+.reflexion.active { /* Texto de las reflexiones se muestran con funcion .JS*/
   display: block;
 }
 
-.uno {
+.uno { /* Ajuste de color para cada lección  */
   background-color: #FFE19A;
 }
 
-.dos {
+.dos { /* Ajuste de color para cada lección  */
   background-color: #602273;
 }
 
-.tres {
+.tres { /* Ajuste de color para cada lección  */
   background-color: #8EBBC4;
 }
 
-.cuatro {
+.cuatro { /* Ajuste de color para cada lección  */
   background-color: #C87356;
 }
 
-.cinco {
+.cinco { /* Ajuste de color para cada lección  */
   background-color: #DFB664;
 }
 
-.seis {
+.seis { /* Ajuste de color para cada lección  */
   background-color: #9B5434;
 }
 
-.siete {
+.siete { /* Ajuste de color para cada lección  */
   background-color: #E7E4E3;
 }
 
-.ocho {
+.ocho { /* Ajuste de color para cada lección  */
   background-color: #E8C91E;
 }
 
-.nueve {
+.nueve { /* Ajuste de color para cada lección  */
   background-color: #8EBBC4;
 }
 
-.diez {
+.diez { /* Ajuste de color para cada lección  */
   background-color: #C87356;
 }
 
 
 /* Hacer responsive para Tablet */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
+
 
 @media (max-width: 960px) {
-  .header {
+  .header { /* Ajuste de tamaños*/
     padding: 0rem 2rem;
   }
 
-  .header__li {
-    font-size: 2rem;
+  .header__li { /* Ajuste de tamaños*/
+    font-size: 4rem;
   }
 
-  .contenedor {
+  .contenedor { /* Ajuste de tamaños*/
     padding: 0rem 1rem 3rem;
     border-radius: 16px;
   }
@@ -476,12 +477,11 @@ form, input, textarea, select, button, label {
     line-height: 1.1em;
   }
 
-  .concepto {
+  .concepto { /* Ajuste de dirección*/
     flex-flow: column nowrap;
-
   }
 
-  .concepto__text {
+  .concepto__text { /* Ajuste de tamaños*/
     width: 100%;
   }
 
@@ -498,7 +498,6 @@ form, input, textarea, select, button, label {
     text-align: center;
   }
 
-
   .filosofos__h3 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -508,63 +507,55 @@ form, input, textarea, select, button, label {
     gap: 3rem;
   }
 
-  .lecciones {
+  .lecciones { /* Ajustando tamaño con un mínimo de alto para no deformar la caja con el texto*/
     gap: 2rem;
     padding: 1rem;
     border-radius: 16px;
     min-height: 120px;
   }
 
-  .leccion {
+  .leccion { /* Ajustando tamaños*/
     font-size: 1.4rem;
     line-height: 1.2em;
   }
 
-  .numero {
+  .numero { /* Ajustando tamaños*/
     font-size: 2rem;
   }
 }
 
 /* Hacer responsive para Moviles */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
 
 @media (max-width: 480px) {
-  .header__li {
+  .header__li { /* Ajuste de tamaños*/
     font-size: 2rem;
   }
 
-  .cerrar__svg {
+  .cerrar__svg { /* Ajuste de tamaños*/
     top: 30px;
     right: 30px;
   }
 
-  .contenedor {
-    border-radius: 16px;
-    gap: 3rem;
-  }
-
   .main__container {
-    padding: 3rem 1rem;
-    border-radius: 16px;
     gap: 3rem;
   }
 
-  .resumen__span {
+  .resumen__span {  /* Texto centrado*/
     text-align: center;
   }
 
   .descripcion__p {
     font-size: 2rem;
-
   }
 
-  .concepto__h2 {
+  .concepto__h2 { /* Ajuste de tamaños*/
     font-size: 2.5rem;
     line-height: 1.1em;
   }
 
-  .filosofos__h3 {
+  .filosofos__h3 { /* Ajuste de tamaños*/
     font-size: 1.8rem;
     line-height: 1.1em;
   }
-
 }

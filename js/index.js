@@ -37,6 +37,26 @@ botones.forEach((boton) =>
 //     personajesIl.style.transform = 'translateX(-${calculo}%)'
 // })
 
+
+
+
+//Cuando hago CLICK en .filosofos__h3
+// .filosofos__h3 amarillo le REMOVE la clase 
+
+const btnFilosofos = document.querySelectorAll(".filosofos__h3");
+console.log(btnFilosofos);
+
+btnFilosofos.forEach(function(eachFil , index){
+    btnFilosofos[index].addEventListener("click", function(){
+        btnFilosofos[index].classList.remove('amarillo');
+    })
+})
+
+
+
+//Cuando hago CLICK en .fxxx
+// .xxxxx
+
 const botonesFilosofos = document.querySelectorAll(".filosofos__h3");
 const frasesFilosofos = document.querySelectorAll(".filosofos__p");
 

@@ -90,22 +90,22 @@ form, input, textarea, select, button, label {
   
   body {
     background: #262626;
+    min-width: 320px; /*Después de esta medida mínima se rompe la web*/
     min-height: 100vh;
     font-size: 100%;
     font-family: 'Barlow';
     color: #fffff6 ;
     line-height: 1.6em;
-
   }
 
-  /* Aqui empieza el header */
 
+/* Aqui empieza el header */
 .header{
   max-width: 90rem;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-between;  /*División equitativa a los extremos del header*/
   align-items: center;
 }
 
@@ -113,7 +113,7 @@ form, input, textarea, select, button, label {
   width: 120px;
 }
 
-.abrir__svg{
+.abrir__svg{ /* Icon abrir aplica un función de .JS*/
   cursor: pointer;
   width: 2.625rem;
   height: 2.625rem;
@@ -123,22 +123,27 @@ form, input, textarea, select, button, label {
   border: 1px solid #E8C91E;
 }
 
-.modal__menu{
-  position: absolute;
+.modal__menu{ 
+  position: absolute; /* Para superponer el menú cuando se abra */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 100%; /*Ancho total de la pantalla*/
+  height: 100vh; /*Alto total de la pantalla*/
   background-color: #282252;
-      
-  display: none;
-    
+  z-index: 1; /*Por encima del contenido*/
+
+  display: none; /* Desactivado. Se activa con una funcion en JS */
+
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.header__ul{
+::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
+  display: none;
+}
+
+.header__ul{ /* Menú organizado en una sola columna, uno debajo del otro */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -146,106 +151,105 @@ form, input, textarea, select, button, label {
   gap: 4rem;
 }
 
-.isActive{
-  display: flex;
+.active{ 
+  display: flex; /* Activado. Se activa con una funcion en JS */
 }
 
-.cerrar__svg{
+.cerrar__svg{ /* Icon cerrar aplica un función de .JS*/
   cursor: pointer;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 50px; /* Ajuste de posición*/
+  right: 50px; /* Ajuste de posición*/
   width: 2.625rem;
   height: 2.625rem;
   color: #FFE19A;
 }
 
 .header__li{
-  font-family: 'Rubik Doodle Shadow';
-  font-size: 6rem;
+  font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
+  font-size: 6rem; 
   line-height: 5rem;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   font-weight: 700;
   color: #FFE19A;
-  letter-spacing: 3px;
+  letter-spacing: 3px; /*Espacio entre letras*/
 }
-
 /* Aqui termina el Header */
 
-.main__container{
+
+.main__container { /* Segundo contenedor de la biografía de Bojack */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   gap: 6rem;
 
   max-width: 90rem;
-  padding: 5rem;
+  padding: 5rem;  /* Ajustando padding del container*/
   margin: 0 auto;
 
   border-radius: 52px;
   background: #1d1d1d;
-  box-shadow:  5px 5px 9px #181818,
-  -5px -5px 9px #222222;
+  box-shadow: 5px 5px 9px #181818,  /*Efecto neumorfismo de la contenedora*/
+    -5px -5px 9px #222222;
 }
 
-.episodios__h2{
+.episodios__h2 { /* Titulo principal */
   font-size: 4rem;
   font-weight: 800;
   line-height: 3rem;
 }
 
-span{
+span { /* Color al punto final del titulo */
   color: #E8C91E;
 }
 
-.episodios__h3{
+.episodios__h3 { /* Subtitulo color gray */
   color: darkgray;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.1em;
 }
 
-.episodios__video{
+.episodios__video { /* Borde redondeado al video */
   border-radius: 52px;
 }
 
-.episodios__img{
+.episodios__img { /* Bordes redondeadas a las fotos */
   width: 100%;
-  background-color: rebeccapurple;
   border-radius: 52px;
 }
 
-.fotos{
+.fotos { /* Fotos organizados en fila */
   width: 100%;
-      
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;    
+  gap: 1rem;
 }
 
-.fotos__img{
+.fotos__img {  /* Bordes redondeadas a las fotos */
   border-radius: 52px;
 }
 
-.texto{
+.texto { /* Texto organizado en fila */
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.texto__svg{
+.texto__svg { /* Ajustando tamaños al icono*/
   width: 20%;
 }
 
-.texto__p{
+.texto__p { /* Ajustando tamaño al texto*/
   width: 80%;
 }
 
-.autor__span{
+.autor__span { /* Alineado a la derecha texto*/
   width: 100%;
   display: block;
   text-align: right;
@@ -253,41 +257,52 @@ span{
   font-weight: 700;
 }
 
-/* Hacer responsive para Tablets */
+.episodios__button { /* Boton que te llevara a la página principal de los demas episodios*/
+  padding: 1rem;
+  border: 4px solid #E8C91E;
+  border-radius: 16px;
+  background-color: #E8C91E;
+  color: #181818;
+  font-weight: 700;
+}
 
-@media ( max-width: 960px){
-  .header{
+
+/* Hacer responsive para Tablets */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
+
+@media (max-width: 960px) {
+  .header {
     padding: 0rem 2rem;
   }
 
-  .header__li{
+  .header__li {
     font-size: 4rem;
   }
 
-  .contenedor{
-  padding: 0rem 1rem 3rem;
-  border-radius: 16px;
-  }
-  
-  .main__container{
-  padding: 3rem 1rem;
-  border-radius: 16px;
-  gap: 3rem;
-  }
-
-  .episodios__video{
+  .contenedor {
+    padding: 0rem 1rem 3rem;
     border-radius: 16px;
   }
 
-  .episodios__img{
+  .main__container {
+    padding: 3rem 1rem;
+    border-radius: 16px;
+    gap: 3rem;
+  }
+
+  .episodios__video {
     border-radius: 16px;
   }
 
-  .fotos__img{
+  .episodios__img {
     border-radius: 16px;
   }
 
-  .fotos{
+  .fotos__img {
+    border-radius: 16px;
+  }
+
+  .fotos {
     justify-content: space-between;
   }
 
@@ -299,22 +314,22 @@ span{
 
 /* Hacer responsive para Moviles */
 
-@media ( max-width: 480px ){
-  .header__li{
+@media (max-width: 480px) {
+  .header__li {
     font-size: 2rem;
   }
 
-  .cerrar__svg{
+  .cerrar__svg {
     top: 30px;
     right: 30px;
   }
 
-  .contenedor{
+  .contenedor {
     border-radius: 16px;
     gap: 3rem;
   }
 
-  .main__container{
+  .main__container {
     padding: 3rem 1rem;
     border-radius: 16px;
     gap: 3rem;
@@ -330,11 +345,16 @@ span{
 
   .fotos__img {
     width: 150px;
-   
+
   }
 
-.texto__p{
-  font-size: .875rem;
-  line-height: 1.1em;
+  .texto__p {
+    font-size: .875rem;
+    line-height: 1.1em;
+  }
+
+  .episodios__button {
+    padding: .5rem;
+    font-size: .875rem;
   }
 }

@@ -115,7 +115,7 @@
   padding: .2rem;
   color: #E8C91E;
   border: 1px solid #E8C91E;
-  }
+}
 
 .modal__menu{ 
   position: absolute; /* Para superponer el menú cuando se abra */
