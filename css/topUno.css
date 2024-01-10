@@ -264,14 +264,19 @@ span { /* Color al punto final del titulo */
   background-color: #E8C91E;
   color: #181818;
   font-weight: 700;
+  cursor: pointer;
 }
 
+.episodios__button:hover{ /* Efecto hover al boton*/
+  background-color: black;
+  color: #E8C91E;
+}
 
 /* Hacer responsive para Tablets */
 /* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
 
 @media (max-width: 960px) {
-  .header {
+  .header { /* Ajuste de tamaño */
     padding: 0rem 2rem;
   }
 
@@ -284,21 +289,21 @@ span { /* Color al punto final del titulo */
     border-radius: 16px;
   }
 
-  .main__container {
+  .main__container { /* Ajuste de tamaño */
     padding: 3rem 1rem;
     border-radius: 16px;
     gap: 3rem;
   }
 
-  .episodios__video {
+  .episodios__video { /* Ajuste de bordes */
     border-radius: 16px;
   }
 
-  .episodios__img {
+  .episodios__img {   /* Ajuste de bordes */
     border-radius: 16px;
   }
 
-  .fotos__img {
+  .fotos__img { /* Ajuste de bordes */
     border-radius: 16px;
   }
 
@@ -306,54 +311,47 @@ span { /* Color al punto final del titulo */
     justify-content: space-between;
   }
 
-  .fotos__img {
+  .fotos__img {  /* Ajuste de tamaño */
     width: 340px;
   }
 }
 
 
 /* Hacer responsive para Moviles */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
 
 @media (max-width: 480px) {
   .header__li {
     font-size: 2rem;
   }
 
-  .cerrar__svg {
+  .cerrar__svg { /* Ajuste de tamaño */
     top: 30px;
     right: 30px;
   }
 
   .contenedor {
-    border-radius: 16px;
     gap: 3rem;
   }
 
-  .main__container {
-    padding: 3rem 1rem;
-    border-radius: 16px;
-    gap: 3rem;
-  }
-
-  .episodios__h2 {
+  .episodios__h2 { /* Ajuste de tamaño */
     font-size: 2.5rem;
   }
 
-  .episodios__h3 {
+  .episodios__h3 { /* Ajuste de tamaño */
     font-size: 1.5rem;
   }
 
-  .fotos__img {
+  .fotos__img { /* Ajuste de tamaño */
     width: 150px;
-
   }
 
-  .texto__p {
+  .texto__p { /* Ajuste de tamaño */
     font-size: .875rem;
     line-height: 1.1em;
   }
 
-  .episodios__button {
+  .episodios__button { /* Ajuste de tamaño */
     padding: .5rem;
     font-size: .875rem;
   }
