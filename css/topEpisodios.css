@@ -314,7 +314,8 @@ body {
 }
 
 .grid__episodio { /* Efecto de gradiante a las cajas contenedoras de los episodios, con contenido centrado */
-  min-height: 420px;
+  min-height: 420px; 
+  aspect-ratio: 3 / 4; /* Para respetar proporción en relación 3 de ancho por 4 de alto */
   gap: 4rem;
   padding: 2rem;
   border-radius: 22px;
@@ -327,8 +328,8 @@ body {
     -5px -5px 9px #1e1e1e;
 }
 
-.grid__p { /* Texto centrado */
-  font-size: 2.25rem;
+.grid__h3 { /* Texto centrado */
+  font-size: 2rem;
   line-height: 1em;
   font-weight: 700;
   text-align: center;
@@ -407,7 +408,7 @@ body {
     line-height: 1.1em;
   }
 
-  .grid__p {
+  .grid__h3 {
     font-size: 2rem;
   }
 }

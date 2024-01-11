@@ -269,7 +269,7 @@ form, input, textarea, select, button, label {
 }
 
 .sectionB { /* Color de fondo a la caja */
-  background-color: #FFE19A;
+  background-color: #8DBAC3;
 }
 
 .sectionD {
@@ -310,7 +310,7 @@ form, input, textarea, select, button, label {
 }
 
 .sectionH { /* Color de fondo a la caja y tamaño de la columna */
-  background-color: #262626;
+  background-color: #C67154;
   grid-column: span 2;
 }
 
@@ -441,6 +441,18 @@ form, input, textarea, select, button, label {
   }
 
   .todd { /* Ajuste de tamaño */
+    width: 100%;
+  }
+
+  .princess { /* Ajuste de tamaño */
+    width: 100%;
+  }
+
+  .diane { /* Ajuste de tamaño */
+    width: 100%;
+  }
+
+  .peanut { /* Ajuste de tamaño */
     width: 100%;
   }
 
