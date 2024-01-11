@@ -258,6 +258,8 @@ span { /* Color al punto final del titulo */
 }
 
 .episodios__button { /* Boton que te llevara a la página principal de los demas episodios*/
+  display: block;
+  margin: 30px;
   padding: 1rem;
   border: 4px solid #E8C91E;
   border-radius: 16px;
@@ -289,6 +291,11 @@ span { /* Color al punto final del titulo */
     border-radius: 16px;
   }
 
+  .cerrar__svg { /* Ajuste de tamaños*/
+    top: 40px;
+    right: 32px;
+  }
+  
   .main__container { /* Ajuste de tamaño */
     padding: 3rem 1rem;
     border-radius: 16px;
@@ -314,6 +321,10 @@ span { /* Color al punto final del titulo */
   .fotos__img {  /* Ajuste de tamaño */
     width: 340px;
   }
+
+  .texto__svg { /* Ajustando tamaños al icono*/
+    height: 200px;
+  }
 }
 
 
@@ -326,8 +337,8 @@ span { /* Color al punto final del titulo */
   }
 
   .cerrar__svg { /* Ajuste de tamaño */
-    top: 30px;
-    right: 30px;
+    top: 39px;
+    right: 32px;
   }
 
   .contenedor {
@@ -344,6 +355,10 @@ span { /* Color al punto final del titulo */
 
   .fotos__img { /* Ajuste de tamaño */
     width: 150px;
+  }
+
+  .autor__span{
+    font-size: 1rem;
   }
 
   .texto__p { /* Ajuste de tamaño */

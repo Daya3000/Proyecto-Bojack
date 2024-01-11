@@ -463,6 +463,11 @@ form, input, textarea, select, button, label {
     border-radius: 16px;
   }
 
+  .cerrar__svg { /* Ajuste de tamaños*/
+    top: 40px;
+    right: 32px;
+  }
+  
   .main__container {
     padding: 3rem 1rem;
     border-radius: 16px;
@@ -533,8 +538,8 @@ form, input, textarea, select, button, label {
   }
 
   .cerrar__svg { /* Ajuste de tamaños*/
-    top: 30px;
-    right: 30px;
+    top: 39px;
+    right: 32px;
   }
 
   .main__container {

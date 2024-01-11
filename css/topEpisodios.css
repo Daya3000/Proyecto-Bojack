@@ -308,7 +308,6 @@ body {
 
 .grid__top {
   width: 100%;
-
   display: grid; /* Distribuido como GRID */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Distribuido en columnas que tienen un tamaño mínimo de 300px y que pueden ocupar el espacio disponible del contenedor*/
   gap: 2rem;
@@ -360,6 +359,11 @@ body {
 
   .header__li { /* Ajuste de tamaños*/
     font-size: 4rem;
+  }
+
+  .cerrar__svg { /* Ajuste de tamaños*/
+    top: 40px;
+    right: 32px;
   }
 
   .contenedor { /* Ajuste de tamaños*/
@@ -418,8 +422,8 @@ body {
   }
 
   .cerrar__svg { /* Ajuste de tamaños*/
-    top: 30px;
-    right: 30px;
+    top: 39px;
+    right: 32px;
   }
 
   .contenedor {

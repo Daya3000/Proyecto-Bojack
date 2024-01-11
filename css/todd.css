@@ -90,363 +90,403 @@ form, input, textarea, select, button, label {
   
   body {
     background: #262626;
+    min-width: 320px; /*Después de esta medida mínima se rompe la web*/
     min-height: 100vh;
     font-size: 100%;
     font-family: 'Barlow';
     color: #fffff6 ;
     line-height: 1.6em;
-    
-
   }
-  
-/* AQUI EMPIEZA EL HEADER */
 
-
+/* Aqui empieza el Header */
 .header{
-
-max-width: 90rem;
-margin: auto;
-display: flex;
-flex-flow: row nowrap;
-justify-content: space-between;
-align-items: center;
+  max-width: 90rem;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; /*División equitativa a los extremos del header*/
+  align-items: center;
 }
+
 .header__h1{
-width: 120px;
+  width: 120px;
 }
 
-.abrir__svg{
-cursor: pointer;
-width: 2.625rem;
-height: 2.625rem;
-border-radius: 50px;
-padding: .2rem;
-color: #E8C91E;
-border: 1px solid #E8C91E;
-  
+.abrir__svg{ /* Icon abrir aplica un función de .JS*/
+  cursor: pointer;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 50px;
+  padding: .2rem;
+  color: #E8C91E;
+  border: 1px solid #E8C91E;
 }
-.modal__menu{
-  position: absolute;
+
+.modal__menu{ 
+  position: absolute; /* Para superponer el menú cuando se abra */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  width: 100%; /*Ancho total de la pantalla*/
+  height: 100vh; /*Alto total de la pantalla*/
   background-color: #282252;
-  z-index: 1;
+  z-index: 1; /*Por encima del contenido*/
 
+  display: none; /* Desactivado. Se activa con una funcion en JS */
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
   display: none;
+}
 
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.header__ul{
+.header__ul{  /* Menú organizado en una sola columna, uno debajo del otro */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  
+  gap: 4rem;  
 }
-.isActive{
-  display: flex;
+
+.active{ 
+  display: flex; /* Activado. Se activa con una funcion en JS */
 }
-.cerrar__svg{
+
+.cerrar__svg{ /* Icon cerrar aplica un función de .JS*/
   cursor: pointer;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 40px; /* Ajuste de posición*/
+  right: 72px; /* Ajuste de posición*/
   width: 2.625rem;
   height: 2.625rem;
   color: #FFE19A;
 }
+
 .header__li{
-  font-family: 'Rubik Doodle Shadow';
-  font-size: 6rem;
+  font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
+  font-size: 6rem; 
   line-height: 5rem;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   font-weight: 700;
   color: #FFE19A;
-  letter-spacing: 3px;
+  letter-spacing: 3px; /*Espacio entre letras*/
+}
+/* Aqui termina el Header */
 
+.contenedor { /* Contenedor principal centrado y que mantengan cierta separación*/
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6rem;
 }
 
 
-/* AQUI TERMINA EL HEADER */
+.main__container { /* Segundo contenedor de la biografía de Bojack */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
 
+  max-width: 90rem;
+  padding: 5rem; /* Ajustando padding del container*/
+  margin: 0 auto;
 
-.contenedor{
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center;
-
-gap: 6rem;
-}
-
-
-.main__container{
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center ;
-gap: 6rem;
-
-max-width: 90rem;
-padding: 5rem;
-margin: 0 auto;
-
-border-radius: 52px;
-background: #1d1d1d;
-box-shadow:  5px 5px 9px #181818,
+  border-radius: 52px;
+  background: #1d1d1d;
+  box-shadow: 5px 5px 9px #181818, /*Efecto neumorfismo de la contenedora*/
     -5px -5px 9px #222222;
-  }
-  
- 
+}
 
-  .descripcion{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center ;
-    gap: 3rem;
+.descripcion { /* Texto alineado al centro */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.descripcion__h2 { /* Tipografía para titulares transformado en mayuscula y centrado*/
+  font-family: 'Rubik Doodle Shadow';
+  text-align: center;
+  font-size: 5rem;
+  text-transform: uppercase;
+  line-height: 4rem;
+}
+
+
+.descripcion__h3 { /* Tipografía para subtítulos */
+  font-family: 'Barlow';
+  line-height: 3rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.descripcion__span { /* Detalle de color para un punto al subtitulo */
+  color: #E8C91E;
+}
+
+.muroGrid {/* Distribuido como GRID de 4 columnas y 3 filas*/
+  width: 100%;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.muroGrid__section { /* Sección centrada y con efecto al borde */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1.6rem;
+  padding: 1rem;
+
+
+  border-radius: 22px;
+  background: #1a1a1a;
+  box-shadow: 5px 5px 9px #161616, /*Efecto neumorfismo a cada caja*/
+    -5px -5px 9px #1e1e1e;
+}
+
+.sectionA,
+.sectionF,
+.sectionC { /* Eliminar padding a las fotos */
+  padding: 0;
+}
+
+.muroGrid__section img { /* Ajuste de bordes*/
+  border-radius: 22px;
+}
+
+.sectionB { /* Color de fondo a la caja */
+  background-color: #FFE19A;
+}
+
+.sectionD {
+  background-color: #602273;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.muroGrid__text {
+  display: flex;
+  animation: move 5s linear infinite;
+  /* font-size: 7vw; */
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0) rotate(21deg);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.sectionE { /* Ajuste de la fila para que ocupe más espacio*/
+  background-color: #282252;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.sectionG { /* Color de fondo a la caja */
+  background-color: #E8C91E;
+}
+
+.sectionH { /* Color de fondo a la caja y tamaño de la columna */
+  background-color: #262626;
+  grid-column: span 2;
+}
+
+.resumen { /* Organizado en columna */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.resumen__h4 { /* Texto centrado */
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.resumen__column { /* Organizado en fila el contenido */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.todd { /* Ajuste del borde de la imagen*/
+  width: 50%;
+  border: .2125rem solid #E8C91E;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.princess { /* Ajuste del borde de la imagen*/
+  width: 50%;
+  border: .2125rem solid #602273;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.diane { /* Ajuste del borde de la imagen*/
+  width: 50%;
+  border: .2125rem solid #FFE19A;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.peanut { /* Ajuste del borde de la imagen*/
+  width: 50%;
+  border: .2125rem solid #8DBAC3 ;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.todd__ul { /* Ajuste del borde de la otra fila*/
+  border: .2125rem solid #262626;
+  border-radius: 20px;
+  width: 50%;
+  padding: 3rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  line-height: 2rem;
+}
+
+.todd__li { /* Ajuste al estilo de la lista*/
+  list-style-type: circle;
+}
+
+
+/* Hacer responsive para Tablets */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
+
+@media (max-width:960px) {
+  .header { /* Ajuste de tamaños*/
+    padding: 0rem 2rem;
+  }
+
+  .header__li { /* Ajuste de tamaños*/
+    font-size: 4rem;
+  }
+
+  .contenedor { /* Ajuste de tamaños*/
+    padding: 0rem 1rem 3rem;
+    border-radius: 16px;
+  }
+
+  .cerrar__svg { /* Ajuste de tamaños*/
+    top: 40px;
+    right: 32px;
+  }
+
+  .main__container { /* Ajuste de tamaños*/
+    padding: 3rem 1rem;
+    border-radius: 16px;
   }
 
   .descripcion__h2{
-    font-family: 'Rubik Doodle Shadow';
-    text-align: center;
-    font-size: 5rem;
-    text-transform: uppercase;
-    line-height: 4rem;
+    font-size: 4rem;
   }
-  
 
   .descripcion__h3{
-    font-family: 'Barlow';
-    line-height: 3rem;
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 2.5rem;
   }
-  .descripcion__span{
-    color: #E8C91E ;
+
+  .resumen__column {
+    flex-direction: column;
   }
-  .descripcion__texto{}
 
+  .muroGrid { /* Ajuste en el tamaño de cada caja del grid para que no se deforme*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr))
+  }
 
+  .muroGrid__section { /* Ajuste a todas las cajas al mismo tamaño*/
+    aspect-ratio: 1 / 1;
+  }
 
-  .muroGrid{
+  .sectionE { /* Ajuste de tamaño de caja*/
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .sectionH { /* Ajuste de tamaño de caja*/
+    grid-column: span 1;
+  }
+
+  .todd { /* Ajuste de tamaño */
     width: 100%;
-
-    font-size: 1.5rem;
-    font-weight: 600;
-
-    display: grid;
-    grid-template-columns: repeat( 4 , 1fr);
-    grid-template-rows: repeat( 3 , 1fr);
-    gap: 1rem;
   }
 
-  .muroGrid__section{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content:  center;
-    align-items: center;
-
-    line-height: 1.6rem;
-    padding: 1rem;
-
-
-    border-radius: 22px;
-    background: #1a1a1a;
-    box-shadow:  5px 5px 9px #161616,
-                 -5px -5px 9px #1e1e1e;
-  }
-.sectionA, .sectionF, .sectionC{
-  padding: 0;
-}
-.muroGrid__section img{
-  border-radius: 22px;
-}
-  .sectionA{
-    
-  }
-  .sectionB{
-    background-color: #FFE19A;
-  }
-  .sectionC{
-    
-  }
-  .sectionD{
-    background-color: #602273;
-
-    display: flex;
-flex-flow: column nowrap;
-justify-content: flex-start;
-align-items: center;
-
-overflow: hidden;
-  }
-
-  .muroGrid__text{
-    animation: move 5s linear infinite;
-    /* font-size: 7vw; */
- 
-  }
-
-  .sectionD__marquee{
-  
-  }
-
-  @keyframes move{
-    from{
-      transform: translateX(0) rotate(21deg);
-    }
-  
-    to{
-      transform: translateX(-100%);
-    }
-  }
-
- 
-  .sectionE{
-    background-color: #282252;
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  .sectionF{
-
-  }
-  .sectionG{
-    background-color: #E8C91E;
-
-  }
-  .sectionH{
-    background-color: #262626;
-    grid-column: span 2;
-
-  }
-
-
-  .resumen{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center ;
-    gap: 3rem;
-  }
-
-  .resumen__h4{
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 700;
-  }
-
-  .resumen__column{
-
-    /* background-color: aquamarine; */
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 1rem;
-  }
-
-  .todd{
-    width: 50%;
-    border: .2125rem solid #E8C91E;
-    border-radius: 20px;
-  }
-
-
-  .todd__ul{
-    border: .2125rem solid #262626;
-    border-radius: 20px;
-    width: 50%;
-    padding: 3rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-
-    line-height: 2rem;
-  }
-  .todd__li{
-    list-style-type: circle;
-  }
-
-  @media (max-width:960px){
-    .main__container{
-      padding: 3rem 1rem;
-      border-radius: 16px;
-    }
-    .resumen__column{
-        flex-direction: column;
-    }
-    .muroGrid{
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      grid-template-rows: repeat(auto-fit, minmax(300px, 1fr))
-    }
-    .muroGrid__section{
-      aspect-ratio: 1 / 1;
-    }
-    .sectionE{
-      grid-column: span 1;
-      grid-row: span 1;
-    }
-    .sectionH{
-      grid-column: span 1;
-  
-    }
-    .todd{
-      width: 100%;
-    }
-    .todd__ul{
-      width: 100%;
-    }
-}
-
-/* Hacer responsive para Tablets */
-
-@media ( max-width: 960px){
-  .header{
-    padding: 0rem 2rem;
-  }
-  .header__li{
-    font-size: 4rem;
-  }
-  .contenedor{
-  padding: 0rem 1rem 3rem;
-  border-radius: 16px;
-  }
-  
-  .main__container{
-  padding: 3rem 1rem;
-  border-radius: 16px;
-  gap: 3rem;
+  .todd__ul {/* Ajuste de tamaño */
+    width: 100%;
   }
 }
-
 
 
 /* Hacer responsive para Moviles */
+/* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
 
-@media ( max-width: 480px ) {
-  .header__li{
+@media (max-width: 480px) {
+  .header__li { /* Ajuste de tamaños*/
     font-size: 2rem;
   }
-  .cerrar__svg{
-    top: 30px;
-    right: 30px;
-  }
-.contenedor{
-border-radius: 16px;
-gap: 3rem;
-}
 
-.main__container{
-padding: 3rem 1rem;
-border-radius: 16px;
-gap: 3rem;
-}
+  .cerrar__svg { /* Ajuste de tamaños*/
+    top: 39px;
+    right: 32px;
+  }
+
+  .contenedor {
+    border-radius: 16px;
+    gap: 3rem;
+  }
+
+  .main__container {
+    gap: 3rem;
+  }
+
+  .descripcion__h2{ /* Ajuste de tamaños*/
+    font-size: 2.5rem;
+  }
+
+  .descripcion__h3{
+    font-size: 2rem;
+    line-height: 1.1em;
+  }
+
+  .descripcion__texto{ /* Ajuste de tamaños*/
+    font-size: 0.875rem;
+  }
+
+  .todd__ul{ /* Ajuste de tamaños*/
+    padding: 2rem;
+    line-height: 1.5rem;
+  }
 }

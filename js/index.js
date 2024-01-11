@@ -9,50 +9,6 @@ botones.forEach((boton) =>
   boton.addEventListener("click", () => modalMenu.classList.toggle("active"))
 );
 
-//Cuando hago CLICK en .boton__button
-// calcular el translate = INDEX * (100 / 4)
-// .personajes__ul STYLE transform translateX()
-// .boton__button le REMOVE la clase active a TODOS
-// .boton__button le ADD la clase active a lo que hicimos CLICK
-
-// const personajes = document.querySelector('.personajes__nav')
-// console.log(personajes)
-
-// const botonBtn = document.querySelector('.boton__button')
-// const personajesUl = document.querySelector('.personajes__ul')
-// const personajesIl = document.querySelectorAll('.personas__il')
-
-// console.log(botonBtn)
-// console.log(personajesUl)
-
-// botonBtn.addEventListener('click', function(){
-
-//     personajesIl.forEach( function (eachIl , index){
-//         personajesUl[index].addEventListener('click', function(){
-
-//         })
-//         let calculo = personajesIl * (100 / 4 )
-//         console.log(calculo)
-//     })
-//     personajesIl.style.transform = 'translateX(-${calculo}%)'
-// })
-
-
-
-
-//Cuando hago CLICK en .filosofos__h3
-// .filosofos__h3 amarillo le REMOVE la clase 
-
-const btnFilosofos = document.querySelectorAll(".filosofos__h3");
-console.log(btnFilosofos);
-
-btnFilosofos.forEach(function(eachFil , index){
-    btnFilosofos[index].addEventListener("click", function(){
-        btnFilosofos[index].classList.remove('amarillo');
-    })
-})
-
-
 
 //Cuando hago CLICK en .fxxx
 // .xxxxx
@@ -65,10 +21,14 @@ console.log(frasesFilosofos);
 
 botonesFilosofos.forEach(function (eachFilosofo, index) {
   botonesFilosofos[index].addEventListener("click", function () {
+    botonesFilosofos.forEach( function ( eachFilosofo , index){
+      botonesFilosofos[index].classList.remove("amarillo")
+    })
     frasesFilosofos.forEach(function (eachFrase, index) {
       frasesFilosofos[index].classList.remove("hover");
     });
     frasesFilosofos[index].classList.add("hover");
+    botonesFilosofos[index].classList.add("amarillo")
   });
 });
 

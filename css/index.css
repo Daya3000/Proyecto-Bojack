@@ -695,6 +695,11 @@
   border-radius: 16px;
   }
 
+  .cerrar__svg { /* Ajuste de tamaños*/
+    top: 40px;
+    right: 32px;
+  }
+  
   .main__container{ /* Ajuste de tamaños*/
   padding: 3rem 1rem;
   border-radius: 16px;
@@ -872,8 +877,8 @@
   font-size: 2rem;
   }
   .cerrar__svg{ /* Ajuste de tamaños*/
-  top: 30px;
-  right: 30px;
+  top: 39px;
+  right: 32px;
   }
   .contenedor{ /* Ajuste de tamaños*/
   border-radius: 16px;
