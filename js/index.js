@@ -1,13 +1,21 @@
 "use strict";
 
-console.log("holaaaaa");
 
 const modalMenu = document.querySelector(".modal__menu");
 const botones = document.querySelectorAll(".abrir__svg , .cerrar__svg");
+const todoBody = document.querySelector("body")
 
-botones.forEach((boton) =>
-  boton.addEventListener("click", () => modalMenu.classList.toggle("active"))
-);
+// botones.forEach((boton) =>
+  
+//   boton.addEventListener("click", () => modalMenu.classList.toggle("active"))
+// );
+
+botones.forEach( function ( eachBoton , index ){
+  eachBoton.addEventListener("click" , function() {
+    modalMenu.classList.toggle("active")
+    todoBody.classList.toggle("mostrar")
+  })
+})
 
 
 //Cuando hago CLICK en .fxxx

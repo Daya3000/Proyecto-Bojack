@@ -96,8 +96,12 @@ form, input, textarea, select, button, label {
     font-family: 'Barlow';
     color: #fffff6 ;
     line-height: 1.6em;
+    overflow: hidden; /* Se escondio la página principal, para que no haga scroll cuando habra menú */
   }
 
+  body.mostrar{
+    overflow: visible;
+  }
 
 /* Aqui empieza el header */
 .header{
@@ -137,10 +141,6 @@ form, input, textarea, select, button, label {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
-
-::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
-  display: none;
 }
 
 .header__ul{ /* Menú organizado en una sola columna, uno debajo del otro */

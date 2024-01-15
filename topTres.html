@@ -16,7 +16,7 @@
     <script src="js/index.js" defer></script>
     <!-- Se agrego defer para que se descargue al mismo tiempo que el HTML pero que no se ejecute hasta que este termine su descarga -->
 </head>
-<body>
+<body class="mostrar">
     <header class="header"><!-- Contenedor del Header con menú a pantalla completa -->
         <h1 class="header__h1">
             <a href="./index.html" title="Ir al inicio en Bojack">
@@ -60,7 +60,7 @@
                 <span>.</span>
             </h2>
             <h3 class="episodios__h3">Temporada 4, episodio 11. Puntuación en IMDB 9,8</h3> <!-- Sección de la temporada -->
-            <video  autoplay playsinline loop muted class="episodios__video" src="assets/top3.mp4"></video>
+            <video poster="assets/bojack-epi3.jpeg" autoplay controls playsinline preload="none" loop muted class="episodios__video" src="assets/top3.mp4"></video>
             
             <p class="episodios__p">Un episodio fundamental para la historia, que fue alabado por la crítica por su tratamiento de los personajes femeninos, nos cuenta la historia de cómo se conocieron los padres de Bojack, la época de su nacimiento, del posterior empeoramie   nto de su relación (ambos dirigen sus frustraciones hacia el Bojack niño) y la ruptura final entre ambos.</p>
             <img loading="lazy" class="episodios__img"  src="assets/top3.1-bojack.webp" alt="Foto Episodio Uno">

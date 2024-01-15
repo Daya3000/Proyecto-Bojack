@@ -16,7 +16,7 @@
     <script src="js/index.js" defer></script>
     <!-- Se agrego defer para que se descargue al mismo tiempo que el HTML pero que no se ejecute hasta que este termine su descarga -->
 </head>
-<body>
+<body class="mostrar">
     <header class="header"><!-- Contenedor del Header con menú a pantalla completa -->
         <h1 class="header__h1">
             <a href="./index.html" title="Ir al inicio en Bojack">
@@ -60,7 +60,7 @@
                 <span>.</span> 
             </h2>
             <h3 class="episodios__h3">Temporada 3, episodio 4. Puntuación en IMDB 9,6</h3> <!-- Sección de la temporada -->
-            <video  autoplay playsinline loop muted class="episodios__video" src="assets/top4.mp4"></video>
+            <video poster="assets/bojack-epi4.jpeg" autoplay controls playsinline preload="none" loop muted class="episodios__video" src="assets/top4.mp4"></video>
             
             <p class="episodios__p">Como BoJack se ve obligado a asistir a un festival de cine submarino para promocionar su nueva película, una serie de eventos y la incapacidad de comunicarse con la vida submarina asegura que no todo salga como estaba previsto.</p>
             <img loading="lazy" class="episodios__img"  src="assets/top4.1-bojack.jpeg" alt="Foto Episodio Uno">

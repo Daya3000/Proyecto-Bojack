@@ -96,6 +96,11 @@ form, input, textarea, select, button, label {
     font-family: 'Barlow';
     color: #fffff6 ;
     line-height: 1.6em;
+    overflow: hidden; /* Se escondio la página principal, para que no haga scroll cuando habra menú */
+  }
+
+  body.mostrar{
+    overflow: visible;
   }
 
 /* Aqui empieza el Header */
@@ -136,10 +141,6 @@ form, input, textarea, select, button, label {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
-
-::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
-  display: none;
 }
 
 .header__ul{  /* Menú organizado en una sola columna, uno debajo del otro */
@@ -275,6 +276,8 @@ form, input, textarea, select, button, label {
 .sectionD {
   background-color: #602273;
 
+  font-size: 3rem;
+  line-height: 1.1em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -285,9 +288,35 @@ form, input, textarea, select, button, label {
 
 .muroGrid__text {
   display: flex;
-  animation: move 5s linear infinite;
-  /* font-size: 7vw; */
+  font-size: 2vw;
 }
+
+/* @keyframes move {
+  from {
+    transform: translateX(0) rotate(21deg);
+  }
+
+  to {
+    transform: translateX(-100%) rotate(21deg);
+  }
+} */
+
+.sectionD__text{
+  width: 100%;
+  background: lightgreen;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  
+  /* transform: translateX(-33%);
+  transition: all .5s linear; */
+}
+
+.one{
+  animation: move 5s ease;
+ }
 
 @keyframes move {
   from {
@@ -295,7 +324,49 @@ form, input, textarea, select, button, label {
   }
 
   to {
-    transform: translateX(-100%);
+    transform:translateX(-100%) rotate(21deg) ;
+  }
+}
+
+.two{
+  animation: hurra 5s ease;
+}
+
+@keyframes hurra {
+  from {
+    transform: translateX(0) rotate(21deg);
+  }
+
+  to {
+    transform:translateX(-100%) rotate(21deg) ;
+  }
+}
+
+.three{
+  animation: hurratres 5s ease;
+}
+
+@keyframes hurratres {
+  from {
+    transform: translateX(0) rotate(21deg);
+  }
+
+  to {
+    transform:translateX(-100%) rotate(21deg) ;
+  }
+}
+
+.four{
+  animation: hurracuatro 5s ease;
+}
+
+@keyframes hurracuatro {
+  from {
+    transform: translateX(0) rotate(21deg);
+  }
+
+  to {
+    transform:translateX(-100%) rotate(21deg) ;
   }
 }
 

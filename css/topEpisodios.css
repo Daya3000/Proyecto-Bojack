@@ -123,12 +123,14 @@ body {
   font-family: 'Barlow';
   color: #FFFFF6;
   line-height: 1.6em;
-
+  overflow: hidden; /* Se escondio la página principal, para que no haga scroll cuando habra menú */
 }
 
-/* AQUI EMPIEZA EL HEADER */
+body.mostrar{
+    overflow: visible;
+}
 
-
+/* Aqui empieza el Header */
 .header {
   max-width: 90rem;
   margin: auto;
@@ -166,10 +168,6 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
-
-::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
-  display: none;
 }
 
 .header__ul { /* Selector de la lista de menú en dirección de columna */

@@ -89,9 +89,13 @@
     font-size: 100%;
     font-family: 'Barlow';
     color: #1d1d1d ;
-    line-height: 1.6em; 
+    line-height: 1.6em;
+    overflow: hidden; /* Se escondio la página principal, para que no haga scroll cuando habra menú */
   }
 
+  body.mostrar{
+    overflow: visible;
+  }
 
 /* Aqui empieza el Header */
 .header{
@@ -131,10 +135,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
-
-::-webkit-scrollbar{ /* Para esconder la barra de scroll cuando abran menú */
-  display: none;
 }
 
 .header__ul{  /* Menú organizado en una sola columna, uno debajo del otro */
@@ -363,8 +363,7 @@ overflow: hidden;
   line-height: 5rem;
   letter-spacing: -5px;
   font-weight: 600;
-
-  /* white-space: nowrap; */
+  
   padding: 0 3rem;
 
   animation: move 5s linear infinite; /*Efecto de animación infinita*/
