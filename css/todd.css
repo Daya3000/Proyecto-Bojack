@@ -268,7 +268,10 @@ form, input, textarea, select, button, label {
 .muroGrid__section img { /* Ajuste de bordes*/
   border-radius: 22px;
 }
-
+.sectionA img{
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
 .sectionB { /* Color de fondo a la caja */
   background-color: #8DBAC3;
 }
@@ -282,91 +285,27 @@ form, input, textarea, select, button, label {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-
+  overflow: hidden;
+}
+.muroGrid__text{
+  transform: rotate(15deg);
+}
+.sectionD__text {
+  font-size: 5rem;
+  line-height: 1em;
+  animation: move 5s linear infinite alternate;
+  animation-play-state: running;
+  word-break: keep-all;
   overflow: hidden;
 }
 
-.muroGrid__text {
-  display: flex;
-  font-size: 2vw;
-}
-
-/* @keyframes move {
-  from {
-    transform: translateX(0) rotate(21deg);
-  }
-
-  to {
-    transform: translateX(-100%) rotate(21deg);
-  }
-} */
-
-.sectionD__text{
-  width: 100%;
-  background: lightgreen;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-
-  
-  /* transform: translateX(-33%);
-  transition: all .5s linear; */
-}
-
-.one{
-  animation: move 5s ease;
- }
-
 @keyframes move {
   from {
-    transform: translateX(0) rotate(21deg);
+    transform: translateX(0);
   }
 
   to {
-    transform:translateX(-100%) rotate(21deg) ;
-  }
-}
-
-.two{
-  animation: hurra 5s ease;
-}
-
-@keyframes hurra {
-  from {
-    transform: translateX(0) rotate(21deg);
-  }
-
-  to {
-    transform:translateX(-100%) rotate(21deg) ;
-  }
-}
-
-.three{
-  animation: hurratres 5s ease;
-}
-
-@keyframes hurratres {
-  from {
-    transform: translateX(0) rotate(21deg);
-  }
-
-  to {
-    transform:translateX(-100%) rotate(21deg) ;
-  }
-}
-
-.four{
-  animation: hurracuatro 5s ease;
-}
-
-@keyframes hurracuatro {
-  from {
-    transform: translateX(0) rotate(21deg);
-  }
-
-  to {
-    transform:translateX(-100%) rotate(21deg) ;
+    transform: translateX(-45%);
   }
 }
 
