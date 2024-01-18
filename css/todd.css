@@ -259,24 +259,24 @@ form, input, textarea, select, button, label {
     -5px -5px 9px #1e1e1e;
 }
 
-.sectionA,
-.sectionF,
-.sectionC { /* Eliminar padding a las fotos */
+.personajegif,
+.fotocard,
+.personajefoto { /* Eliminar padding a las fotos */
   padding: 0;
 }
 
 .muroGrid__section img { /* Ajuste de bordes*/
   border-radius: 22px;
 }
-.sectionA img{
+.personajegif img{
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
-.sectionB { /* Color de fondo a la caja */
+.latiguillo { /* Color de fondo a la caja */
   background-color: #8DBAC3;
 }
 
-.sectionD {
+.muletilla {
   background-color: #602273;
 
   font-size: 3rem;
@@ -291,7 +291,7 @@ form, input, textarea, select, button, label {
   transform: rotate(15deg);
   overflow: hidden;
 }
-.sectionD__text {
+.muletilla__text {
   font-size: 4.6rem;
   line-height: 1em;
   animation: move 10s linear infinite alternate;
@@ -299,7 +299,7 @@ form, input, textarea, select, button, label {
   word-break: keep-all;
   
 }
-.sectionD__text:nth-child(2){
+.muletilla__text:nth-child(2){
   animation: moveReverse 10s linear infinite alternate;
 }
 
@@ -322,17 +322,17 @@ form, input, textarea, select, button, label {
   }
 }
 
-.sectionE { /* Ajuste de la fila para que ocupe más espacio*/
+.fraseuno { /* Ajuste de la fila para que ocupe más espacio*/
   background-color: #282252;
   grid-column: span 2;
   grid-row: span 2;
 }
 
-.sectionG { /* Color de fondo a la caja */
+.frasedos { /* Color de fondo a la caja */
   background-color: #E8C91E;
 }
 
-.sectionH { /* Color de fondo a la caja y tamaño de la columna */
+.frasetres { /* Color de fondo a la caja y tamaño de la columna */
   background-color: #C67154;
   grid-column: span 2;
 }
@@ -470,12 +470,12 @@ form, input, textarea, select, button, label {
     aspect-ratio: 1 / 1;
   }
 
-  .sectionE { /* Ajuste de tamaño de caja*/
+  .fraseuno { /* Ajuste de tamaño de caja*/
     grid-column: span 1;
     grid-row: span 1;
   }
 
-  .sectionH { /* Ajuste de tamaño de caja*/
+  .frasetres { /* Ajuste de tamaño de caja*/
     grid-column: span 1;
   }
 

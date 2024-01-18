@@ -171,6 +171,25 @@
 /* Aqui termina el Header */
 
 
+.preload{ /* Intro a la página */
+  width: 100%;
+  height: 100%;
+  background-color: #FFE19A;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+  animation: intro 2s linear 1 both;
+}
+
+@keyframes intro{ /* Efecto intro de precargar la página */
+  0%{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+  50%{clip-path: polygon(0 0, 100% 0, 0 100%, 0% 100%);}
+  100%{clip-path: polygon(0 0, 100% 0, 0 0, 0 0);}
+}
+
 .contenedor{ /* Contenedor principal centrado y que mantengan cierta separación*/
   display: flex;
   flex-flow: column nowrap;
