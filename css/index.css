@@ -145,28 +145,6 @@
   gap: 4rem;  
 }
 
-.header__titulo{
-overflow: hidden;
-}
-
-.header__span{
-  display: inline-block;
-  transform: translateY(100%) rotate(5deg);
-  transform-origin: bottom left;
-  transition: all .5s ease;
-}
-
-.header__titulo:hover .header__span{
-  transform: translateY(0%) rotate(0deg);
-}
-
-.header__span:nth-child(1){transition-delay: 0s ;}
-.header__span:nth-child(2){transition-delay: 0.01s;}
-.header__span:nth-child(3){transition-delay: 0.02s;}
-.header__span:nth-child(4){transition-delay: 0.03s ;}
-.header__span:nth-child(5){transition-delay: 0.04s;}
-.header__span:nth-child(6){transition-delay: 0.05s;}
-
 .active{ 
   display: flex; /* Activado. Se activa con una funcion en JS */
 }
@@ -419,7 +397,8 @@ overflow: hidden;
   border-radius: 32px;
   border: 1px solid #fffff6;
   padding: 1rem;
-  display: inline-block; /* Alineación uno al lado del otro*/
+  display: inline-block; /* Alineación uno al lado del otro */
+  cursor: pointer;
 }
 
 .secundary__container{ /* Contenedor con más informacion de la trayectoria de Bojack */
@@ -528,6 +507,7 @@ overflow: hidden;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  position: relative;
 }
 
 .popular__h3{
@@ -541,6 +521,45 @@ overflow: hidden;
   display: grid; /* Distribuido como GRID */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribuido como GRID con un minmax de 250px y filas 1 fracción*/
   gap: 1rem;
+  position: relative;
+}
+.mujeres__button{
+  width: 40px;
+  color: #CA7557;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.mujeres__button:hover{
+  transform: scale(1.1)
+}
+.lightbox{
+  display: none;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  gap: 2rem;
+}
+.lightbox.modal{
+  display: flex;
+}
+.imgActiva{
+  display: none;
+}
+.imgActiva.modal{
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 32px;
+  box-shadow:  5px 5px 9px #00000088,
+               -5px -5px 9px #00000088;
 }
 
 .mujeres__lista{
@@ -549,6 +568,7 @@ overflow: hidden;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .mujeres__picture{
@@ -628,31 +648,6 @@ overflow: hidden;
 
   position: relative; /*Relativo para que texto flote dentro del elemento*/
 }
-
-.temporadas__info:hover .temporadas__img{
-  transform: scale(1.1); /* Animación para que la imagen de portada haga escala al hacer Hover en cada temporada */
-  transition: all 1s ease;
-}
-
-.temporadas__info .temporadas__h4{
-  transform: translateY(-100%); /* Animación para esconder el titulo de cada temporada */
-  transition: all .5s ease;
-}
-
-.temporadas__info:hover .temporadas__h4{
-  transform: translateY(0%);  /* Animación para que salga titulo al hacer Hover en cada temporada */
-  opacity: 1; /* Elementos visibles sin HOVER*/
-}
-
-.temporadas__info .temporadas__p{
-  transform: translateY(-100%); /* Animación para esconder el párrafo de cada temporada */
-  transition: all .5s ease;
-}
-
-.temporadas__info:hover .temporadas__p{
-  transform: translateY(0%); /* Animación para que salga texto al hacer Hover en cada temporada */
-  opacity: 1;
-}
 .temporadas__h4{
   font-size: 2rem;
   font-weight: 500;
@@ -692,12 +687,37 @@ overflow: hidden;
   align-items: center; /* Contenido centrado */
   opacity: 0;
   text-align: center;
-  padding: 80px 20px 0;
+  padding: 40px 20px 0;
 
   color: #FFE19A;
   
   transition: all .8s ease;
 }
+.temporadas__info:hover .temporadas__img{
+  transform: scale(1.1); /* Animación para que la imagen de portada haga escala al hacer Hover en cada temporada */
+  transition: all 1s ease;
+}
+
+.temporadas__info .temporadas__h4{
+  transform: translateY(-100%); /* Animación para esconder el titulo de cada temporada */
+  transition: all .5s ease;
+}
+
+.temporadas__info:hover .temporadas__h4{
+  transform: translateY(0%);  /* Animación para que salga titulo al hacer Hover en cada temporada */
+  opacity: 1; /* Elementos visibles sin HOVER*/
+}
+
+.temporadas__info .temporadas__p{
+  transform: translateY(-100%); /* Animación para esconder el párrafo de cada temporada */
+  transition: all .5s ease;
+}
+
+.temporadas__info:hover .temporadas__p{
+  transform: translateY(0%); /* Animación para que salga texto al hacer Hover en cada temporada */
+  opacity: 1;
+}
+
 
 /* Hacer responsive para Tablets */
 /* Se ajusto los tamaños y peso de las fuentes, las imágenes tambien se modificaron al igual que los bordes para tener un diseño agradable y responsive  */
@@ -862,6 +882,11 @@ overflow: hidden;
   padding: 0;
   }
   
+  .imgActiva.modal{
+    width: 100%;
+    border-radius: 16px;
+  }
+
   .exitos__h3{
   font-size: 2.5rem;
   line-height: 1.1em;
@@ -987,7 +1012,7 @@ overflow: hidden;
   }
 
   .roles{
-  min-width: 320px;
+  min-width: 280px; /* Contenedor se reduce en ancho */
   padding: 0;
   }
 
@@ -995,9 +1020,8 @@ overflow: hidden;
   font-size: .8rem;
   }
 
-  .grid__p:nth-child(1) { /* Cambio en todos los elementos .grid__p que sean primer hijo */
-  min-width: 0px;
-  width: 50px;
+  .grid__p:nth-child(1) { /* Todos los elementos .grid__p que sean primer hijo desaparecen*/
+  display: none; 
   }
 
   .grid__p:nth-child(2) { /* Cambio en todos los elementos .grid__p que sean segundo hijo */

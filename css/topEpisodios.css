@@ -303,14 +303,41 @@ body.mostrar{
 .grid {
   width: 100%;
 }
-
 .grid__top {
   width: 100%;
   display: grid; /* Distribuido como GRID */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Distribuido en columnas que tienen un tamaño mínimo de 300px y que pueden ocupar el espacio disponible del contenedor*/
   gap: 2rem;
 }
-
+.grid__a{
+  display: block;
+  animation: apareceGrid 1s ease forwards;
+  animation-delay: 2s;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.grid__a:nth-child(2){ /* Delay de Animación para cards de episodios */
+  animation-delay: 2.5s;
+}
+.grid__a:nth-child(3){
+  animation-delay: 3s;
+}
+.grid__a:nth-child(4){
+  animation-delay: 3.5s;
+}
+.grid__a:nth-child(5){
+  animation-delay: 4s;
+}
+@keyframes apareceGrid { /* Animación para cards de episodios */
+  form{
+    transform: translateY(-100px); 
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .grid__episodio { /* Efecto de gradiante a las cajas contenedoras de los episodios, con contenido centrado */
   min-height: 420px; 
   aspect-ratio: 3 / 4; /* Para respetar proporción en relación 3 de ancho por 4 de alto */
@@ -325,6 +352,8 @@ body.mostrar{
   box-shadow: 5px 5px 9px #161616,
     -5px -5px 9px #1e1e1e;
 }
+
+
 
 .grid__h3 { /* Texto centrado */
   font-size: 2rem;
