@@ -140,6 +140,7 @@ form, input, textarea, select, button, label {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .header__ul { /* Menú organizado en una sola columna, uno debajo del otro */
@@ -165,14 +166,20 @@ form, input, textarea, select, button, label {
   color: #FFE19A;
 }
 
-.header__li {
+.header__li{
   font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
-  font-size: 6rem;
+  font-size: 5rem; 
   line-height: 5rem;
   text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   font-weight: 700;
   color: #FFE19A;
   letter-spacing: 3px; /*Espacio entre letras*/
+  transition: transform .5s ease;
+}
+
+.header__li:hover{
+  transform: scale(1.1);
+  color: #E8C91E;
 }
 /* Aqui termina el Header */
 
@@ -334,7 +341,7 @@ form, input, textarea, select, button, label {
 }
 .slider__contenedor{
   transform: translate(0%);
-  transition: all ease 1s ;
+  transition: transform ease 1s ;
   width: 500%;
   display: flex;
   flex-flow: row nowrap;
@@ -404,7 +411,7 @@ form, input, textarea, select, button, label {
   padding: 1.875rem;
   border-radius: 2rem;
   transform: rotateX(0deg);
-  transition: all 2s ease;
+  transition: transform 2s ease;
 }
 
 .lecciones.active { /* Animación para cuando lecciones este activo haga una rotación de 360deg */

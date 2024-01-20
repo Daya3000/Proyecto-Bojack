@@ -167,10 +167,14 @@
   font-weight: 700;
   color: #FFE19A;
   letter-spacing: 3px; /*Espacio entre letras*/
+  transition: transform .5s ease;
 }
+.header__li:hover{
+  transform: scale(1.1);
+  color: #E8C91E;
+}
+
 /* Aqui termina el Header */
-
-
 .preload{ /* Intro a la página */
   width: 100%;
   height: 100%;
@@ -212,7 +216,7 @@
   border-radius: 52px;
 }
 
-.home__p{ /* Texto centrado */
+.home__p{ /* Contenedor de Texto centrado */
   font-size: 2rem;
   font-weight: 500;
   color: #fffff6;
@@ -346,7 +350,7 @@
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   overflow: hidden; /* Se utiliza para ocultar el texto de la animación */
@@ -850,14 +854,19 @@
   line-height: 1.1em;
   padding: .5rem 1rem
   }
-
+  .ocupaciones{
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
   .ocupaciones__h3{
   font-size: 2.5rem;
   line-height: 1.1em;
   }
   
   .ocupaciones__img{
-  width: 40%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   }
   
   .ocupaciones__ul {
@@ -873,6 +882,8 @@
   }
   
   .roles__contenedor {
+  flex-flow: column nowrap;
+  justify-content: center;
   width: 100%;
   }
   

@@ -192,15 +192,20 @@ body.mostrar{
   color: #FFE19A;
 }
 
-.header__li {
+.header__li{
   font-family: 'Rubik Doodle Shadow'; /* Tipografía para titulares*/
-  font-size: 6rem;
+  font-size: 5rem; 
   line-height: 5rem;
   text-transform: uppercase; /*Texto transformado todo a mayúscula*/
   font-weight: 700;
   color: #FFE19A;
   letter-spacing: 3px; /*Espacio entre letras*/
+  transition: transform .5s ease;
+}
 
+.header__li:hover{
+  transform: scale(1.1);
+  color: #E8C91E;
 }
 /* Aqui termina el Header */
 
@@ -312,21 +317,21 @@ body.mostrar{
 .grid__a{
   display: block;
   animation: apareceGrid 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
   opacity: 0;
   transform: translateY(100px);
 }
 .grid__a:nth-child(2){ /* Delay de Animación para cards de episodios */
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
 }
 .grid__a:nth-child(3){
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .grid__a:nth-child(4){
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
 }
 .grid__a:nth-child(5){
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 @keyframes apareceGrid { /* Animación para cards de episodios */
   form{
